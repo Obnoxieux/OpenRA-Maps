@@ -1,0 +1,93 @@
+Player:
+	-ConquestVictoryConditions:
+	MissionObjectives:
+		EarlyGameOver: true
+	Shroud:
+		FogLocked: True
+		FogEnabled: False
+		ExploredMapLocked: True
+		ExploredMapEnabled: False
+	PlayerResources:
+		DefaultCashLocked: True
+		DefaultCash: 20000
+World:
+	-CrateSpawner:
+	-SpawnMPUnits:
+	-MPStartLocations:
+	LuaScript:
+		Scripts: luaorbiter.lua
+	ObjectivesPanel:
+		PanelName: MISSION_OBJECTIVES
+	MissionData:
+		Briefing: LANDCOM 17 HQS.\nTOP SECRET.\nT1 FIELD COMMANDER A10\n\nINTELLIGENCE RECON HAS DETECTED\nMAIN SARIN GAS PRODUCTION FACILITY\nON THIS REMOTE ISLAND.\nDESTROY EVERYTHING YOU FIND.\nADVISE TO TAKE OUT NAVAL\nBASE IN NORTHEAST FIRST.\n\nCONFIRMATION CODE 1613.\n\nTRANSMISSION ENDS.
+	MapBuildRadius:
+		AllyBuildRadiusLocked: True
+		AllyBuildRadiusEnabled: True
+	MapOptions:
+		ShortGameLocked: True
+		ShortGameEnabled: False
+SS:
+	AutoTarget:
+		InitialStanceAI: AttackAnything
+
+#------------------------------RA classic mode--------------------------------#
+
+APC:
+	Buildable:
+		Prerequisites: ~vehicles.allies
+HIND:
+	Buildable:
+		Prerequisites: ~vehicles.soviet
+HPAD:
+	Buildable:
+		Prerequisites: dome, ~techlevel.medium
+SHOK:
+	Buildable:
+		Prerequisites: stek, tsla, ~infantry.soviet
+E3:
+	Buildable:
+		Prerequisites: ~infantry.allies
+HELI:
+	Buildable:
+		Prerequisites: ~vehicles.allies
+TRUK:
+	Buildable:
+		Prerequisites: ~disabled
+MGG:
+	Buildable:
+		Prerequisites: atek, ~vehicles.allies
+TTNK:
+	Buildable:
+		Prerequisites: stek, tsla, ~vehicles.soviet
+FTRK:
+	Buildable:
+		Prerequisites: ~disabled
+DTRK:
+	Buildable:
+		Prerequisites: stek, ~vehicles.soviet
+CTNK:
+	Buildable:
+		Prerequisites: atek, ~vehicles.allies
+STNK:
+	Buildable:
+		Prerequisites: atek, ~vehicles.allies
+AFLD:
+	AirstrikePower@parabombs:
+		OrderName: UkraineParabombs
+		Prerequisites: aircraft.soviet
+		Icon: parabombs
+		ChargeTime: 300
+		Description: Parabombs
+		LongDesc: A squad of Badgers drops parachuted\nbombs on your target.
+		SelectTargetSpeechNotification: SelectTarget
+		CameraActor: camera
+		CameraRemoveDelay: 150
+		UnitType: badr.bomber
+		QuantizedFacings: 8
+		DisplayBeacon: true
+		BeaconPoster: pbmbicon
+		SquadSize: 3
+		SquadOffset: 1792,1792,0
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles

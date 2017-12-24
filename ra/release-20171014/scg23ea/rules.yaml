@@ -1,0 +1,153 @@
+Player:
+	-ConquestVictoryConditions:
+	MissionObjectives:
+		EarlyGameOver: True
+	Shroud:
+		FogLocked: True
+		FogEnabled: False
+		ExploredMapLocked: True
+		ExploredMapEnabled: False
+	PlayerResources:
+		DefaultCashLocked: True
+		DefaultCash: 0
+
+World:
+	LuaScript:
+		Scripts: scg23ea.lua
+	MissionData:
+		WinVideo: toofar.vqa
+		LossVideo: bmap.vqa
+		Briefing: With the fighting fast approaching Athens, Stavros has insisted that he be allowed to survey the damage in his own hometown in Greece. \n\nYou must escort Stavros through the town and to a nearby friendly outpost. Once you reach it, evacuate Stavros to safety.\n\nIf anything should happen, get Stavros to safety any way possible. He must be kept alive.
+
+GNRL:
+	UpdatesPlayerStatistics: 
+	MustBeDestroyed: 
+	ProximityCaptor: 
+		Types: Infantry 
+	DetectCloaked: 
+		CloakTypes: Hijacker 
+	RenderSprites: 
+		Image: gnrl 
+	Valued: 
+		Cost: 2500 
+	DeliversCash@GRINDABLE: 
+		Payload: 1250 
+		Voice: Move 
+	Tooltip: 
+		Name: Stavros 
+	Health: 
+		HP: 150 
+	Mobile: 
+		Speed: 71 
+	Passenger: 
+		PipType: Red 
+	Armor: 
+		Type: Heavy 
+	RevealsShroud: 
+		Range: 6c0 
+	-Crushable: 
+	-Armament: 
+	Armament@PRIMARY: 
+		Weapon: Colt45 
+	Armament@GARRISONED: 
+		Name: garrisoned 
+		Weapon: Colt45 
+		MuzzleSequence: garrison-muzzle 
+	WithInfantryBody: 
+		DefaultAttackSequence: shoot 
+		StandSequences: stand 
+	Targetable: 
+		TargetTypes: Ground, Infantry
+
+APC:
+	Buildable:
+		Prerequisites: ~vehicles.allies
+HIND:
+	Buildable:
+		Prerequisites: ~aircraft.soviet
+HPAD:
+	Buildable:
+		Prerequisites: dome, ~techlevel.medium
+SHOK:
+	Buildable:
+		Prerequisites: stek, tsla, ~infantry.soviet
+#	E3:
+#		Buildable:
+#			Prerequisites: ~infantry.allies
+HELI:
+	Buildable:
+		Prerequisites: ~vehicles.allies
+TRUK:
+	Buildable:
+		Prerequisites: ~disabled
+	-DeliversCash:
+	SpawnActorOnDeath:
+		Actor: healcrate
+MGG:
+	Buildable:
+		Prerequisites: atek, ~vehicles.allies
+TTNK:
+	Buildable:
+		Prerequisites: stek, tsla, ~vehicles.soviet
+FTRK:
+	Buildable:
+		Prerequisites: ~disabled
+DTRK:
+	Buildable:
+		Prerequisites: stek, ~vehicles.soviet
+CTNK:
+	Buildable:
+		Prerequisites: atek, ~vehicles.allies
+STNK:
+	Buildable:
+		Prerequisites: atek, ~vehicles.allies
+AFLD:
+	AirstrikePower@parabombs:
+		OrderName: UkraineParabombs
+		Prerequisites: aircraft.soviet
+		Icon: parabombs
+		ChargeTime: 300
+		Description: Parabombs
+		LongDesc: A squad of Badgers drops parachuted\nbombs on your target.
+		SelectTargetSpeechNotification: SelectTarget
+		CameraActor: camera
+		CameraRemoveDelay: 150
+		UnitType: badr.bomber
+		QuantizedFacings: 8
+		DisplayBeacon: true
+		BeaconPoster: pbmbicon
+		SquadSize: 3
+		SquadOffset: 1792,1792,0
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+BADR:
+	Health:
+		HP: 450
+Zombie:
+	Buildable:
+		Prerequisites: ~disabled
+Ant:
+	Buildable:
+		Prerequisites: ~disabled
+SS:
+	AutoTarget:
+		InitialStanceAI: AttackAnything
+E1:
+	AutoTarget:
+		InitialStanceAI: AttackAnything
+E2:
+	AutoTarget:
+		InitialStanceAI: AttackAnything
+E4:
+	AutoTarget:
+		InitialStanceAI: AttackAnything
+4TNK:
+	AutoTarget:
+		InitialStanceAI: AttackAnything
+3TNK:
+	AutoTarget:
+		InitialStanceAI: AttackAnything
+V2RL:
+	AutoTarget:
+		InitialStanceAI: AttackAnything

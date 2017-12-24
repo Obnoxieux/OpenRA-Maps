@@ -1,0 +1,117 @@
+Player:
+	-ConquestVictoryConditions:
+	MissionObjectives:
+		Cooperative: True
+	Shroud:
+		FogLocked: True
+		FogEnabled: False
+		ExploredMapLocked: True
+		ExploredMapEnabled: False
+	PlayerResources:
+		DefaultCashLocked: True
+		DefaultCash: 10000
+World:
+	-SpawnMPUnits:
+	-MPStartLocations:
+	LuaScript:
+		Scripts: threepaths.lua
+	ObjectivesPanel:
+		PanelName: MISSION_OBJECTIVES
+	MissionData:
+		Briefing: Transmission received\nFrom --Soviet High Command--\n\nBy capturing our Forward Command in Ukraine, the Allies have discovered the location of our main Nuclear Processing Plant in Poland. They have overrun the sector, capturing one of our riverside outposts and threatening the main facility.\n\nIt is of utmost importance that we evacuate our experimental nuclear bombs from this area before the Allies can destroy them. Unfortunately, the Allies know of our plans and have blocked the only escape route with heavy defences.\n\nComrades Generals, you have to get at least one of our trucks with those bombs out of there. There are three options - obliterate the Allies on the main route with superior Soviet firepower, find another less guarded way by land or recapture our riverside outpost to transport the trucks by sea.\n\nIf all trucks are destroyed, you will both be beheaded at the command of Stalin himself.
+	-CrateSpawner:
+	MapBuildRadius:
+		AllyBuildRadiusLocked: True
+		AllyBuildRadiusEnabled: True
+	MapOptions:
+		ShortGameLocked: True
+		ShortGameEnabled: False
+APC:
+	Buildable:
+		Prerequisites: ~vehicles.allies
+HIND:
+	Buildable:
+		Prerequisites: ~aircraft.soviet
+HPAD:
+	Buildable:
+		Prerequisites: dome, ~techlevel.medium
+SHOK:
+	Buildable:
+		Prerequisites: stek, tsla, ~infantry.soviet
+#	E3:
+#		Buildable:
+#			Prerequisites: ~infantry.allies
+HELI:
+	Buildable:
+		Prerequisites: ~vehicles.allies
+TRUK:
+	Buildable:
+		Prerequisites: ~disabled
+	-DeliversCash:
+	SpawnActorOnDeath:
+		Actor: scrate
+SCRATE:
+	Inherits: ^Crate
+	Tooltip:
+		Name: Nuclear Bomb
+	Crate:
+		Lifetime: 0
+	ExplodeCrateAction:
+		Weapon: Atomic
+		SelectionShares: 1
+MGG:
+	Buildable:
+		Prerequisites: atek, ~vehicles.allies
+TTNK:
+	Buildable:
+		Prerequisites: stek, tsla, ~vehicles.soviet
+FTRK:
+	Buildable:
+		Prerequisites: ~disabled
+DTRK:
+	Buildable:
+		Prerequisites: stek, ~vehicles.soviet
+CTNK:
+	Buildable:
+		Prerequisites: atek, ~vehicles.allies
+STNK:
+	Buildable:
+		Prerequisites: atek, ~vehicles.allies
+AFLD:
+	AirstrikePower@parabombs:
+		OrderName: UkraineParabombs
+		Prerequisites: aircraft.soviet
+		Icon: parabombs
+		ChargeTime: 300
+		Description: Parabombs
+		LongDesc: A squad of Badgers drops parachuted\nbombs on your target.
+		SelectTargetSpeechNotification: SelectTarget
+		CameraActor: camera
+		CameraRemoveDelay: 150
+		UnitType: badr.bomber
+		QuantizedFacings: 8
+		DisplayBeacon: true
+		BeaconPoster: pbmbicon
+		SquadSize: 3
+		SquadOffset: 1792,1792,0
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+BADR:
+	Health:
+		HP: 600
+MCV:
+	Buildable:
+		Prerequisites: ~disabled
+MSLO:
+	Buildable:
+		Prerequisites: ~disabled
+V01:
+	SpawnActorOnDeath:
+		Actor: moneycrate
+Zombie:
+	Buildable:
+		Prerequisites: ~disabled
+Ant:
+	Buildable:
+		Prerequisites: ~disabled
