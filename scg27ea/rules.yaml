@@ -1,0 +1,123 @@
+Player:
+	-ConquestVictoryConditions:
+	MissionObjectives:
+		EarlyGameOver: True
+	Shroud:
+		FogLocked: True
+		FogEnabled: False
+		ExploredMapLocked: True
+		ExploredMapEnabled: False
+	PlayerResources:
+		DefaultCashLocked: True
+		DefaultCash: 4000
+
+
+World:
+	LuaScript:
+		Scripts: scg27ea.lua
+	MissionData:
+		WinVideo: aftrmath.vqa
+		LossVideo: trinity.vqa
+		Briefing: The convoys have been traced back to a Soviet atomic processing station. We need this facility destroyed, and all of the nuclear cargo safely neutralized.\n\nEstablish your base, and destroy the Soviet processing center.\nIn addition, no Soviet convoy trucks must be allowed to leave the area - we can't have our operations into Moscow threatened by nuclear attack.
+
+APC:
+	Buildable:
+		Prerequisites: ~vehicles.allies
+HIND:
+	Buildable:
+		Prerequisites: ~aircraft.soviet
+HPAD:
+	Buildable:
+		Prerequisites: dome, ~techlevel.medium
+SHOK:
+	Buildable:
+		Prerequisites: ~infantry.soviet
+E4:
+	Buildable:
+		Prerequisites: ~infantry.soviet
+#	E3:
+#		Buildable:
+#			Prerequisites: ~infantry.allies
+HELI:
+	Buildable:
+		Prerequisites: hpad, atek
+TRUK:
+	Buildable:
+		Prerequisites: ~disabled
+	-DeliversCash:
+	SpawnActorOnDeath:
+		Actor: scrate
+	Mobile:
+		Speed: 90
+SCRATE:
+	Inherits: ^Crate
+	Tooltip:
+		Name: Nuclear Bomb
+	Crate:
+		Lifetime: 0
+	ExplodeCrateAction:
+		Weapon: Atomic
+		SelectionShares: 1
+TTNK:
+	Buildable:
+		Prerequisites: stek, tsla, ~vehicles.soviet
+FTRK:
+	Buildable:
+		Prerequisites: ~disabled
+DTRK:
+	Buildable:
+		Prerequisites: stek, ~vehicles.soviet
+MGG:
+	Buildable:
+		Prerequisites: weap, atek, ~vehicles.allies
+CTNK:
+	Buildable:
+		Prerequisites: weap, atek, ~vehicles.allies
+STNK:
+	Buildable:
+		Prerequisites: weap, atek, ~vehicles.allies
+AFLD:
+	AirstrikePower@parabombs:
+		OrderName: UkraineParabombs
+		Prerequisites: aircraft.soviet
+		Icon: parabombs
+		ChargeTime: 300
+		Description: Parabombs
+		LongDesc: A squad of Badgers drops parachuted\nbombs on your target.
+		SelectTargetSpeechNotification: SelectTarget
+		CameraActor: camera
+		CameraRemoveDelay: 150
+		UnitType: badr.bomber
+		QuantizedFacings: 8
+		DisplayBeacon: true
+		BeaconPoster: pbmbicon
+		SquadSize: 3
+		SquadOffset: 1792,1792,0
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+BADR:
+	Health:
+		HP: 450
+Zombie:
+	Buildable:
+		Prerequisites: ~disabled
+Ant:
+	Buildable:
+		Prerequisites: ~disabled
+SS:
+	AutoTarget:
+		InitialStanceAI: AttackAnything
+E7.noautotarget:
+	Buildable:
+		Prerequisites: ~disabled
+MSLO:
+	Buildable:
+		Prerequisites: ~disabled
+	-NukePower:
+	-SupportPowerChargeBar:
+BIO:
+	Tooltip:
+		Name: Nuclear Processing Plant
+	MustBeDestroyed:
+		RequiredForShortGame: false

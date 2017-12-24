@@ -1,0 +1,97 @@
+Player:
+	-ConquestVictoryConditions:
+	MissionObjectives:
+		EarlyGameOver: true
+	Shroud:
+		FogLocked: True
+		FogEnabled: False
+		ExploredMapLocked: True
+		ExploredMapEnabled: False
+	PlayerResources:
+		DefaultCashLocked: True
+		DefaultCash: 0
+
+World:
+	LuaScript:
+		Scripts: scg21ea.lua
+	MissionData:
+		WinVideo: spy.vqa
+		LossVideo: execute.vqa
+		Briefing: We've traced the convoy's route to this underground facility. We suspect that this is a hidden access to the Soviet's main Sarin plant. \n\nLead your troops through the tunnels and remove any opposition you may find. Be careful -- the Soviets are conducting all kinds of research in this facility, and we don't know what they may throw at you.\n\nUse spies to scout and infiltrate factories where they can steal vehicles.\n\nThe mission is complete when your forces reach the far exit of the facility.
+
+APC:
+	Buildable:
+		Prerequisites: ~vehicles.allies
+HIND:
+	Buildable:
+		Prerequisites: ~vehicles.soviet
+HPAD:
+	Buildable:
+		Prerequisites: dome, ~techlevel.medium
+SHOK:
+	Buildable:
+		Prerequisites: stek, tsla, ~infantry.soviet
+#	E3:
+#		Buildable:
+#			Prerequisites: ~infantry.allies
+HELI:
+	Buildable:
+		Prerequisites: ~vehicles.allies
+TRUK:
+	Buildable:
+		Prerequisites: ~disabled
+	-DeliversCash:
+MGG:
+	Buildable:
+		Prerequisites: ~disabled
+TTNK:
+	Buildable:
+		Prerequisites: stek, tsla, ~vehicles.soviet
+FTRK:
+	Buildable:
+		Prerequisites: ~disabled
+DTRK:
+	Buildable:
+		Prerequisites: stek, ~vehicles.soviet
+CTNK:
+	Buildable:
+		Prerequisites: ~disabled
+STNK:
+	Buildable:
+		Prerequisites: ~disabled
+AFLD:
+	AirstrikePower@parabombs:
+		OrderName: UkraineParabombs
+		Prerequisites: aircraft.soviet
+		Icon: parabombs
+		ChargeTime: 300
+		Description: Parabombs
+		LongDesc: A squad of Badgers drops parachuted\nbombs on your target.
+		SelectTargetSpeechNotification: SelectTarget
+		CameraActor: camera
+		CameraRemoveDelay: 150
+		UnitType: badr.bomber
+		QuantizedFacings: 8
+		DisplayBeacon: true
+		BeaconPoster: pbmbicon
+		SquadSize: 3
+		SquadOffset: 1792,1792,0
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+
+Zombie:
+	Buildable:
+		Prerequisites: ~disabled
+Ant:
+	Buildable:
+		Prerequisites: ~disabled
+SPY:
+	RevealsShroud:
+		Range: 7c0
+TSLA:	
+	Health:
+		HP: 3000
+GNRL:
+	Tooltip:
+		Name: Officer

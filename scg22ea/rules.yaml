@@ -1,0 +1,108 @@
+Player:
+	-ConquestVictoryConditions:
+	MissionObjectives:
+		EarlyGameOver: true
+	Shroud:
+		FogLocked: True
+		FogEnabled: False
+		ExploredMapLocked: True
+		ExploredMapEnabled: False
+	PlayerResources:
+		DefaultCashLocked: True
+		DefaultCash: 4000
+
+World:
+	LuaScript:
+		Scripts: scg22ea.lua
+	MissionData:
+		WinVideo: apcescpe.vqa
+		LossVideo: tesla.vqa
+		Briefing: We have infiltrated the Soviet's Sarin facility. However, the main entrance is guarded by a wall of Tesla coils. We can't move a large force in until they are taken down.\n\nInfiltrate the power grid to the east and destroy the power plants. Once done, reinforcements will arrive.\n\nDestroy the Soviet compound, but capture all of the Sarin processor buildings intact -- we can't have a chemical spill.
+
+APC:
+	Buildable:
+		Prerequisites: ~vehicles.allies
+HIND:
+	Buildable:
+		Prerequisites: hpad, ~aircraft.soviet
+HPAD:
+	Buildable:
+		Prerequisites: dome, ~techlevel.medium
+SHOK:
+	Buildable:
+		Prerequisites: stek, tsla, ~infantry.soviet
+#	E3:
+#		Buildable:
+#			Prerequisites: ~infantry.allies
+HELI:
+	Buildable:
+		Prerequisites: ~vehicles.allies
+TRUK:
+	Buildable:
+		Prerequisites: ~disabled
+	-DeliversCash:
+MGG:
+	Buildable:
+		Prerequisites: ~disabled
+FTRK:
+	Buildable:
+		Prerequisites: ~disabled
+DTRK:
+	Buildable:
+		Prerequisites: stek, ~vehicles.soviet
+CTNK:
+	Buildable:
+		Prerequisites: ~disabled
+STNK:
+	Buildable:
+		Prerequisites: ~disabled
+AFLD:
+	AirstrikePower@parabombs:
+		OrderName: UkraineParabombs
+		Prerequisites: aircraft.soviet
+		Icon: parabombs
+		ChargeTime: 300
+		Description: Parabombs
+		LongDesc: A squad of Badgers drops parachuted\nbombs on your target.
+		SelectTargetSpeechNotification: SelectTarget
+		CameraActor: camera
+		CameraRemoveDelay: 150
+		UnitType: badr.bomber
+		QuantizedFacings: 8
+		DisplayBeacon: true
+		BeaconPoster: pbmbicon
+		SquadSize: 3
+		SquadOffset: 1792,1792,0
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+
+Zombie:
+	Buildable:
+		Prerequisites: ~disabled
+Ant:
+	Buildable:
+		Prerequisites: ~disabled
+MSLO:
+	Buildable:
+		Prerequisites: ~disabled
+SYRD:
+	Buildable:
+		Prerequisites: ~disabled
+3TNK:
+	Buildable:
+		Prerequisites: weap, ~vehicles.soviet
+4TNK:
+	Buildable:
+		Prerequisites: weap, ~vehicles.soviet
+TTNK:
+	Buildable:
+		Prerequisites: weap, ~vehicles.soviet
+V2RL:
+	Buildable:
+		Prerequisites: weap, ~vehicles.soviet
+BIO:
+	Tooltip:
+		Name: Sarin Processing Plant
+	MustBeDestroyed:
+		RequiredForShortGame: false
