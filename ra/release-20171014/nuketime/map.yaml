@@ -99,7 +99,7 @@ Actors:
 		Location: 98,82
 		Facing: 32
 		TurretFacing: 32
-	Actor10: truk
+	NukeTruck: truk
 		Owner: USSR2
 		Location: 102,86
 		Facing: 36
@@ -1812,19 +1812,19 @@ Actors:
 		Location: 53,23
 		SubCell: 3
 		Facing: 92
-	Actor529: spy
+	spy1: spy
 		Owner: Allies
 		Location: 90,58
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
-	Actor530: spy
+	spy2: spy
 		Owner: Allies
 		Location: 90,58
 		SubCell: 1
 		Facing: 92
 		TurretFacing: 92
-	Actor531: spy
+	spy3: spy
 		Owner: Allies
 		Location: 90,58
 		SubCell: 2
@@ -2652,3 +2652,5 @@ Actors:
 	Actor692: waypoint
 		Owner: Allies
 		Location: 64,23
+
+Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, rules.yaml

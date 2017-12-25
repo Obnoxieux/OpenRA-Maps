@@ -95,9 +95,6 @@ MGG:
 TTNK:
 	Buildable:
 		Prerequisites: stek, tsla, ~vehicles.soviet
-FTRK:
-	Buildable:
-		Prerequisites: ~disabled
 DTRK:
 	Buildable:
 		Prerequisites: stek, ~vehicles.soviet

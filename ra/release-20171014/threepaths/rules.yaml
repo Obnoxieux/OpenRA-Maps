@@ -38,9 +38,9 @@ HPAD:
 SHOK:
 	Buildable:
 		Prerequisites: stek, tsla, ~infantry.soviet
-#	E3:
-#		Buildable:
-#			Prerequisites: ~infantry.allies
+	E3:
+		Buildable:
+			Prerequisites: ~infantry.allies
 HELI:
 	Buildable:
 		Prerequisites: ~vehicles.allies
@@ -65,9 +65,6 @@ MGG:
 TTNK:
 	Buildable:
 		Prerequisites: stek, tsla, ~vehicles.soviet
-FTRK:
-	Buildable:
-		Prerequisites: ~disabled
 DTRK:
 	Buildable:
 		Prerequisites: stek, ~vehicles.soviet

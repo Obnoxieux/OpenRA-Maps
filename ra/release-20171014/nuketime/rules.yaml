@@ -1,0 +1,118 @@
+Player:
+	Shroud:
+		FogLocked: True
+		FogEnabled: False
+		ExploredMapLocked: True
+		ExploredMapEnabled: True #debug
+	PlayerResources:
+		DefaultCashLocked: True
+		DefaultCash: 5000
+
+World:
+	LuaScript:
+		Scripts: nuketime.lua
+	MissionData:
+		StartVideo: movingin.vqa
+		WinVideo: trinity.vqa
+		LossVideo: shorbom2.vqa
+		Briefing: Our nuclear convoy has almost reached its destination our nuclear base near Severomorsk. The Allies are trying to bar our way once again, but this won't stop us.\n\nBreak their lines and get our nukes to the base, which is under heavy fire.\n\nOne of you needs to defend it, while the other secures the convoy.\n\nOnce you reach the base, use our nuclear weaponry at your own discretion and show no mercy to all Allied forces in the sector.
+	MapBuildRadius:
+		AllyBuildRadiusLocked: True
+		AllyBuildRadiusEnabled: True
+
+APC:
+	Buildable:
+		Prerequisites: ~vehicles.allies
+HIND:
+	Buildable:
+		Prerequisites: hpad
+HPAD:
+	Buildable:
+		Prerequisites: dome, ~techlevel.medium
+SHOK:
+	Buildable:
+		Prerequisites: barr, stek, ~infantry.soviet
+E4:
+	Buildable:
+		Prerequisites: barr, ftur, ~infantry.soviet
+E3:
+	Buildable:
+		Prerequisites: tent, ~infantry.allies
+HELI:
+	Buildable:
+		Prerequisites: hpad, atek
+TRUK:
+	Buildable:
+		Prerequisites: ~disabled
+	-DeliversCash:
+	SpawnActorOnDeath:
+		Actor: scrate
+	Mobile:
+		Speed: 90
+SCRATE:
+	Inherits: ^Crate
+	Tooltip:
+		Name: Nuclear Bomb
+	Crate:
+		Lifetime: 0
+	ExplodeCrateAction:
+		Weapon: Atomic
+		SelectionShares: 1
+TTNK:
+	Buildable:
+		Prerequisites: stek, tsla, ~vehicles.soviet
+DTRK:
+	Buildable:
+		Prerequisites: weap, stek, ~vehicles.soviet
+MGG:
+	Buildable:
+		Prerequisites: weap, atek, ~vehicles.allies
+CTNK:
+	Buildable:
+		Prerequisites: weap, atek, ~vehicles.allies
+STNK:
+	Buildable:
+		Prerequisites: weap, atek, ~vehicles.allies
+AFLD:
+	AirstrikePower@parabombs:
+		OrderName: UkraineParabombs
+		Prerequisites: aircraft.soviet
+		Icon: parabombs
+		ChargeTime: 300
+		Description: Parabombs
+		LongDesc: A squad of Badgers drops parachuted\nbombs on your target.
+		SelectTargetSpeechNotification: SelectTarget
+		CameraActor: camera
+		CameraRemoveDelay: 150
+		UnitType: badr.bomber
+		QuantizedFacings: 8
+		DisplayBeacon: true
+		BeaconPoster: pbmbicon
+		SquadSize: 3
+		SquadOffset: 1792,1792,0
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+BADR:
+	Health:
+		HP: 450
+Zombie:
+	Buildable:
+		Prerequisites: ~disabled
+Ant:
+	Buildable:
+		Prerequisites: ~disabled
+SS:
+	AutoTarget:
+		InitialStanceAI: AttackAnything
+E7.noautotarget:
+	Buildable:
+		Prerequisites: ~disabled
+MSLO:
+	Buildable:
+		Prerequisites: ~disabled
+BIO:
+	Tooltip:
+		Name: Nuclear Processing Plant
+	MustBeDestroyed:
+		RequiredForShortGame: false
