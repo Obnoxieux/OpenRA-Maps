@@ -1,0 +1,9 @@
+World:
+	LuaScript:
+		Scripts: presents.lua
+	MusicPlaylist:
+		StartingMusic: aoi
+	MissionData:
+		Briefing: He's got many presents for y'all
+		WinVideo: consyard.vqa
+		LossVideo: gameover.vqa
