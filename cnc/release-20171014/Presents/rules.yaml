@@ -7,3 +7,12 @@ World:
 		Briefing: He's got many presents for y'all
 		WinVideo: consyard.vqa
 		LossVideo: gameover.vqa
+Player:
+	Shroud:
+		FogLocked: True
+		FogEnabled: False
+		ExploredMapLocked: True
+		ExploredMapEnabled: False
+	PlayerResources:
+		DefaultCashLocked: True
+		DefaultCash: 0
