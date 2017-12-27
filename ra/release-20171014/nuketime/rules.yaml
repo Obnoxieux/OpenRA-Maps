@@ -7,6 +7,8 @@ Player:
 	PlayerResources:
 		DefaultCashLocked: True
 		DefaultCash: 5000
+	MissionObjectives:
+		Cooperative: True
 
 World:
 	LuaScript:

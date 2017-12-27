@@ -110,3 +110,9 @@ ATEK:
 CA:
 	Buildable:
 		Prerequisites: ~disabled
+E7.noautotarget:
+	Buildable:
+		Prerequisites: ~disabled
+E7:
+	Buildable:
+		Prerequisites: ~disabled

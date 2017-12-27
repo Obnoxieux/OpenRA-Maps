@@ -1,0 +1,74 @@
+Player:
+	-ConquestVictoryConditions:
+	MissionObjectives:
+		EarlyGameOver: true
+	Shroud:
+		FogLocked: True
+		FogEnabled: False
+		ExploredMapLocked: True
+		ExploredMapEnabled: True
+	PlayerResources:
+		DefaultCashLocked: True
+		DefaultCash: 20000
+World:
+	-CrateSpawner:
+	-SpawnMPUnits:
+	-MPStartLocations:
+	LuaScript:
+		Scripts: testmap.lua
+	ObjectivesPanel:
+		PanelName: MISSION_OBJECTIVES
+	MissionData:
+		Briefing: Motmot
+	MapBuildRadius:
+		AllyBuildRadiusLocked: True
+		AllyBuildRadiusEnabled: False
+	MapOptions:
+		ShortGameLocked: True
+		ShortGameEnabled: False
+APC:
+	Buildable:
+		Prerequisites: ~vehicles.allies
+HIND:
+	Buildable:
+		Prerequisites: ~aircraft.soviet
+HPAD:
+	Buildable:
+		Prerequisites: dome, ~techlevel.medium
+SHOK:
+	Buildable:
+		Prerequisites: ~infantry.soviet
+E3:
+	Buildable:
+		Prerequisites: ~infantry.allies
+HELI:
+	Buildable:
+		Prerequisites: ~vehicles.allies
+TRUK:
+	Buildable:
+		Prerequisites: ~disabled
+MGG:
+	Buildable:
+		Prerequisites: ~vehicles.allies
+TTNK:
+	Buildable:
+		Prerequisites: ~vehicles.soviet
+FTRK:
+	Buildable:
+		Prerequisites: ~disabled
+DTRK:
+	Buildable:
+		Prerequisites: ~vehicles.soviet
+CTNK:
+	Buildable:
+		Prerequisites: ~vehicles.allies
+STNK:
+	Buildable:
+		Prerequisites: ~vehicles.allies
+THF:
+	Buildable:
+		Queue: Infantry
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 210
+		Prerequisites: tent, dome, ~infantry.allies
+		Description: Steals cash from enemy refineries and silos.\n  Unarmed

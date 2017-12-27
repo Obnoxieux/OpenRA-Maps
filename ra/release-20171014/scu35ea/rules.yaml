@@ -30,7 +30,7 @@ World:
 		ShortGameEnabled: False
 GUN:
 	Health:
-		HP: 999999
+		HP: 99999999
 GNRL:
 	UpdatesPlayerStatistics: 
 	MustBeDestroyed: 
@@ -41,14 +41,14 @@ GNRL:
 	RenderSprites: 
 		Image: gnrl 
 	Valued: 
-		Cost: 2500 
+		Cost: 1800 
 	DeliversCash@GRINDABLE: 
 		Payload: 1250 
 		Voice: Move 
 	Tooltip: 
 		Name: Volkov 
 	Health: 
-		HP: 2500 
+		HP: 1800 
 	Mobile: 
 		Speed: 71 
 	Passenger: 
