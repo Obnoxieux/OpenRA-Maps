@@ -8,13 +8,16 @@ AlliedArmorTypes = { "1tnk", "1tnk", "1tnk", "2tnk", "2tnk", "2tnk", "2tnk", "2t
 AlliedAircraftTypes = { "heli" }
 AlliedNavalTypes = { "pt", "dd", "dd", "dd", "dd", "ca" }
 
+InvasionTeams = { { "1tnk", "1tnk", "e3", "e3", "e1" }, { "1tnk", "2tnk", "e1", "e1", "e3" }, { "1tnk", "2tnk", "2tnk", "arty", "apc" }, { "jeep", "1tnk", "2tnk", "2tnk", "ctnk" } }
+InvasionWays = { { AlliedInvSp2.Location, MainBeach.Location }, { AlliedInvSp1.Location, MainBeach.Location } }
+
 InfAttack = { }
 TankAttack = { }
 AirAttack = { }
 NavalAttack = { }
 
-AlliedAttackPath = XXXXXXXXXXXXXXXXXXXXX
-AlliedNavyPath = XXXXXXXXXXXXXXXXXXXXX
+AlliedAttackPath = { { wp2, wp3, wp4, wp5, wp1, wp6, wp7 }, { wp2, wp8, wp9, wp4, wp5, wp17, wp7 }, { wp10, wp11, wp12, wp13, wp14, wp15, wp16, wp1, wp6, wp7 } }
+AlliedNavyPath = { { wp18, wp19, wp20, wp21 }, { wp18, wp22, wp23, wp20, wp21 } }
 
 OrangeMCVTeam = { "3tnk", "3tnk", "mcv", "shok", "shok" }
 
@@ -28,7 +31,7 @@ end
 
 ProduceInfantry = function()
 
-	local delay = Utils.RandomInteger(DateTime.Seconds(1), DateTime.Seconds(2))
+	local delay = Utils.RandomInteger(DateTime.Seconds(1), DateTime.Seconds(3))
 	local toBuild = { Utils.Random(AlliedInfantryTypes) }
   local Path = Utils.Random(AlliedAttackPath)
 	allies.Build(toBuild, function(unit)
@@ -37,7 +40,7 @@ ProduceInfantry = function()
 		if #InfAttack >= 6 then
 			SendUnits(InfAttack, Path)
 			InfAttack = { }
-			Trigger.AfterDelay(DateTime.Seconds(10), ProduceInfantry)
+			Trigger.AfterDelay(DateTime.Seconds(30), ProduceInfantry)
 		else
 			Trigger.AfterDelay(delay, ProduceInfantry)
 		end
@@ -55,7 +58,7 @@ ProduceTanks = function()
 		if #TankAttack >= 4 then
 			SendUnits(TankAttack, Path)
 			TankAttack = { }
-			Trigger.AfterDelay(DateTime.Seconds(10), ProduceTanks)
+			Trigger.AfterDelay(DateTime.Seconds(20), ProduceTanks)
 		else
 			Trigger.AfterDelay(delay, ProduceTanks)
 		end
@@ -83,7 +86,7 @@ ProduceNavy = function()
 
 	local delay = Utils.RandomInteger(DateTime.Seconds(1), DateTime.Seconds(2))
 	local toBuild = { Utils.Random(AlliedNavalTypes) }
-  local Path = Utils.Random(XXXXXXXXX)
+  local Path = Utils.Random(AlliedNavyPath)
 	allies.Build(toBuild, function(unit)
 		NavalAttack[#NavalAttack + 1] = unit[1]
 
@@ -126,6 +129,50 @@ ActivateAI = function()
 		ProduceAircraft()
 		ProduceNavy()
 	end)
+end
+
+SendAlliedInvasion = function()
+  local units = Utils.Random(InvasionTeams)
+	local way = Utils.Random(InvasionWays)
+  local invasionteam = Reinforcements.ReinforceWithTransport (allies, "lst", units, way, { AlliedInvSp2.Location})[2]
+  Utils.Do(invasionteam, function(a)
+    Trigger.OnAddedToWorld(a, function()
+      a.AttackMove(wp7.Location)
+      a.Hunt()
+    end)
+  end)
+
+  Trigger.AfterDelay(DateTime.Minutes(6), SendAlliedInvasion)
+end
+
+AttackIsland1 = function()
+  local invasionteam = Reinforcements.ReinforceWithTransport (allies, "lst", { "1tnk", "2tnk", "2tnk", "2tnk", "arty" }, { AlliedInvSp1.Location, IslandBeach1.Location }, { AlliedInvSp1.Location})[2]
+  Utils.Do(invasionteam, function(a)
+    Trigger.OnAddedToWorld(a, function()
+      a.AttackMove(IslandCentre.Location)
+      a.Hunt()
+    end)
+  end)
+end
+
+AttackIsland2 = function()
+  local invasionteam = Reinforcements.ReinforceWithTransport (allies, "lst", { "1tnk", "2tnk", "2tnk", "2tnk", "arty" }, { AlliedInvSp2.Location, IslandBeach2.Location }, { AlliedInvSp2.Location})[2]
+  Utils.Do(invasionteam, function(a)
+    Trigger.OnAddedToWorld(a, function()
+      a.AttackMove(IslandCentre.Location)
+      a.Hunt()
+    end)
+  end)
+end
+
+AttackIsland3 = function()
+  local invasionteam = Reinforcements.ReinforceWithTransport (allies, "tran", { "e1", "e1", "e1", "e1", "e3", "e3", "e3", "e3" }, { AlliedInvSp2.Location, TranUnload.Location }, { AlliedInvSp2.Location})[2]
+  Utils.Do(invasionteam, function(a)
+    Trigger.OnAddedToWorld(a, function()
+      a.AttackMove(IslandCentre.Location)
+      a.Hunt()
+    end)
+  end)
 end
 
 ParadropAlliedUnits = function()
@@ -189,8 +236,27 @@ InitObjectives = function()
 	objEscortTruck = ussr2.AddPrimaryObjective("Escort the Truck with nuclear material to our facility.")
 	objperfect = ussr2.AddSecondaryObjective("Prevent the Truck from getting damaged at all.")
   objDefendBase = ussr1.AddPrimaryObjective("Defend the nuclear processing plants.")
-	objKillAll = ussr1.AddPrimaryObjective("Eliminate all Allied presence in the sector")
-	objKillAll = ussr2.AddPrimaryObjective("Eliminate all Allied presence in the sector")
+	objKillAll = ussr1.AddPrimaryObjective("Eliminate all Allied presence in the sector.")
+	objKillAll = ussr2.AddPrimaryObjective("Eliminate all Allied presence in the sector.")
+	
+end
+
+SendInitialAttackers = function()
+	
+	StartShip1.AttackMove(wp23.Location)
+	StartShip2.AttackMove(wp23.Location)
+	StartShip3.AttackMove(wp23.Location)
+	l1.AttackMove(wp6.Location)
+	l2.AttackMove(wp6.Location)
+	l3.AttackMove(wp6.Location)
+	l4.AttackMove(wp6.Location)
+	l5.AttackMove(wp6.Location)
+	l6.Move(wp6.Location)
+	r1.AttackMove(wp6.Location)
+	r2.AttackMove(wp6.Location)
+	r3.AttackMove(wp6.Location)
+	r4.AttackMove(wp6.Location)
+	r5.AttackMove(wp6.Location)
 	
 end
 
@@ -233,29 +299,34 @@ WorldLoaded = function()
   end)
 
   Trigger.OnPlayerWon(ussr1, function()
-    Media.PlaySpeechNotification(player, "MissionAccomplished")
+    Media.PlaySpeechNotification(ussr1, "MissionAccomplished")
   end)
     
   Trigger.OnPlayerWon(ussr2, function()
-    Media.PlaySpeechNotification(player, "MissionAccomplished")
+    Media.PlaySpeechNotification(ussr2, "MissionAccomplished")
   end)
 
   Trigger.OnPlayerLost(ussr1, function()
-    Media.PlaySpeechNotification(player, "MissionFailed")
+    Media.PlaySpeechNotification(ussr1, "MissionFailed")
   end)
     
   Trigger.OnPlayerLost(ussr2, function()
-    Media.PlaySpeechNotification(player, "MissionFailed")
+    Media.PlaySpeechNotification(ussr2, "MissionFailed")
   end)
 
   Trigger.AfterDelay(DateTime.Seconds(5), function()
 		ParadropAlliedUnits()
-		StartShip1.AttackMove(wp23.Location)
-		StartShip2.AttackMove(wp23.Location)
-		StartShip3.AttackMove(wp23.Location)
+		SendInitialAttackers()
 	end)
 
-	Trigger.AfterDelay(DateTime.Seconds(6), function() --set to 120
+	Trigger.AfterDelay(DateTime.Seconds(110), function()
+		AttackIsland1()
+		AttackIsland2()
+		AttackIsland3()
+		SendAlliedInvasion()
+	end)
+
+	Trigger.AfterDelay(DateTime.Seconds(120), function()
 		SpiesGo()
 	end)
 end

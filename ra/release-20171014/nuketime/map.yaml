@@ -2038,57 +2038,57 @@ Actors:
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
-	Actor568: 2tnk
+	l1: 2tnk
 		Owner: Allies
 		Location: 43,47
 		Facing: 92
 		TurretFacing: 92
-	Actor569: 2tnk
+	l2: 2tnk
 		Owner: Allies
 		Location: 45,50
 		Facing: 92
 		TurretFacing: 92
-	Actor570: 1tnk
+	l3: 1tnk
 		Owner: Allies
 		Location: 45,47
 		Facing: 92
 		TurretFacing: 92
-	Actor571: 1tnk
+	l4: 1tnk
 		Owner: Allies
 		Location: 46,49
 		Facing: 92
 		TurretFacing: 92
-	Actor572: 2tnk
+	r1: 2tnk
 		Owner: Allies
 		Location: 97,59
 		Facing: 92
 		TurretFacing: 92
-	Actor573: 2tnk
+	r2: 2tnk
 		Owner: Allies
 		Location: 101,59
 		Facing: 92
 		TurretFacing: 92
-	Actor574: 1tnk
+	r3: 1tnk
 		Owner: Allies
 		Location: 98,58
 		Facing: 92
 		TurretFacing: 92
-	Actor575: 1tnk
+	r4: 1tnk
 		Owner: Allies
 		Location: 100,58
 		Facing: 92
 		TurretFacing: 92
-	Actor576: jeep
+	r5: jeep
 		Owner: Allies
 		Location: 99,57
 		Facing: 92
 		TurretFacing: 92
-	Actor577: jeep
+	l5: jeep
 		Owner: Allies
 		Location: 48,47
 		Facing: 92
 		TurretFacing: 92
-	Actor578: dtrk
+	l6: dtrk
 		Owner: Allies
 		Location: 43,50
 		Facing: 92
@@ -2700,5 +2700,11 @@ Actors:
 	Paradrop3: waypoint
 		Owner: Neutral
 		Location: 66,36
+	IslandCentre: waypoint
+		Owner: Neutral
+		Location: 50,20
+	TranUnload: waypoint
+		Owner: Neutral
+		Location: 45,18
 
 Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, rules.yaml

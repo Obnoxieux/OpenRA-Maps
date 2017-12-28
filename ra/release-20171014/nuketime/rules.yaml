@@ -3,7 +3,7 @@ Player:
 		FogLocked: True
 		FogEnabled: False
 		ExploredMapLocked: True
-		ExploredMapEnabled: True #debug
+		ExploredMapEnabled: False
 	PlayerResources:
 		DefaultCashLocked: True
 		DefaultCash: 5000
