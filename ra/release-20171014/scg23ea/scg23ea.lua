@@ -11,6 +11,7 @@ AlliedParadropUnitTypes = { "e1", "e1", "e1", "e1", "e1", "e1", "e3", "e3" }
 ExtractionPath = { InsertionEntry.Location, ExtractionPoint.Location }
 
 SendExtractionHelicopter = function()
+	Media.DisplayMessage("We have sent a second extraction helicopter to the west of the sector")
 	heli = Reinforcements.ReinforceWithTransport(allies, "tran", nil, ExtractionPath)[1]
 	if not Stavros.IsDead then
 		Trigger.OnRemovedFromWorld(Stavros, EvacuateHelicopter)
@@ -110,6 +111,7 @@ SendAlliedParatroopersTesla = function()
 end
 
 OutpostAttack = function()
+	Media.DisplayMessage("The Soviets are attacking. RUN!")
   Reinforcements.Reinforce(ussr, OutpostAttackers, { SovietReinforcementsSpawn.Location, SovietsMove.Location })
   Trigger.AfterDelay(DateTime.Seconds(100), function()
     Reinforcements.Reinforce(ussr, SecondWaveTeam, { SovietReinforcementsSpawn.Location, SecondWaveMove.Location })
