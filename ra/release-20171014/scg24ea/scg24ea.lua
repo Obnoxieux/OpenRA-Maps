@@ -15,6 +15,11 @@ SovietArmorTypes = { "3tnk", "3tnk", "3tnk", "3tnk", "3tnk", "3tnk", "3tnk", "v2
 SovietHeliType = { "hind" }
 SovietSubType = { "ss" }
 
+TownEastCheck = false
+TownWestCheck = false
+TownMiddleCheck = false
+TownSouthWestCheck = false
+
 InfAttack = { }
 TankAttack = { }
 HeliAttack = { }
@@ -163,9 +168,13 @@ SetupTriggers = function()
   
   Trigger.OnEnteredProximityTrigger(ChurchEast.CenterPosition, WDist.FromCells(2), function(actor, trigger)
 		if actor.Owner == allies then
+			TownEastCheck = true
 			Trigger.RemoveProximityTrigger(trigger)
-      Reinforcements.Reinforce(allies, CivsEast, { ChurchEast.Location, VillageEast.Location })
+      easterncivs = Reinforcements.Reinforce(allies, CivsEast, { ChurchEast.Location, VillageEast.Location })
       Actor.Create("flare", true, { Owner = england, Location = VillageEast.Location })
+			Trigger.OnAllKilled(easterncivs, function()
+				allies.MarkFailedObjective(objEvacCivs)
+			end)
       Trigger.AfterDelay(DateTime.Seconds(75), function()
         SendSovietParatroopersVillage()
       end)
@@ -174,17 +183,25 @@ SetupTriggers = function()
 
   Trigger.OnEnteredProximityTrigger(ChurchMiddle.CenterPosition, WDist.FromCells(2), function(actor, trigger2)
 		if actor.Owner == allies then
+			TownMiddleCheck = true
 			Trigger.RemoveProximityTrigger(trigger2)
-      Reinforcements.Reinforce(allies, CivsMiddle, { ChurchMiddle.Location, VillageMiddle.Location })
+      middlecivs = Reinforcements.Reinforce(allies, CivsMiddle, { ChurchMiddle.Location, VillageMiddle.Location })
       Actor.Create("flare", true, { Owner = england, Location = VillageMiddle.Location })
+			Trigger.OnAllKilled(middlecivs, function()
+				allies.MarkFailedObjective(objEvacCivs)
+			end)
 		end
 	end)
 
   Trigger.OnEnteredProximityTrigger(ChurchSouthwest.CenterPosition, WDist.FromCells(2), function(actor, trigger3)
 		if actor.Owner == allies then
+			TownSouthWestCheck = true
 			Trigger.RemoveProximityTrigger(trigger3)
-      Reinforcements.Reinforce(allies, CivsSouthWest, { ChurchSouthwest.Location, VillageSouthwest.Location })
+      southwestcivs = Reinforcements.Reinforce(allies, CivsSouthWest, { ChurchSouthwest.Location, VillageSouthwest.Location })
       Actor.Create("flare", true, { Owner = england, Location = VillageSouthwest.Location })
+			Trigger.OnAllKilled(southwestcivs, function()
+				allies.MarkFailedObjective(objEvacCivs)
+			end)
       Trigger.AfterDelay(DateTime.Seconds(70), function()
         Reinforcements.Reinforce(ussr, SovietVillageAttackers, { SovietReinforcementsSpawn.Location, VillageSouthwest.Location })
       end)
@@ -193,9 +210,13 @@ SetupTriggers = function()
 
   Trigger.OnEnteredProximityTrigger(ChurchNorthwest.CenterPosition, WDist.FromCells(2), function(actor, trigger4)
 		if actor.Owner == allies then
+			TownWestCheck = true
 			Trigger.RemoveProximityTrigger(trigger4)
-      Reinforcements.Reinforce(allies, CivsWest, { ChurchNorthwest.Location, VillageNorthwest.Location })
+      westcivs = Reinforcements.Reinforce(allies, CivsWest, { ChurchNorthwest.Location, VillageNorthwest.Location })
       Actor.Create("flare", true, { Owner = england, Location = VillageNorthwest.Location })
+			Trigger.OnAllKilled(westcivs, function()
+				allies.MarkFailedObjective(objEvacCivs)
+			end)
       Trigger.AfterDelay(DateTime.Seconds(80), function()
         Reinforcements.Reinforce(ussr, SovietVillageAttackers, { SovietReinforcementsSpawnNorth.Location, VillageNorthwest.Location })
       end)
