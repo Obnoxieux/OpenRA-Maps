@@ -38,6 +38,7 @@ end
 
 IdleHunt = function(unit) if not unit.IsDead then Trigger.OnIdle(unit, unit.Hunt) end end
 
+------------------------------------------------------build stuff------------------------------------------------------------------------------
 
 ProduceInfantry = function()
 
@@ -131,6 +132,8 @@ ActivateAI = function()
 	end)
 end
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 InitObjectives = function()
 	Trigger.OnObjectiveAdded(ussr, function(p, id)
 		Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
@@ -188,7 +191,6 @@ WorldLoaded = function()
 
 	InitObjectives()
 	ActivateAI()
-	--TheTruck.Kill()
 
   Trigger.AfterDelay(DateTime.Seconds(3), function()
     Actor.Create("tsla", true, { Owner = ussr, Location = TeslaSpawn.Location })
@@ -198,7 +200,7 @@ WorldLoaded = function()
 			MoveTruck(TheTruck)
 		end
 	end)
-  Trigger.AfterDelay(DateTime.Seconds(7), function() SendReinforcements() end)
-  Trigger.AfterDelay(DateTime.Seconds(10), function() ParadropAlliedUnits() end)
+  --Trigger.AfterDelay(DateTime.Seconds(7), function() SendReinforcements() end)
+  --Trigger.AfterDelay(DateTime.Seconds(10), function() ParadropAlliedUnits() end)
 
 end==

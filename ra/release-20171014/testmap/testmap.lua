@@ -1,6 +1,8 @@
 SovietAircraftType = { "yak", "mig", "hind" }
 Yaks = { }
 
+ConvoyActualTrucks = { "truk", "truk", "truk" }
+
 SovietAirAttack = { MainAttack3 }
 
 AirAttack = { }
@@ -92,6 +94,24 @@ TargetAndAttack = function(yak, target)
 	end)
 end
 
+SendConvoy7 = function()
+  Media.PlaySpeechNotification(allies, "ConvoyApproaching")
+	--[[Reinforcements.Reinforce(ussr, Convoy7, { EntryNorthEdgeRight.Location, EntryNorthEdgeRightMove.Location }, 5, function(convoyescort)
+    convoyescort.AttackMove(WP10.Location)
+    convoyescort.AttackMove(ExitNorth.Location)
+	end)]]
+  Trigger.AfterDelay(DateTime.Seconds(4), function()
+    lastconvoy = Reinforcements.Reinforce(ussr, ConvoyActualTrucks, { TruckEscape.Location, ConvoyMove.Location }, 5, function(convoy)
+      convoy.Move(ConvoyGoal.Location)
+    end)
+		Trigger.OnAllKilled(lastconvoy, function()
+			allies.MarkCompletedObjective(convoyobj)
+		end)
+  end)
+
+	
+end
+
 InitObjectives = function()
 	Trigger.OnObjectiveAdded(allies, function(p, id)
 		Media.DisplayMessage(p.GetObjectiveDescription(id), "New " .. string.lower(p.GetObjectiveType(id)) .. " objective")
@@ -100,6 +120,7 @@ InitObjectives = function()
 	ussrObj = ussr.AddPrimaryObjective("Deny the Allies.")
 	KillAll = allies.AddPrimaryObjective("Eliminate all Soviet units in this area.")
   Dumbass = allies.AddSecondaryObjective("Let the Soviet truck escape\nbecause we're dumb")
+	convoyobj = allies.AddSecondaryObjective("Kill the Soviet convoy.")
 
 	Trigger.OnObjectiveCompleted(allies, function(p, id)
 		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
@@ -155,7 +176,11 @@ WorldLoaded = function()
 	ussr = Player.GetPlayer("USSR")
   
   TheTruck.Move(TruckEscape.Location)
-
+	
+	Trigger.AfterDelay(DateTime.Seconds(5), function()
+		SendConvoy7()
+	end)
+	
 	InitObjectives()
 	ActivateAI()
 end

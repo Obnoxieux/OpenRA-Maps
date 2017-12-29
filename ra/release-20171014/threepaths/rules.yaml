@@ -38,9 +38,9 @@ HPAD:
 SHOK:
 	Buildable:
 		Prerequisites: stek, tsla, ~infantry.soviet
-	E3:
-		Buildable:
-			Prerequisites: ~infantry.allies
+E3:
+	Buildable:
+		Prerequisites: ~infantry.allies
 HELI:
 	Buildable:
 		Prerequisites: ~vehicles.allies

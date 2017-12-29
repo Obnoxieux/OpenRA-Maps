@@ -880,5 +880,11 @@ Actors:
 		Owner: USSR
 		Location: 47,5
 		Facing: 92
+	ConvoyGoal: waypoint
+		Owner: Neutral
+		Location: 6,56
+	ConvoyMove: waypoint
+		Owner: Neutral
+		Location: 32,26
 
 Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, rules.yaml

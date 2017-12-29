@@ -162,18 +162,21 @@ SendConvoy7 = function()
     convoyescort.AttackMove(ExitNorth.Location)
 	end)
   Trigger.AfterDelay(DateTime.Seconds(4), function()
-    Reinforcements.Reinforce(ussr, ConvoyActualTrucks, { EntryNorthEdgeRight.Location, EntryNorthEdgeRightMove.Location }, 5, function(convoy)
+    lastconvoy = Reinforcements.Reinforce(ussr, ConvoyActualTrucks, { EntryNorthEdgeRight.Location, EntryNorthEdgeRightMove.Location }, 5, function(convoy)
       convoy.Move(WP10.Location)
       convoy.Move(ExitNorth.Location)
     end)
+		Trigger.OnAllKilled(lastconvoy, function()
+			allies.MarkCompletedObjective(objKillConvoys)
+		end)
   end)
 end
 
---TEMP TEMP TEMP
+--[[old workaround to complete mission
 
 WinMission = function()
   allies.MarkCompletedObjective(objKillConvoys)
-end
+end]]
 
 SendSovietAttacks = function()
 	local way = Utils.Random(SovietAttackerWays)
@@ -286,5 +289,5 @@ WorldLoaded = function()
   Trigger.AfterDelay(DateTime.Minutes(27), SendConvoy5)
   Trigger.AfterDelay(DateTime.Minutes(31), SendConvoy6)
   Trigger.AfterDelay(DateTime.Minutes(35), SendConvoy7) --was 44
-  Trigger.AfterDelay(DateTime.Minutes(38), WinMission) --this is temporary until I can find a better solution
+  --Trigger.AfterDelay(DateTime.Minutes(38), WinMission) --this is temporary until I can find a better solution
 end
