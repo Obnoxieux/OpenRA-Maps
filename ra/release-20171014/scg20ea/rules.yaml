@@ -55,7 +55,7 @@ TRUK:
 		Prerequisites: ~disabled
 MGG:
 	Buildable:
-		Prerequisites: ~vehicles.allies
+		Prerequisites: ~disabled
 TTNK:
 	Buildable:
 		Prerequisites: ~vehicles.soviet
@@ -67,7 +67,7 @@ DTRK:
 		Prerequisites: ~vehicles.soviet
 CTNK:
 	Buildable:
-		Prerequisites: ~vehicles.allies
+		Prerequisites: ~disabled
 STNK:
 	Buildable:
-		Prerequisites: ~vehicles.allies
+		Prerequisites: ~disabled

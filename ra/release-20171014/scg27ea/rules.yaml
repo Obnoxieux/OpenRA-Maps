@@ -58,9 +58,18 @@ SCRATE:
 	ExplodeCrateAction:
 		Weapon: Atomic
 		SelectionShares: 1
+3TNK:
+	Buildable:
+		Prerequisites: weap, ~vehicles.soviet
+4TNK:
+	Buildable:
+		Prerequisites: weap, ~vehicles.soviet
 TTNK:
 	Buildable:
-		Prerequisites: stek, tsla, ~vehicles.soviet
+		Prerequisites: weap, ~vehicles.soviet
+V2RL:
+	Buildable:
+		Prerequisites: weap, ~vehicles.soviet
 FTRK:
 	Buildable:
 		Prerequisites: ~disabled

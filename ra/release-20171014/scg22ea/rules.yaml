@@ -106,3 +106,6 @@ BIO:
 		Name: Sarin Processing Plant
 	MustBeDestroyed:
 		RequiredForShortGame: false
+E7.noautotarget:
+	Buildable:
+		Prerequisites: ~disabled
