@@ -1,5 +1,5 @@
 AlliedInfantryTypes = { "e1", "e1", "e1", "e3", "e3"}
-AlliedArmorTypes = { "1tnk", "2tnk", "e1", "e1", "e3" }
+AlliedArmorTypes = { "1tnk", "2tnk" }
 Helis = { "heli"}
 ReinforcementTypes = { "4tnk", "4tnk", "v2rl", "3tnk"}
 ParadropUnitTypes = { "e1", "e1", "e1", "e3", "e3" }
@@ -121,18 +121,90 @@ end
 
 --note: es wird immer nur eine davon aktiviert - offenbar gehen keine zwei loopenden Aufträge bei einem Gebäude
 
-ActivateAI = function()
+ActivateAI = function(cyard)
+
+	Utils.Do(Map.NamedActors, function(actor)
+		if actor.Owner == allies and actor.HasProperty("StartBuildingRepairs") then
+			Trigger.OnDamaged(actor, function(building)
+				if building.Owner == allies and building.Health < 3/4 * building.MaxHealth then
+					building.StartBuildingRepairs()
+				end
+			end)
+		end
+	end)
+
+	allies.Cash = 999999
 
 	InitProductionBuildings()
+	BuildBase(cyard)
 
 	Trigger.AfterDelay(DateTime.Seconds(2), function()
-		--ProduceInfantry()
+		ProduceInfantry()
 		ProduceTanks()
 		ProduceHelis()
 	end)
 end
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------base stuff-------------------------------------------------------------------------------------------
+
+InfantryProduction = { type = "tent", pos = CPos.New(17, 2), cost = 500, exists = true }
+VehicleProduction = { type = "weap", pos = CPos.New(22, 2), cost = 2000, exists = true }
+
+BaseBuildings = { InfantryProduction, VehicleProduction }
+
+Trigger.OnKilled(Rax, function(building)
+	InfantryProduction.exists = false
+end)
+
+Trigger.OnKilled(Wafa, function(building)
+	VehicleProduction.exists = false
+end)
+
+BuildBase = function(cyard)
+	Utils.Do(BaseBuildings, function(building)
+		if not building.exists and not cyardIsBuilding then
+			BuildBuilding(building, cyard)
+			return
+		end
+	end)
+	Trigger.AfterDelay(DateTime.Seconds(10), function() BuildBase(cyard) end)
+end
+
+BuildBuilding = function(building, cyard)
+	cyardIsBuilding = true
+
+	Trigger.AfterDelay(Actor.BuildTime(building.type), function()
+		cyardIsBuilding = false
+
+		if cyard.IsDead or cyard.Owner ~= allies then
+			return
+		end
+
+		local actor = Actor.Create(building.type, true, { Owner = allies, Location = building.pos })
+		allies.Cash = allies.Cash - building.cost
+
+		building.exists = true
+
+		if actor.Type == 'tent' or actor.Type == 'barr' then
+			Trigger.AfterDelay(DateTime.Seconds(1), function() ProduceInfantry() end)
+		if actor.Type == 'weap' then
+			Trigger.AfterDelay(DateTime.Seconds(1), function() ProduceTanks() end)
+		end
+
+		Trigger.OnKilled(actor, function() building.exists = false end)
+
+		Trigger.OnDamaged(actor, function(building)
+			if building.Owner == allies and building.Health < building.MaxHealth * 3/4 then
+				building.StartBuildingRepairs()
+			end
+		end)
+
+		Trigger.AfterDelay(DateTime.Seconds(10), function() BuildBase(cyard) end)
+		
+end end)
+end
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
 InitObjectives = function()
 	Trigger.OnObjectiveAdded(ussr, function(p, id)
@@ -190,14 +262,15 @@ WorldLoaded = function()
 	greece = Player.GetPlayer("Greece")
 
 	InitObjectives()
-	ActivateAI()
+	ActivateAI(AlliesCYard)
 
   Trigger.AfterDelay(DateTime.Seconds(3), function()
     Actor.Create("tsla", true, { Owner = ussr, Location = TeslaSpawn.Location })
   end)
 	Trigger.AfterDelay(DateTime.Seconds(4), function()
 		if not TheTruck.IsDead then
-			MoveTruck(TheTruck)
+			--MoveTruck(TheTruck) --finished testing this
+			TheTruck.Destroy()
 		end
 	end)
   --Trigger.AfterDelay(DateTime.Seconds(7), function() SendReinforcements() end)

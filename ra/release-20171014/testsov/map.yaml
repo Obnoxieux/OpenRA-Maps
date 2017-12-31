@@ -227,7 +227,7 @@ Actors:
 		Location: 2,30
 		Facing: 92
 		TurretFacing: 92
-	Actor45: fact
+	AlliesCYard: fact
 		Owner: Allies
 		Location: 19,1
 	Wafa: weap

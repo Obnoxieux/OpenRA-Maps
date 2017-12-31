@@ -136,3 +136,11 @@ AFLD:
 		ArrowSequence: arrow
 		ClockSequence: clock
 		CircleSequence: circles
+
+############################
+1TNK:
+	Buildable:
+		Prerequisites: ~vehicles.allies
+2TNK:
+	Buildable:
+		Prerequisites: ~vehicles.allies
