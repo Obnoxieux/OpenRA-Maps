@@ -1,0 +1,31 @@
+World:
+	LuaScript:
+		Scripts: riverattack.lua
+	MusicPlaylist:
+		StartingMusic: aoi
+	MissionData:
+		Briefing: We have detected one of Nod's premier research labs in this sector. If we act quickly, we can steal Nod's valuable research for our intel.\n\nEstablish your base to the east after destroying the Nod outpost there, then capture the research lab intact. Eliminate any hostiles you find.
+		WinVideo: akira.vqa
+		LossVideo: seige.vqa
+Player:
+	Shroud:
+		FogLocked: True
+		FogEnabled: False
+		ExploredMapLocked: True
+		ExploredMapEnabled: False
+	PlayerResources:
+		DefaultCashLocked: True
+		DefaultCash: 6000
+
+E5:
+	Buildable:
+		Prerequisites: anyhq, ~techlevel.high
+
+STNK:
+	Buildable:
+		Prerequisites: anyhq, ~techlevel.high
+	AutoTarget:
+		InitialStanceAI: AttackAnything
+MISS:
+	Tooltip:
+		Name: Nod Research Lab

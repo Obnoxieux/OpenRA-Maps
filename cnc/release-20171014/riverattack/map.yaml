@@ -62,7 +62,7 @@ Actors:
 	Actor4: splitblue
 		Owner: Neutral
 		Location: 41,16
-	Actor5: miss
+	TheLab: miss
 		Owner: Nod
 		Location: 15,4
 	Actor6: bio
@@ -389,7 +389,7 @@ Actors:
 	Actor121: brik
 		Owner: Neutral
 		Location: 10,9
-	Actor122: hpad
+	NodHelipad: hpad
 		Owner: Nod
 		Location: 2,9
 	Actor123: nuk2
@@ -432,10 +432,10 @@ Actors:
 	Actor134: obli
 		Owner: Nod
 		Location: 30,16
-	Actor135: afld
+	NodAirfield: afld
 		Owner: Nod
 		Location: 16,17
-	Actor136: hand
+	NodHand: hand
 		Owner: Nod
 		Location: 22,13
 	Actor137: sam
@@ -620,19 +620,19 @@ Actors:
 	Actor194: brik
 		Owner: Neutral
 		Location: 49,65
-	Actor195: fact.nod
+	EarlyConyard: fact.nod
 		Owner: Nod
 		Location: 58,54
-	Actor196: hand
+	EarlyHand: hand
 		Owner: Nod
 		Location: 52,48
-	Actor197: afld
+	EarlyAFLD: afld
 		Owner: Nod
 		Location: 59,48
-	Actor198: hq
+	EarlyCommCentre: hq
 		Owner: Nod
 		Location: 61,59
-	Actor199: hpad
+	EarlyHelipad: hpad
 		Owner: Nod
 		Location: 53,60
 	Actor200: gun
@@ -896,10 +896,10 @@ Actors:
 	Actor286: v13.husk
 		Owner: Neutral
 		Location: 6,53
-	Actor284: waypoint
+	GDIReinforce: waypoint
 		Owner: GDI
 		Location: 47,64
-	Actor287: waypoint
+	GDIReinforceGo: waypoint
 		Owner: GDI
 		Location: 47,57
 	Actor288: camera
@@ -1020,7 +1020,7 @@ Actors:
 		SubCell: 5
 		Facing: 92
 		TurretFacing: 92
-	Actor310: waypoint
+	camstart: waypoint
 		Owner: Neutral
 		Location: 4,60
 	Actor311: split3
@@ -1479,5 +1479,367 @@ Actors:
 	Actor435: t07
 		Owner: Neutral
 		Location: 22,37
+	Actor436: ltnk
+		Owner: Nod
+		Location: 54,55
+		Facing: 64
+		TurretFacing: 64
+	Actor437: stnk
+		Owner: Nod
+		Location: 60,38
+		Facing: 92
+	Actor438: ltnk
+		Owner: Nod
+		Location: 25,61
+		Facing: 145
+		TurretFacing: 145
+	Actor439: bggy
+		Owner: Nod
+		Location: 42,45
+		Facing: 92
+		TurretFacing: 92
+	Actor440: bike
+		Owner: Nod
+		Location: 42,46
+		Facing: 92
+	Actor441: bike
+		Owner: Nod
+		Location: 53,46
+		Facing: 150
+	Actor442: bggy
+		Owner: Nod
+		Location: 62,46
+		Facing: 92
+		TurretFacing: 92
+	Actor443: e4
+		Owner: Nod
+		Location: 58,57
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor444: e4
+		Owner: Nod
+		Location: 60,57
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor445: e1
+		Owner: Nod
+		Location: 54,50
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor446: e1
+		Owner: Nod
+		Location: 54,50
+		SubCell: 1
+		Facing: 92
+		TurretFacing: 92
+	Actor447: e1
+		Owner: Nod
+		Location: 58,51
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor448: e1
+		Owner: Nod
+		Location: 60,51
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor449: e1
+		Owner: Nod
+		Location: 61,52
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor450: e3
+		Owner: Nod
+		Location: 56,46
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor451: e3
+		Owner: Nod
+		Location: 56,47
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor452: e3
+		Owner: Nod
+		Location: 55,60
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor453: e3
+		Owner: Nod
+		Location: 55,60
+		SubCell: 1
+		Facing: 92
+		TurretFacing: 92
+	Actor454: e1
+		Owner: Nod
+		Location: 41,32
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor455: e1
+		Owner: Nod
+		Location: 35,29
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor456: e1
+		Owner: Nod
+		Location: 34,29
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor457: e1
+		Owner: Nod
+		Location: 49,29
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor458: e1
+		Owner: Nod
+		Location: 63,4
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor459: e1
+		Owner: Nod
+		Location: 59,2
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor460: e1
+		Owner: Nod
+		Location: 59,2
+		SubCell: 1
+		Facing: 92
+		TurretFacing: 92
+	Actor461: e3
+		Owner: Nod
+		Location: 59,2
+		SubCell: 2
+		Facing: 92
+		TurretFacing: 92
+	Actor462: ftnk
+		Owner: Nod
+		Location: 56,4
+		Facing: 92
+	Actor463: ftnk
+		Owner: Nod
+		Location: 45,15
+		Facing: 156
+	Actor464: e1
+		Owner: Nod
+		Location: 3,18
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor465: e1
+		Owner: Nod
+		Location: 3,18
+		SubCell: 1
+		Facing: 92
+		TurretFacing: 92
+	Actor466: e1
+		Owner: Nod
+		Location: 3,18
+		SubCell: 2
+		Facing: 92
+		TurretFacing: 92
+	Actor467: e3
+		Owner: Nod
+		Location: 4,18
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor468: e3
+		Owner: Nod
+		Location: 4,18
+		SubCell: 1
+		Facing: 92
+		TurretFacing: 92
+	Actor469: e3
+		Owner: Nod
+		Location: 22,33
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor470: e3
+		Owner: Nod
+		Location: 24,34
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor471: bike
+		Owner: Nod
+		Location: 23,33
+		Facing: 92
+	Actor472: ltnk
+		Owner: Nod
+		Location: 34,37
+		Facing: 150
+		TurretFacing: 150
+	Actor473: ltnk
+		Owner: Nod
+		Location: 35,34
+		Facing: 149
+		TurretFacing: 149
+	Actor474: ltnk
+		Owner: Nod
+		Location: 39,36
+		Facing: 148
+		TurretFacing: 148
+	Actor475: e4
+		Owner: Nod
+		Location: 38,35
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor476: e4
+		Owner: Nod
+		Location: 38,35
+		SubCell: 1
+		Facing: 92
+		TurretFacing: 92
+	Actor477: e4
+		Owner: Nod
+		Location: 34,36
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor478: e4
+		Owner: Nod
+		Location: 34,36
+		SubCell: 1
+		Facing: 92
+		TurretFacing: 92
+	Actor479: e5
+		Owner: Nod
+		Location: 17,7
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor480: e5
+		Owner: Nod
+		Location: 17,7
+		SubCell: 1
+		Facing: 92
+		TurretFacing: 92
+	Actor481: e5
+		Owner: Nod
+		Location: 17,7
+		SubCell: 2
+		Facing: 92
+		TurretFacing: 92
+	Actor482: stnk
+		Owner: Nod
+		Location: 13,6
+		Facing: 126
+	Actor483: stnk
+		Owner: Nod
+		Location: 14,6
+		Facing: 125
+	Actor484: ftnk
+		Owner: Nod
+		Location: 15,14
+		Facing: 194
+	wp1: waypoint
+		Owner: Nod
+		Location: 26,21
+	wp2: waypoint
+		Owner: Nod
+		Location: 36,35
+	GDIBase: waypoint
+		Owner: Nod
+		Location: 59,53
+	wp3: waypoint
+		Owner: Nod
+		Location: 35,9
+	wp4: waypoint
+		Owner: Nod
+		Location: 50,16
+	wp5: waypoint
+		Owner: Nod
+		Location: 60,24
+	wp6: waypoint
+		Owner: Nod
+		Location: 40,28
+	wp7: waypoint
+		Owner: Nod
+		Location: 10,31
+	wp8: waypoint
+		Owner: Nod
+		Location: 8,49
+	wp9: waypoint
+		Owner: Nod
+		Location: 44,56
+	Actor495: e1
+		Owner: Nod
+		Location: 3,5
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor496: e1
+		Owner: Nod
+		Location: 3,5
+		SubCell: 1
+		Facing: 92
+		TurretFacing: 92
+	Actor497: e3
+		Owner: Nod
+		Location: 2,8
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor498: e3
+		Owner: Nod
+		Location: 3,8
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor499: e1
+		Owner: Nod
+		Location: 39,54
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor500: e1
+		Owner: Nod
+		Location: 39,54
+		SubCell: 1
+		Facing: 92
+		TurretFacing: 92
+	Actor501: e3
+		Owner: Nod
+		Location: 40,55
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor502: e3
+		Owner: Nod
+		Location: 40,55
+		SubCell: 1
+		Facing: 92
+		TurretFacing: 92
+	Actor503: e3
+		Owner: Nod
+		Location: 42,59
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	NodIN: waypoint
+		Owner: Nod
+		Location: 60,1
+	NodINGo: waypoint
+		Owner: Nod
+		Location: 60,4
+	LabPoint: waypoint
+		Owner: Neutral
+		Location: 14,9
 
 Rules: cnc|rules/campaign-maprules.yaml, cnc|rules/campaign-tooltips.yaml, cnc|rules/campaign-palettes.yaml, rules.yaml
