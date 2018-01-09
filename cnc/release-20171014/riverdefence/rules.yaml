@@ -1,0 +1,32 @@
+World:
+	LuaScript:
+		Scripts: riverdefence.lua
+	MusicPlaylist:
+		StartingMusic: aoi
+	MissionData:
+		Briefing: GDI has launched a surprise attack on our premier research labs in this sector. They want to steal our valuable research for their intel.\n\nReinforce the lab and protect it at all costs, then eliminate all GDI units in the region. In the name of Kane!
+		WinVideo: .vqa
+		LossVideo: akira.vqa
+Player:
+	Shroud:
+		FogLocked: True
+		FogEnabled: False
+		ExploredMapLocked: True
+		ExploredMapEnabled: False
+	PlayerResources:
+		DefaultCashLocked: True
+		DefaultCash: 6000
+STNK:
+	AutoTarget:
+		InitialStanceAI: AttackAnything
+MISS:
+	Tooltip:
+		Name: Nod Research Lab
+	Health:
+		HP: 600
+GUN:
+	Buildable:
+		Queue: Defence.Nod
+GTWR:
+	Buildable:
+		Queue: Defence.GDI

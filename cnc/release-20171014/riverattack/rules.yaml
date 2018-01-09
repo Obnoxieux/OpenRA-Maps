@@ -16,11 +16,9 @@ Player:
 	PlayerResources:
 		DefaultCashLocked: True
 		DefaultCash: 6000
-
 E5:
 	Buildable:
 		Prerequisites: anyhq, ~techlevel.high
-
 STNK:
 	Buildable:
 		Prerequisites: anyhq, ~techlevel.high
@@ -29,3 +27,11 @@ STNK:
 MISS:
 	Tooltip:
 		Name: Nod Research Lab
+	Health:
+		HP: 600
+GUN:
+	Buildable:
+		Queue: Defence.Nod
+GTWR:
+	Buildable:
+		Queue: Defence.GDI
