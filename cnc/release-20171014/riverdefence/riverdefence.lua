@@ -1,6 +1,6 @@
 MCVReinforcements = { "ltnk", "ltnk", "ftnk", "ftnk", "ftnk", "e3", "e3", "e3", "e3", "e3", "e3", "arty", "arty", "mcv" }
 
-AttackPaths = { { wp1, wp2, GDIBase }, { wp3, wp4, wp5, wp6, wp2, GDIBase }, { wp1, wp7, wp8, wp9, GDIBase } }
+AttackPaths = { { wp2, wp1, LabPoint }, { wp2, wp6, wp5, wp4, wp3, LabPoint }, { wp9, wp8, wp7, wp1, LabPoint } }
 
 InfantryProductionTypes = { "e1", "e1", "e1", "e1", "e1", "e2", "e2", "e2", "e3", "e3" }
 InfantryAttackGroup = { }
@@ -8,6 +8,14 @@ VehicleProductionTypes = { "mtnk", "mtnk", "mtnk", "mtnk", "mtnk", "apc", "apc",
 VehicleAttackGroup = { }
 HeliAttackGroup = { }
 
+InitialAttackers = { a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14 ,a15, a16 ,a17, a18, a19, a20 }
+
+Tick = function()
+	if gdi.HasNoRequiredUnits() then
+		nod.MarkCompletedObjective(objkillGDI)
+		nod.MarkCompletedObjective(objdefend)
+	end
+end
 
 ProduceInfantry = function(building)
 	if building.IsDead or building.Owner ~= gdi then
@@ -118,18 +126,33 @@ end
 
 SetupTriggers = function()
 
-	--[[Trigger.OnEnteredProximityTrigger(LabPoint.CenterPosition, WDist.FromCells(2), function(actor, trigger)
-		if actor.Owner == gdi then
-			Trigger.RemoveProximityTrigger(trigger)
-			SendNodLateReinforcements()
-			Media.DisplayMessage("Nod has received heavy reinforcements from the east!")
-		end
-	end)]]
-
 	Trigger.OnKilledOrCaptured(TheLab, function()
 		nod.MarkFailedObjective(objdefend)
 	end)
 
+end
+
+SendInitialAttackers = function()
+	a1.AttackMove(LabPoint.Location)
+	a2.AttackMove(LabPoint.Location)
+	a3.AttackMove(LabPoint.Location)
+	a4.AttackMove(LabPoint.Location)
+	a5.AttackMove(LabPoint.Location)
+	a6.AttackMove(LabPoint.Location)
+	a7.AttackMove(LabPoint.Location)
+	a8.AttackMove(LabPoint.Location)
+	a9.AttackMove(LabPoint.Location)
+	a10.AttackMove(LabPoint.Location)
+	a11.AttackMove(LabPoint.Location)
+	a12.AttackMove(LabPoint.Location)
+	a13.AttackMove(LabPoint.Location)
+	a14.AttackMove(LabPoint.Location)
+	a15.AttackMove(LabPoint.Location)
+	a16.AttackMove(LabPoint.Location)
+	a17.AttackMove(LabPoint.Location)
+	a18.AttackMove(LabPoint.Location)
+	a19.AttackMove(LabPoint.Location)
+	a20.AttackMove(LabPoint.Location)
 end
 
 WorldLoaded = function()
@@ -138,6 +161,8 @@ WorldLoaded = function()
 	
 	SetupTriggers()
 	ActivateAI()
+	
+	SendInitialAttackers()
 	
 	Reinforcements.Reinforce(nod, MCVReinforcements, { NodIN.Location, NodINGo.Location })
 

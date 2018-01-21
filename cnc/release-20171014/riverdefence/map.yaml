@@ -729,7 +729,7 @@ Actors:
 		Location: 47,57
 	camstart: waypoint
 		Owner: Neutral
-		Location: 4,60
+		Location: 59,5
 	Actor311: split3
 		Owner: Neutral
 		Location: 54,38
@@ -1362,111 +1362,111 @@ Actors:
 		Location: 23,33
 		Facing: 92
 		TurretFacing: 92
-	Actor513: mtnk
+	a1: mtnk
 		Owner: GDI
 		Location: 39,6
 		Facing: 92
 		TurretFacing: 92
-	Actor514: mtnk
+	a2: mtnk
 		Owner: GDI
 		Location: 41,7
 		Facing: 92
 		TurretFacing: 92
-	Actor515: jeep
+	a3: jeep
 		Owner: GDI
 		Location: 38,7
 		Facing: 92
 		TurretFacing: 92
-	Actor516: jeep
+	a4: jeep
 		Owner: GDI
 		Location: 37,29
 		Facing: 92
 		TurretFacing: 92
-	Actor517: jeep
+	a5: jeep
 		Owner: GDI
 		Location: 36,30
 		Facing: 92
 		TurretFacing: 92
-	Actor518: mtnk
+	a6: mtnk
 		Owner: GDI
 		Location: 35,32
 		Facing: 92
 		TurretFacing: 92
-	Actor519: mtnk
+	a7: mtnk
 		Owner: GDI
 		Location: 37,31
 		Facing: 92
 		TurretFacing: 92
-	Actor520: mtnk
+	a8: mtnk
 		Owner: GDI
 		Location: 41,29
 		Facing: 92
 		TurretFacing: 92
-	Actor521: htnk
+	a9: htnk
 		Owner: GDI
 		Location: 39,30
 		Facing: 92
 		TurretFacing: 92
-	Actor522: msam
+	a10: msam
 		Owner: GDI
 		Location: 33,33
 		Facing: 92
 		TurretFacing: 92
-	Actor523: e1
+	a11: e1
 		Owner: GDI
 		Location: 33,11
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
-	Actor524: e1
+	a12: e1
 		Owner: GDI
 		Location: 34,12
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
-	Actor525: e1
+	a13: e1
 		Owner: GDI
 		Location: 32,11
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
-	Actor526: e2
+	a14: e2
 		Owner: GDI
 		Location: 40,7
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
-	Actor527: e2
+	a15: e2
 		Owner: GDI
 		Location: 39,8
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
-	Actor528: e2
+	a16: e2
 		Owner: GDI
 		Location: 38,28
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
-	Actor529: e2
+	a17: e2
 		Owner: GDI
 		Location: 39,27
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
-	Actor530: e2
+	a18: e2
 		Owner: GDI
 		Location: 39,27
 		SubCell: 1
 		Facing: 92
 		TurretFacing: 92
-	Actor531: e1
+	a19: e1
 		Owner: GDI
 		Location: 32,31
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
-	Actor532: e1
+	a20: e1
 		Owner: GDI
 		Location: 33,31
 		SubCell: 3
