@@ -24,7 +24,7 @@ OrangeMCVTeam = { "3tnk", "3tnk", "mcv", "shok", "shok" }
 Tick = function()
 	if allies.HasNoRequiredUnits() and england.HasNoRequiredUnits() then
 		ussr1.MarkCompletedObjective(objKillAll)
-		ussr2.MarkCompletedObjective(objKillAll)
+		ussr2.MarkCompletedObjective(objKillAll2)
 		ussr1.MarkCompletedObjective(objDefendBase)
 	end
 end
@@ -237,7 +237,7 @@ InitObjectives = function()
 	objperfect = ussr2.AddSecondaryObjective("Prevent the Truck from getting damaged at all.")
   objDefendBase = ussr1.AddPrimaryObjective("Defend the nuclear processing plants.")
 	objKillAll = ussr1.AddPrimaryObjective("Eliminate all Allied presence in the sector.")
-	objKillAll = ussr2.AddPrimaryObjective("Eliminate all Allied presence in the sector.")
+	objKillAll2 = ussr2.AddPrimaryObjective("Eliminate all Allied presence in the sector.")
 	
 end
 
