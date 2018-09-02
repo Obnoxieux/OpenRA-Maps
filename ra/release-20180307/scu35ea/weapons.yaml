@@ -10,7 +10,7 @@ VolkovWeapon:
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 100
+		Damage: 10000
 		ValidTargets: Ground, Water
 		Versus:
 			None: 100

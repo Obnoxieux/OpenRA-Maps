@@ -48,7 +48,7 @@ GNRL:
 	Tooltip: 
 		Name: Volkov 
 	Health: 
-		HP: 1800 
+		HP: 180000 
 	Mobile: 
 		Speed: 71 
 	Passenger: 
