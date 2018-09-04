@@ -91,7 +91,7 @@ SPY:
 		Range: 7c0
 TSLA:	
 	Health:
-		HP: 3000
+		HP: 300000
 GNRL:
 	Tooltip:
 		Name: Officer

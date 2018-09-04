@@ -96,7 +96,7 @@ AFLD:
 		CircleSequence: circles
 BADR:
 	Health:
-		HP: 600
+		HP: 60000
 MCV:
 	Buildable:
 		Prerequisites: ~disabled

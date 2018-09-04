@@ -123,7 +123,7 @@ AFLD:
 		CircleSequence: circles
 BADR:
 	Health:
-		HP: 450
+		HP: 45000
 Zombie:
 	Buildable:
 		Prerequisites: ~disabled
