@@ -3,10 +3,10 @@ Player:
 	MissionObjectives:
 		Cooperative: True
 	Shroud:
-		FogLocked: True
-		FogEnabled: False
-		ExploredMapLocked: True
-		ExploredMapEnabled: False
+		FogCheckboxLocked: True
+		FogCheckboxEnabled: False
+		ExploredMapCheckboxLocked: True
+		ExploredMapCheckboxEnabled: False
 	PlayerResources:
 		DefaultCashLocked: True
 		DefaultCash: 10000
