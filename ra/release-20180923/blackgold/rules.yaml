@@ -1,0 +1,141 @@
+Player:
+	-ConquestVictoryConditions:
+	MissionObjectives:
+		EarlyGameOver: true
+	Shroud:
+		FogCheckboxLocked: True
+		FogCheckboxEnabled: False
+		ExploredMapCheckboxLocked: True
+		ExploredMapCheckboxEnabled: False
+	PlayerResources:
+		DefaultCashLocked: True
+		DefaultCash: 2000
+World:
+	-SpawnMPUnits:
+	-MPStartLocations:
+	LuaScript:
+		Scripts: blackgold.lua
+	ObjectivesPanel:
+		PanelName: MISSION_OBJECTIVES
+	MissionData:
+		WinVideo: flare.vqa
+		LossVideo: sfrozen.vqa
+		Briefing: To be written
+	-CrateSpawner:
+	MapBuildRadius:
+		AllyBuildRadiusLocked: True
+		AllyBuildRadiusEnabled: True
+	MapOptions:
+		ShortGameLocked: True
+		ShortGameEnabled: False
+
+GNRL:
+	UpdatesPlayerStatistics: 
+	MustBeDestroyed: 
+	ProximityCaptor: 
+		Types: Infantry 
+	DetectCloaked: 
+		CloakTypes: Hijacker 
+	RenderSprites: 
+		Image: gnrl 
+	Valued: 
+		Cost: 1800 
+	DeliversCash@GRINDABLE: 
+		Payload: 1250 
+		Voice: Move 
+	Tooltip: 
+		Name: Volkov 
+	Health: 
+		HP: 180000 
+	Mobile: 
+		Speed: 71 
+	Passenger: 
+		PipType: Red 
+	Armor: 
+		Type: Heavy 
+	RevealsShroud: 
+		Range: 7c0 
+	Demolition: 
+		DetonationDelay: 45 
+		Voice: Attack 
+	-Crushable: 
+	-Armament: 
+	Armament@PRIMARY: 
+		Weapon: VolkovWeapon 
+	Armament@GARRISONED: 
+		Name: garrisoned 
+		Weapon: VolkovWeapon 
+		MuzzleSequence: garrison-muzzle 
+	WithInfantryBody: 
+		DefaultAttackSequence: shoot 
+		StandSequences: stand 
+	Targetable: 
+		TargetTypes: Ground, Infantry
+APC:
+	Buildable:
+		Prerequisites: ~vehicles.allies
+HIND:
+	Buildable:
+		Prerequisites: ~vehicles.soviet
+HPAD:
+	Buildable:
+		Prerequisites: dome, ~techlevel.medium
+SHOK:
+	Buildable:
+		Prerequisites: stek, tsla, ~infantry.soviet
+HELI:
+	Buildable:
+		Prerequisites: ~vehicles.allies
+TRUK:
+	Buildable:
+		Prerequisites: ~disabled
+	SpawnActorOnDeath:
+		Actor: healcrate
+HOSP:
+	SpawnActorOnDeath:
+		Actor: healcrate
+V01:
+	SpawnActorOnDeath:
+		Actor: healcrate
+MGG:
+	Buildable:
+		Prerequisites: atek, ~vehicles.allies
+TTNK:
+	Buildable:
+		Prerequisites: stek, tsla, ~vehicles.soviet
+FTRK:
+	Buildable:
+		Prerequisites: ~disabled
+DTRK:
+	Buildable:
+		Prerequisites: stek, ~vehicles.soviet
+CTNK:
+	Buildable:
+		Prerequisites: atek, ~vehicles.allies
+STNK:
+	Buildable:
+		Prerequisites: atek, ~vehicles.allies
+AFLD:
+	AirstrikePower@parabombs:
+		OrderName: UkraineParabombs
+		Prerequisites: aircraft.soviet
+		Icon: parabombs
+		ChargeTime: 300
+		Description: Parabombs
+		LongDesc: A squad of Badgers drops parachuted\nbombs on your target.
+		SelectTargetSpeechNotification: SelectTarget
+		CameraActor: camera
+		CameraRemoveDelay: 150
+		UnitType: badr.bomber
+		QuantizedFacings: 8
+		DisplayBeacon: true
+		BeaconPoster: pbmbicon
+		SquadSize: 3
+		SquadOffset: 1792,1792,0
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+
+#this will be decided in balancing
+#^Vehicle:
+#	-Demolishable:
