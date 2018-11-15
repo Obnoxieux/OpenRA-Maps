@@ -1,0 +1,23 @@
+MapFormat: 11
+RequiresMod: ra
+Title: Black Gold
+Author: Seth
+Tileset: SNOW
+MapSize: 146,146
+Bounds: 1,1,144,144
+Visibility: MissionSelector
+Categories: Mission
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: england
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: england
+Actors:
+	Actor0: tc01
+		Owner: Neutral
+		Location: 61,134
