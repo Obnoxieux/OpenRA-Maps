@@ -90,13 +90,21 @@ TRUK:
 	Buildable:
 		Prerequisites: ~disabled
 	SpawnActorOnDeath:
-		Actor: healcrate
+		Actor: moneycrate
 HOSP:
 	SpawnActorOnDeath:
 		Actor: healcrate
 V01:
 	SpawnActorOnDeath:
 		Actor: healcrate
+MISS:
+	Targetable:
+		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
+	Tooltip: 
+		Name: Einstein's Lab
+STEK:
+	Targetable:
+		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
 MGG:
 	Buildable:
 		Prerequisites: atek, ~vehicles.allies
