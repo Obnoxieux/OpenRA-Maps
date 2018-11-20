@@ -37,7 +37,7 @@ Players:
 		Color: FE1100
 		LockSpawn: True
 		LockTeam: True
-		Enemies: Allies, Greece, Germany
+		Enemies: Allies, Greece, Germany, Creeps
 	PlayerReference@Neutral:
 		Name: Neutral
 		OwnsWorld: True
@@ -66,7 +66,7 @@ Actors:
 		Location: 137,139
 		SubCell: 4
 		Facing: 92
-	Actor5: spy.england
+	SovietSpy: spy.england
 		Owner: USSR
 		Location: 133,140
 		SubCell: 3
@@ -345,10 +345,10 @@ Actors:
 	Actor107: apwr
 		Owner: Germany
 		Location: 18,6
-	Actor108: miss
+	EinsteinLab: miss
 		Owner: Germany
 		Location: 13,7
-	Actor109: pdox
+	EinsteinChrono: pdox
 		Owner: Germany
 		Location: 8,9
 	Actor110: pbox
@@ -359,10 +359,10 @@ Actors:
 		Owner: Germany
 		Location: 16,15
 		TurretFacing: 92
-	Actor112: gap
+	LabGap1: gap
 		Owner: Germany
 		Location: 12,8
-	Actor113: gap
+	LabGap2: gap
 		Owner: Germany
 		Location: 16,8
 	Actor114: powr
@@ -539,7 +539,7 @@ Actors:
 	Actor161: apwr
 		Owner: Germany
 		Location: 10,4
-	Actor162: stek
+	StolenTechCentre: stek
 		Owner: Germany
 		Location: 77,103
 	Actor163: brik
@@ -801,13 +801,13 @@ Actors:
 	Actor244: fact
 		Owner: Greece
 		Location: 71,103
-	Actor245: waypoint
+	LabAlertSpawnN: waypoint
 		Owner: Germany
 		Location: 25,1
-	Actor246: waypoint
+	LabAlertSpawnW: waypoint
 		Owner: Germany
 		Location: 1,15
-	Actor247: waypoint
+	LabAlertSpawnMove: waypoint
 		Owner: Germany
 		Location: 13,10
 	Actor248: mine
@@ -828,7 +828,7 @@ Actors:
 	Actor253: mine
 		Owner: Neutral
 		Location: 37,90
-	Actor256: dome
+	RealDome: dome
 		Owner: Germany
 		Location: 136,5
 	Actor257: mgg
@@ -1177,10 +1177,10 @@ Actors:
 	Actor365: oilb
 		Owner: Neutral
 		Location: 101,132
-	Actor366: domf
+	FakeDome1: domf
 		Owner: Germany
 		Location: 108,103
-	Actor367: domf
+	FakeDome2: domf
 		Owner: Germany
 		Location: 109,64
 	Actor368: sbag
@@ -1731,10 +1731,10 @@ Actors:
 	Actor543: waypoint
 		Owner: USSR
 		Location: 77,106
-	Actor544: waypoint
+	CamDomf1: waypoint
 		Owner: USSR
 		Location: 110,104
-	Actor545: waypoint
+	LabCam: waypoint
 		Owner: USSR
 		Location: 14,9
 	Actor546: mine
@@ -3658,19 +3658,19 @@ Actors:
 	Actor1047: hosp
 		Owner: Neutral
 		Location: 14,33
-	Actor1048: waypoint
+	VolkovLZ: waypoint
 		Owner: USSR
 		Location: 46,126
-	Actor1049: waypoint
+	SovietReinfSeaSpawn: waypoint
 		Owner: USSR
 		Location: 29,144
-	Actor1050: waypoint
+	SovietReinfSeaUnload: waypoint
 		Owner: USSR
 		Location: 43,133
-	Actor1051: waypoint
+	SovietReinfLandSpawn: waypoint
 		Owner: USSR
 		Location: 144,143
-	Actor1052: waypoint
+	SovietReinfLandMove: waypoint
 		Owner: USSR
 		Location: 135,140
 	Actor1038: pt
@@ -3788,5 +3788,23 @@ Actors:
 	Actor1081: waypoint
 		Owner: Allies
 		Location: 134,1
+	Actor1082: waypoint
+		Owner: Allies
+		Location: 89,93
+	Actor1083: waypoint
+		Owner: Allies
+		Location: 55,99
+	Actor1084: waypoint
+		Owner: Allies
+		Location: 15,115
+	Actor1085: waypoint
+		Owner: Allies
+		Location: 12,144
+	Actor1086: waypoint
+		Owner: Allies
+		Location: 25,104
+	Actor1087: waypoint
+		Owner: Allies
+		Location: 52,107
 Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, rules.yaml
 Weapons: weapons.yaml
