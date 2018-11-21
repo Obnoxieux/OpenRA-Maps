@@ -1,7 +1,12 @@
 ParadropWaypoints = { Paradrop1, Paradrop2, Paradrop3 }
 ParadropUnitTypes = { "e1", "e1", "e1", "e3", "e1", "e3", "e3" }
 
-AlliedInfantryTypes = { "e1", "e1", "e1", "e1", "e3", "e3",}
+DogPatrolPath = { Patrol1.Location, Patrol2.Location, Patrol3.Location, Patrol4.Location, Patrol5.Location }
+DogPatrolTeam = { PatrolRifle, PatrolDog1, PatrolDog2 }
+
+GreeceBaseBuidings = { GreeceKenn, GreeceProc, GreeceWaFa, GreeceDome, GreeceRax, GreeceFix, GreeceHpad1, GreeceHpad2, GreecePP1, GreecePP2, GreecePP3, GreecePP4, GreecePP5, GreecePP6, GreecePP7, GreeceCyard, GreeceSyard }
+
+AlliedInfantryTypes = { "e1", "e1", "e1", "e1", "e3", "e3" }
 AlliedArmorTypes = { "1tnk", "1tnk", "1tnk", "2tnk", "2tnk", "2tnk", "2tnk", "2tnk", "2tnk", "2tnk", "jeep", "jeep", "apc", "ctnk", "arty" }
 AlliedAircraftTypes = { "heli" }
 AlliedNavalTypes = { "pt", "pt", "pt", "dd", "dd", "dd", "dd", "dd", "ca" }
@@ -17,8 +22,11 @@ NavalAttack = { }
 AlliedAttackPath = { { wp2, wp3, wp4, wp5, wp1, wp6, wp7 }, { wp2, wp8, wp9, wp4, wp5, wp17, wp7 }, { wp10, wp11, wp12, wp13, wp14, wp15, wp16, wp1, wp6, wp7 } }
 AlliedNavyPath = { { wp18, wp19, wp20, wp21 }, { wp18, wp22, wp23, wp20, wp21 } }
 
-OrangeMCVTeam = { "3tnk", "3tnk", "mcv", "shok", "shok" }
+VolkovTeam = { "gnrl" }
 
+SovietReinforcementsSea = { "3tnk", "3tnk", "4tnk", "4tnk", "v2rl" }
+SovietReinforcementsMCV = { "3tnk", "3tnk", "4tnk", "4tnk", "mcv" }
+SovietReinforcementsLand = { "qtnk", "qtnk", "dtrk", "dtrk", "shok", "mnly", "shok", "e1", "e1", "e1", "e1", "e4", "e4", "e6", "e6", "e6", "e6" }
 
 ProduceInfantry = function()
 
@@ -151,8 +159,25 @@ end
 end]]
 
 
-SendSovietReinforcements = function()
+ParadropVolkov = function()
+	local lz = VolkovLZ.Location
+	local start = Map.CenterOfCell(SovietReinfSeaSpawn.Location) + WVec.New(0, 0, Actor.CruiseAltitude("badr"))
+	local transport = Actor.Create("badr", true, { CenterPosition = start, Owner = ussr1, Facing = (Map.CenterOfCell(lz) - start).Facing })
 
+	Utils.Do(VolkovTeam, function(type)
+		local a = Actor.Create(type, false, { Owner = ussr1 })
+		transport.LoadPassenger(a)
+	end)
+
+	transport.Paradrop(lz)
+end
+
+
+SendSovietReinforcements = function()
+	Reinforcements.ReinforceWithTransport (ussr1, "lst", SovietReinforcementsSea, { SovietReinfSeaSpawn.Location, SovietReinfSeaUnload.Location})
+	
+	--das hier wird Spieler 2
+	Reinforcements.Reinforce (ussr1, SovietReinforcementsLand, { SovietReinfLandSpawn.Location, SovietReinfLandMove.Location })
 end
 
 SetupTriggers = function()
@@ -161,8 +186,35 @@ SetupTriggers = function()
 		ussr1.MarkFailedObjective(objSpyTech)
 	end)
 
+	Trigger.OnKilled(StolenTechCentre, function()
+		if not ussr1.IsObjectiveCompleted(objSpyTech) then
+			ussr1.MarkFailedObjective(objSpyTech)
+		end
+	end)
+
+	Trigger.OnAllKilledOrCaptured(GreeceBaseBuidings, function()
+		ussr1.MarkCompletedObjective(objDestroyBase)
+		Reinforcements.Reinforce (ussr1, "lst", SovietReinforcementsMCV, { SovietReinfSeaSpawn.Location, SovietReinfSeaUnload.Location})
+		Media.DisplayMessage("Comrade General, advise to build our base to the West as there is more ore to be found there.")
+		Actor.Create("camera", true, { Owner = ussr1, Location = SovBaseCam.Location })
+	end)
+
   Trigger.OnKilled(RealDome, function()
 		ussr1.MarkFailedObjective(objFindEinstein)
+	end)
+
+	Trigger.OnCapture(RealDome, function()
+		ussr1.MarkCompletedObjective(objFindEinstein)
+		Actor.Create("camera", true, { Owner = ussr1, Location = LabCam.Location })
+		
+		objInfiltrateLab = ussr1.AddPrimaryObjective("Get Volkov into Einstein's lab to eliminate him.")
+		
+		if not LabGap1.IsDead then 
+			LabGap1.Kill()
+		end
+		if not LabGap2.IsDead then 
+			LabGap2.Kill()
+		end
 	end)
 
 	Trigger.OnInfiltrated(StolenTechCentre, function()
@@ -171,8 +223,11 @@ SetupTriggers = function()
 		SendSovietReinforcements()
 		ParadropVolkov()
 		
-		objDestroyBase = ussr1.AddPrimaryObjective("Destroy or capture the rest of the Allied base")
+		objDestroyBase = ussr1.AddPrimaryObjective("Destroy or capture the rest of the Allied base.")
+		objVolkovSurvival = ussr1.AddPrimaryObjective("Volkov must survive.")
 		objFindEinstein = ussr1.AddPrimaryObjective("Find the location of Einstein's lab\nby capturing the Allied radar dome.")
+		
+		Actor.Create("camera", true, { Owner = ussr1, Location = CamDomf1.Location })
 		
 	end)
 	
@@ -202,7 +257,9 @@ end
 
 
 StartDogPatrol = function()
-	
+	Utils.Do(DogPatrolTeam, function(patrolguys)
+    patrolguys.Patrol(DogPatrolPath, true, 20)
+  end)
 end
 
 WorldLoaded = function()

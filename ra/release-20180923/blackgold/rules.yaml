@@ -9,7 +9,7 @@ Player:
 		ExploredMapCheckboxEnabled: False
 	PlayerResources:
 		DefaultCashLocked: True
-		DefaultCash: 2000
+		DefaultCash: 5000
 World:
 	-SpawnMPUnits:
 	-MPStartLocations:

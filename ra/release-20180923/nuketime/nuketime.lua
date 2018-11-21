@@ -3,7 +3,7 @@ NuclearPlants = { Bio1, Bio2 }
 ParadropWaypoints = { Paradrop1, Paradrop2, Paradrop3 }
 ParadropUnitTypes = { "e1", "e1", "e1", "e3", "e1", "e3", "e3" }
 
-AlliedInfantryTypes = { "e1", "e1", "e1", "e1", "e3", "e3",}
+AlliedInfantryTypes = { "e1", "e1", "e1", "e1", "e3", "e3" }
 AlliedArmorTypes = { "1tnk", "1tnk", "1tnk", "2tnk", "2tnk", "2tnk", "2tnk", "2tnk", "2tnk", "2tnk", "jeep", "jeep", "apc" }
 AlliedAircraftTypes = { "heli" }
 AlliedNavalTypes = { "pt", "dd", "dd", "dd", "dd", "ca" }

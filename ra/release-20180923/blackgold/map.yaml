@@ -623,10 +623,10 @@ Actors:
 	Actor189: tsla
 		Owner: Greece
 		Location: 68,125
-	Actor190: syrd
+	GreeceSyard: syrd
 		Owner: Greece
 		Location: 62,104
-	Actor191: proc
+	GreeceProc: proc
 		Owner: Greece
 		Location: 59,119
 	Actor193: mine
@@ -655,7 +655,7 @@ Actors:
 		Location: 65,121
 		SubCell: 3
 		Facing: 144
-	Actor199: kenn
+	GreeceKenn: kenn
 		Owner: Greece
 		Location: 74,121
 	Actor200: hijacker
@@ -741,22 +741,22 @@ Actors:
 		Owner: Greece
 		Location: 56,124
 		TurretFacing: 92
-	Actor226: weap
+	GreeceWaFa: weap
 		Owner: Greece
 		Location: 68,106
-	Actor227: dome
+	GreeceDome: dome
 		Owner: Greece
 		Location: 81,105
-	Actor228: tent
+	GreeceRax: tent
 		Owner: Greece
 		Location: 44,125
-	Actor229: fix
+	GreeceFix: fix
 		Owner: Greece
 		Location: 54,113
-	Actor230: hpad
+	GreeceHpad1: hpad
 		Owner: Greece
 		Location: 75,113
-	Actor231: hpad
+	GreeceHpad2: hpad
 		Owner: Greece
 		Location: 73,113
 	Actor232: silo
@@ -773,32 +773,32 @@ Actors:
 		Owner: Greece
 		Location: 68,110
 		TurretFacing: 92
-	Actor236: apwr
+	GreecePP1: apwr
 		Owner: Greece
 		Location: 63,112
-	Actor237: apwr
+	GreecePP2: apwr
 		Owner: Greece
 		Location: 60,112
-	Actor238: apwr
+	GreecePP3: apwr
 		Owner: Greece
 		Location: 63,115
-	Actor239: apwr
+	GreecePP4: apwr
 		Owner: Greece
 		Location: 60,115
-	Actor240: apwr
+	GreecePP5: apwr
 		Owner: Greece
 		Location: 44,118
-	Actor241: apwr
+	GreecePP6: apwr
 		Owner: Greece
 		Location: 46,114
-	Actor242: powr
+	GreecePP7: powr
 		Owner: Greece
 		Location: 47,118
 	Actor243: agun
 		Owner: Greece
 		Location: 69,103
 		TurretFacing: 92
-	Actor244: fact
+	GreeceCyard: fact
 		Owner: Greece
 		Location: 71,103
 	LabAlertSpawnN: waypoint
@@ -3413,18 +3413,18 @@ Actors:
 		SubCell: 3
 		Facing: 112
 		TurretFacing: 112
-	Actor999: e1
+	PatrolRifle: e1
 		Owner: Greece
 		Location: 135,124
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
-	Actor1000: dog
+	PatrolDog1: dog
 		Owner: Greece
 		Location: 136,125
 		SubCell: 3
 		Facing: 92
-	Actor1001: dog
+	PatrolDog2: dog
 		Owner: Greece
 		Location: 134,124
 		SubCell: 3
@@ -3701,10 +3701,10 @@ Actors:
 	Actor1058: waypoint
 		Owner: USSR
 		Location: 35,140
-	Actor1059: waypoint
+	SovBaseCam: waypoint
 		Owner: USSR
 		Location: 11,76
-	Actor1060: waypoint
+	CamDomf2: waypoint
 		Owner: USSR
 		Location: 109,63
 	Actor1061: e1
@@ -3743,68 +3743,83 @@ Actors:
 		SubCell: 3
 		Facing: 156
 		TurretFacing: 156
-	Actor1067: waypoint
+	wp1: waypoint
 		Owner: Allies
 		Location: 76,6
-	Actor1068: waypoint
+	wp2: waypoint
 		Owner: Allies
 		Location: 59,7
-	Actor1069: waypoint
+	wp3: waypoint
 		Owner: Allies
 		Location: 48,20
-	Actor1070: waypoint
+	wp4: waypoint
 		Owner: Allies
 		Location: 47,29
-	Actor1071: waypoint
+	wp5: waypoint
 		Owner: Allies
 		Location: 33,30
-	Actor1072: waypoint
+	wp6: waypoint
 		Owner: Allies
 		Location: 31,43
-	Actor1073: waypoint
+	wp7: waypoint
 		Owner: Allies
 		Location: 18,57
-	Actor1074: waypoint
+	wp8: waypoint
 		Owner: Allies
 		Location: 11,88
-	Actor1075: waypoint
+	wp9: waypoint
 		Owner: Allies
 		Location: 83,30
-	Actor1076: waypoint
+	wp10: waypoint
 		Owner: Allies
 		Location: 66,34
-	Actor1077: waypoint
+	wp11: waypoint
 		Owner: Allies
 		Location: 49,46
-	Actor1078: waypoint
+	wp12: waypoint
 		Owner: Allies
 		Location: 40,59
-	Actor1079: waypoint
+	wp13: waypoint
 		Owner: Allies
 		Location: 37,73
-	Actor1080: waypoint
+	wp14: waypoint
 		Owner: Allies
 		Location: 28,81
-	Actor1081: waypoint
+	wp15: waypoint
 		Owner: Allies
 		Location: 134,1
-	Actor1082: waypoint
+	wp16: waypoint
 		Owner: Allies
 		Location: 89,93
-	Actor1083: waypoint
+	wp17: waypoint
 		Owner: Allies
 		Location: 55,99
-	Actor1084: waypoint
+	wp18: waypoint
 		Owner: Allies
 		Location: 15,115
-	Actor1085: waypoint
+	AlliesBoatSpawn: waypoint
 		Owner: Allies
 		Location: 12,144
-	Actor1086: waypoint
+	AlliesBoatUnload1: waypoint
 		Owner: Allies
 		Location: 25,104
-	Actor1087: waypoint
+	AlliesBoatUnload2: waypoint
 		Owner: Allies
 		Location: 52,107
+	Patrol1: waypoint
+		Owner: Greece
+		Location: 133,127
+	Patrol2: waypoint
+		Owner: Greece
+		Location: 113,126
+	Patrol3: waypoint
+		Owner: Greece
+		Location: 96,128
+	Patrol4: waypoint
+		Owner: Greece
+		Location: 95,139
+	Patrol5: waypoint
+		Owner: Greece
+		Location: 73,137
 Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, rules.yaml
 Weapons: weapons.yaml
