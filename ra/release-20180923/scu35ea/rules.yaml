@@ -140,3 +140,15 @@ AFLD:
 
 ^Vehicle:
 	-Demolishable:
+THF:
+	Buildable:
+		Queue: Infantry
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 210
+		Prerequisites: tent, dome, ~infantry.allies
+		Description: Steals cash from enemy refineries and silos.\n  Unarmed
+	Infiltrates:
+		InfiltrateTypes: Cash
+SNIPER:
+	Buildable:
+		Prerequisites: tent, dome, ~infantry.allies
