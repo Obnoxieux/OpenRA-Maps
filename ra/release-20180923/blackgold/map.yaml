@@ -3824,8 +3824,5 @@ Actors:
 	DefaultCameraPosition: waypoint
 		Owner: Neutral
 		Location: 132,132
-	Actor1076: fact
-		Owner: USSR
-		Location: 135,142
 Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, rules.yaml
 Weapons: weapons.yaml

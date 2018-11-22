@@ -150,6 +150,16 @@ end
 
 ActivateAI = function()
 
+	Utils.Do(Map.NamedActors, function(actor)
+		if actor.Owner == allies and actor.HasProperty("StartBuildingRepairs") then
+			Trigger.OnDamaged(actor, function(building)
+				if building.Owner == allies and building.Health < 3/4 * building.MaxHealth then
+					building.StartBuildingRepairs()
+				end
+			end)
+		end
+	end)
+
   allies.Cash = 100000
 
 	Trigger.AfterDelay(DateTime.Seconds(25), function()
@@ -261,8 +271,12 @@ SetupTriggers = function()
 
 	Trigger.OnInfiltrated(StolenTechCentre, function()
 		ussr1.MarkCompletedObjective(objSpyTech)
-		SendSovietReinforcements()
-		ParadropVolkov()
+		
+		Trigger.AfterDelay(DateTime.Seconds(2), function()
+			SendSovietReinforcements()
+			ParadropVolkov()
+		end)
+		
 		--Actor.Create("camera", true, { Owner = ussr1, Location = CamDomf1.Location })
 	end)
 	
@@ -289,7 +303,7 @@ SetupTriggers = function()
 	end)
 
 	--ending the mission
-	Trigger.OnEnteredProximityTrigger(CamDomf2.CenterPosition, WDist.FromCells(1), function(actor, trigger3)
+	Trigger.OnEnteredProximityTrigger(LabCam.CenterPosition, WDist.FromCells(1), function(actor, trigger3)
 		if actor.Owner == ussr1 and actor.Type == "gnrl" then
 			Trigger.RemoveProximityTrigger(trigger3)
 			ussr1.MarkCompletedObjective(objInfiltrateLab)
@@ -328,9 +342,6 @@ WorldLoaded = function()
 
 	InitObjectives()
   SetupTriggers()
-	
-	--DEBUG
-	--SendSovietReinforcements()
 	
 	SovietSpy.DisguiseAsType("e1", greece)
   
