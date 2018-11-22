@@ -1,4 +1,4 @@
-ParadropWaypoints = { Paradrop1, Paradrop2, Paradrop3 }
+ParadropWaypoints = { wp8, SovBaseCam, Actor543 }
 ParadropUnitTypes = { "e1", "e1", "e1", "e3", "e1", "e3", "e3" }
 
 DogPatrolPath = { Patrol1.Location, Patrol2.Location, Patrol3.Location, Patrol4.Location, Patrol5.Location }
@@ -11,22 +11,53 @@ AlliedArmorTypes = { "1tnk", "1tnk", "1tnk", "2tnk", "2tnk", "2tnk", "2tnk", "2t
 AlliedAircraftTypes = { "heli" }
 AlliedNavalTypes = { "pt", "pt", "pt", "dd", "dd", "dd", "dd", "dd", "ca" }
 
-InvasionTeams = { { "1tnk", "1tnk", "e3", "e3", "e1" }, { "1tnk", "2tnk", "e1", "e1", "e3" }, { "1tnk", "2tnk", "2tnk", "arty", "apc" }, { "jeep", "1tnk", "2tnk", "2tnk", "ctnk" } }
-InvasionWays = { { AlliedInvSp2.Location, MainBeach.Location }, { AlliedInvSp1.Location, MainBeach.Location } }
+EinsteinLabDefenders = { "ctnk", "ctnk", "ctnk", "ctnk" }
+
+InvasionTeams = { { "1tnk", "jeep", "e3", "e3", "e1" }, { "1tnk", "2tnk", "e1", "e1", "e3" }, { "1tnk", "2tnk", "2tnk", "arty", "apc" }, { "jeep", "1tnk", "2tnk", "2tnk", "ctnk" } }
+InvasionWays = { { AlliesBoatSpawn.Location, AlliesBoatUnload1.Location }, { AlliesBoatSpawn.Location, AlliesBoatUnload2.Location } }
 
 InfAttack = { }
 TankAttack = { }
 AirAttack = { }
 NavalAttack = { }
 
-AlliedAttackPath = { { wp2, wp3, wp4, wp5, wp1, wp6, wp7 }, { wp2, wp8, wp9, wp4, wp5, wp17, wp7 }, { wp10, wp11, wp12, wp13, wp14, wp15, wp16, wp1, wp6, wp7 } }
-AlliedNavyPath = { { wp18, wp19, wp20, wp21 }, { wp18, wp22, wp23, wp20, wp21 } }
+AlliedAttackPath = { { wp1, wp2, wp3, wp4, wp5, wp6, wp7, wp8 }, { wp9, wp10, wp11, wp12, wp13, wp14, wp8 } }
+AlliedNavyPath = { wp16, wp17, wp18 }
 
 VolkovTeam = { "gnrl" }
 
 SovietReinforcementsSea = { "3tnk", "3tnk", "4tnk", "4tnk", "v2rl" }
 SovietReinforcementsMCV = { "3tnk", "3tnk", "4tnk", "4tnk", "mcv" }
 SovietReinforcementsLand = { "qtnk", "qtnk", "dtrk", "dtrk", "shok", "mnly", "shok", "e1", "e1", "e1", "e1", "e4", "e4", "e6", "e6", "e6", "e6" }
+
+
+Tick = function()
+	if allies.HasNoRequiredUnits() and greece.HasNoRequiredUnits() then
+		ussr1.MarkCompletedObjective(objKillAll)
+		--ussr2.MarkCompletedObjective(objKillAll2)
+	end
+end
+
+--lab last line of defence
+
+Trigger.OnEnteredProximityTrigger(LabAlertSpawnMove.CenterPosition, WDist.FromCells(3), function(actor, triggerlab)
+	if actor.Owner == ussr1 and actor.Type == "gnrl" then
+		Trigger.RemoveProximityTrigger(triggerlab)
+		local lastline1 = Reinforcements.Reinforce(einstein, EinsteinLabDefenders, { LabAlertSpawnN.Location, LabAlertSpawnMove.Location } )
+		Utils.Do(lastline1, function(a)
+			Trigger.OnAddedToWorld(a, function()
+				a.Hunt()
+			end)
+		end)
+		local lastline2 = Reinforcements.Reinforce(einstein, EinsteinLabDefenders, { LabAlertSpawnW.Location, LabAlertSpawnMove.Location } )
+		Utils.Do(lastline2, function(a)
+			Trigger.OnAddedToWorld(a, function()
+				a.Hunt()
+			end)
+		end)
+	end
+end)
+
 
 ProduceInfantry = function()
 
@@ -39,7 +70,7 @@ ProduceInfantry = function()
 		if #InfAttack >= 6 then
 			SendUnits(InfAttack, Path)
 			InfAttack = { }
-			Trigger.AfterDelay(DateTime.Seconds(30), ProduceInfantry)
+			Trigger.AfterDelay(DateTime.Seconds(75), ProduceInfantry)
 		else
 			Trigger.AfterDelay(delay, ProduceInfantry)
 		end
@@ -57,7 +88,7 @@ ProduceTanks = function()
 		if #TankAttack >= 4 then
 			SendUnits(TankAttack, Path)
 			TankAttack = { }
-			Trigger.AfterDelay(DateTime.Seconds(20), ProduceTanks)
+			Trigger.AfterDelay(DateTime.Seconds(80), ProduceTanks)
 		else
 			Trigger.AfterDelay(delay, ProduceTanks)
 		end
@@ -85,12 +116,11 @@ ProduceNavy = function()
 
 	local delay = Utils.RandomInteger(DateTime.Seconds(1), DateTime.Seconds(2))
 	local toBuild = { Utils.Random(AlliedNavalTypes) }
-  local Path = Utils.Random(AlliedNavyPath)
 	allies.Build(toBuild, function(unit)
 		NavalAttack[#NavalAttack + 1] = unit[1]
 
 		if #NavalAttack >= 2 then
-			SendUnits(NavalAttack, Path)
+			SendUnits(NavalAttack, AlliedNavyPath)
 			NavalAttack = { }
 			Trigger.AfterDelay(DateTime.Minutes(5), ProduceNavy)
 		else
@@ -128,23 +158,14 @@ ActivateAI = function()
 		ProduceAircraft()
 		ProduceNavy()
 	end)
+
+	Trigger.AfterDelay(DateTime.Minutes(4), function()
+		SendAlliedInvasion()
+	end)
 end
 
-SendAlliedInvasion = function()
-  local units = Utils.Random(InvasionTeams)
-	local way = Utils.Random(InvasionWays)
-  local invasionteam = Reinforcements.ReinforceWithTransport (allies, "lst", units, way, { AlliedInvSp2.Location})[2]
-  Utils.Do(invasionteam, function(a)
-    Trigger.OnAddedToWorld(a, function()
-      a.AttackMove(wp7.Location)
-      a.Hunt()
-    end)
-  end)
 
-  Trigger.AfterDelay(DateTime.Minutes(6), SendAlliedInvasion)
-end
-
---[[ParadropAlliedUnits = function()
+ParadropAlliedUnits = function()
 	local lz = Utils.Random(ParadropWaypoints).Location
 	local start = Map.CenterOfCell(Map.RandomEdgeCell()) + WVec.New(0, 0, Actor.CruiseAltitude("badr"))
 	local transport = Actor.Create("badr", true, { CenterPosition = start, Owner = allies, Facing = (Map.CenterOfCell(lz) - start).Facing })
@@ -155,8 +176,8 @@ end
 	end)
 
 	transport.Paradrop(lz)
-	Trigger.AfterDelay(DateTime.Seconds(160), ParadropAlliedUnits)
-end]]
+	Trigger.AfterDelay(DateTime.Seconds(240), ParadropAlliedUnits)
+end
 
 
 ParadropVolkov = function()
@@ -170,6 +191,19 @@ ParadropVolkov = function()
 	end)
 
 	transport.Paradrop(lz)
+	--todo: loss script when killed
+end
+
+SendAlliedInvasion = function()
+  local units = Utils.Random(InvasionTeams)
+	local way = Utils.Random(InvasionWays)
+  local invasionteam = Reinforcements.ReinforceWithTransport (allies, "lst", units, way, { AlliesBoatSpawn.Location})[2]
+  Utils.Do(invasionteam, function(a)
+    Trigger.OnAddedToWorld(a, function()
+      a.Hunt()
+    end)
+  end)
+  Trigger.AfterDelay(DateTime.Minutes(7), SendAlliedInvasion)
 end
 
 
@@ -177,14 +211,14 @@ SendSovietReinforcements = function()
 	Reinforcements.ReinforceWithTransport (ussr1, "lst", SovietReinforcementsSea, { SovietReinfSeaSpawn.Location, SovietReinfSeaUnload.Location})
 	
 	--das hier wird Spieler 2
-	Reinforcements.Reinforce (ussr1, SovietReinforcementsLand, { SovietReinfLandSpawn.Location, SovietReinfLandMove.Location })
+	Reinforcements.Reinforce(ussr1, SovietReinforcementsLand, { SovietReinfLandSpawn.Location, SovietReinfLandMove.Location })
 end
 
 SetupTriggers = function()
 
-	Trigger.OnKilled(SovietSpy, function()
+	--[[Trigger.OnKilled(SovietSpy, function()
 		ussr1.MarkFailedObjective(objSpyTech)
-	end)
+	end)]]
 
 	Trigger.OnKilled(StolenTechCentre, function()
 		if not ussr1.IsObjectiveCompleted(objSpyTech) then
@@ -194,9 +228,15 @@ SetupTriggers = function()
 
 	Trigger.OnAllKilledOrCaptured(GreeceBaseBuidings, function()
 		ussr1.MarkCompletedObjective(objDestroyBase)
-		Reinforcements.Reinforce (ussr1, "lst", SovietReinforcementsMCV, { SovietReinfSeaSpawn.Location, SovietReinfSeaUnload.Location})
+		Reinforcements.ReinforceWithTransport (ussr1, "lst", SovietReinforcementsMCV, { SovietReinfSeaSpawn.Location, SovietReinfSeaUnload.Location})
 		Media.DisplayMessage("Comrade General, advise to build our base to the West as there is more ore to be found there.")
 		Actor.Create("camera", true, { Owner = ussr1, Location = SovBaseCam.Location })
+		
+		Trigger.AfterDelay(DateTime.Minutes(9), function()
+			ActivateAI()
+			ParadropAlliedUnits()
+		end)
+
 	end)
 
   Trigger.OnKilled(RealDome, function()
@@ -207,8 +247,6 @@ SetupTriggers = function()
 		ussr1.MarkCompletedObjective(objFindEinstein)
 		Actor.Create("camera", true, { Owner = ussr1, Location = LabCam.Location })
 		
-		objInfiltrateLab = ussr1.AddPrimaryObjective("Get Volkov into Einstein's lab to eliminate him.")
-		
 		if not LabGap1.IsDead then 
 			LabGap1.Kill()
 		end
@@ -217,30 +255,46 @@ SetupTriggers = function()
 		end
 	end)
 
+	Trigger.OnKilled(EinsteinLab, function()
+		ussr1.MarkFailedObjective(objInfiltrateLab)
+	end)
+
 	Trigger.OnInfiltrated(StolenTechCentre, function()
 		ussr1.MarkCompletedObjective(objSpyTech)
-		
 		SendSovietReinforcements()
 		ParadropVolkov()
-		
-		objDestroyBase = ussr1.AddPrimaryObjective("Destroy or capture the rest of the Allied base.")
-		objVolkovSurvival = ussr1.AddPrimaryObjective("Volkov must survive.")
-		objFindEinstein = ussr1.AddPrimaryObjective("Find the location of Einstein's lab\nby capturing the Allied radar dome.")
-		
-		Actor.Create("camera", true, { Owner = ussr1, Location = CamDomf1.Location })
-		
+		--Actor.Create("camera", true, { Owner = ussr1, Location = CamDomf1.Location })
 	end)
 	
-  Trigger.OnEnteredProximityTrigger(TruckGoal.CenterPosition, WDist.FromCells(2), function(actor, trigger)
-		if actor.Type == "truk" and actor.Owner == ussr2 then
+	--kill off the fake domes
+	
+  Trigger.OnEnteredProximityTrigger(CamDomf1.CenterPosition, WDist.FromCells(3), function(actor, trigger)
+		if actor.Owner == ussr1 then
 			Trigger.RemoveProximityTrigger(trigger)
-			actor.Destroy()
-			ussr2.MarkCompletedObjective(objEscortTruck)
-			if not ussr2.IsObjectiveFailed(objperfect) then
-				ussr2.MarkCompletedObjective(objperfect)
+			Media.DisplayMessage("This Radar Dome was just a decoy.")
+			if not FakeDome1.IsDead then
+				FakeDome1.Kill()
 			end
-			Actor.Create("mslo", true, { Owner = ussr1, Location = NukeSpawn.Location })
-			Reinforcements.Reinforce(ussr2, OrangeMCVTeam, { ReinfSpawn.Location, ReinfMove.Location })
+		end
+	end)
+
+	Trigger.OnEnteredProximityTrigger(CamDomf2.CenterPosition, WDist.FromCells(3), function(actor, trigger2)
+		if actor.Owner == ussr1 then
+			Trigger.RemoveProximityTrigger(trigger2)
+			Media.DisplayMessage("This Radar Dome was just a decoy.")
+			if not FakeDome2.IsDead then
+				FakeDome2.Kill()
+			end
+		end
+	end)
+
+	--ending the mission
+	Trigger.OnEnteredProximityTrigger(CamDomf2.CenterPosition, WDist.FromCells(1), function(actor, trigger3)
+		if actor.Owner == ussr1 and actor.Type == "gnrl" then
+			Trigger.RemoveProximityTrigger(trigger3)
+			ussr1.MarkCompletedObjective(objInfiltrateLab)
+			ussr1.MarkCompletedObjective(objVolkovSurvival)
+			actor.Destroy()
 		end
 	end)
 
@@ -249,9 +303,12 @@ end
 InitObjectives = function()
 
 	enemyobj = allies.AddPrimaryObjective("Deny the Soviets.")
-	
   objSpyTech = ussr1.AddPrimaryObjective("Get our spy into our captured tech centre.")
-	--objKillAll = ussr1.AddPrimaryObjective("Eliminate all Allied presence in the sector.")
+	objDestroyBase = ussr1.AddPrimaryObjective("Destroy or capture the rest of the Allied tech base.")
+	objVolkovSurvival = ussr1.AddPrimaryObjective("Volkov must survive.")
+	objFindEinstein = ussr1.AddPrimaryObjective("Find the location of Einstein's lab\nby capturing the Allied radar dome.")
+	objInfiltrateLab = ussr1.AddPrimaryObjective("Get Volkov into Einstein's lab to eliminate him.")
+	objKillAll = ussr1.AddSecondaryObjective("Finish off the Allied forces.")
 	
 end
 
@@ -270,8 +327,10 @@ WorldLoaded = function()
   --ussr2 = Player.GetPlayer("USSR2")
 
 	InitObjectives()
-	--ActivateAI()
   SetupTriggers()
+	
+	--DEBUG
+	--SendSovietReinforcements()
 	
 	SovietSpy.DisguiseAsType("e1", greece)
   

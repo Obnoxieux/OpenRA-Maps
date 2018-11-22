@@ -1732,7 +1732,7 @@ Actors:
 		Owner: USSR
 		Location: 77,106
 	CamDomf1: waypoint
-		Owner: USSR
+		Owner: Neutral
 		Location: 110,104
 	LabCam: waypoint
 		Owner: USSR
@@ -3705,7 +3705,7 @@ Actors:
 		Owner: USSR
 		Location: 11,76
 	CamDomf2: waypoint
-		Owner: USSR
+		Owner: Neutral
 		Location: 109,63
 	Actor1061: e1
 		Owner: Greece
@@ -3821,5 +3821,11 @@ Actors:
 	Patrol5: waypoint
 		Owner: Greece
 		Location: 73,137
+	DefaultCameraPosition: waypoint
+		Owner: Neutral
+		Location: 132,132
+	Actor1076: fact
+		Owner: USSR
+		Location: 135,142
 Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, rules.yaml
 Weapons: weapons.yaml
