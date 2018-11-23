@@ -632,9 +632,6 @@ Actors:
 	Actor193: mine
 		Owner: Neutral
 		Location: 79,129
-	Actor194: gmine
-		Owner: Neutral
-		Location: 120,137
 	Actor196: dog
 		Owner: Greece
 		Location: 72,124
@@ -798,7 +795,7 @@ Actors:
 		Owner: Greece
 		Location: 69,103
 		TurretFacing: 92
-	GreeceCyard: fact
+	GreeceCyard: apwr
 		Owner: Greece
 		Location: 71,103
 	LabAlertSpawnN: waypoint
@@ -3031,10 +3028,6 @@ Actors:
 		Location: 98,12
 		Facing: 44
 		TurretFacing: 44
-	Actor935: harv
-		Owner: GoodGuy
-		Location: 91,11
-		Facing: 65
 	Actor936: e1
 		Owner: GoodGuy
 		Location: 15,56
@@ -3824,5 +3817,9 @@ Actors:
 	DefaultCameraPosition: waypoint
 		Owner: Neutral
 		Location: 132,132
+	Actor1074: harv
+		Owner: GoodGuy
+		Location: 54,6
+		Facing: 92
 Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, ra|rules/campaign-palettes.yaml, rules.yaml
 Weapons: weapons.yaml
