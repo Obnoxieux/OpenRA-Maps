@@ -8,23 +8,23 @@ Bounds: 1,1,144,144
 Visibility: MissionSelector
 Categories: Mission
 Players:
-	PlayerReference@Allies:
-		Name: Allies
+	PlayerReference@GoodGuy:
+		Name: GoodGuy
 		Faction: allies
 		Color: ABB7E4
-		Allies: Greece, Germany
+		Allies: Greece, France
 		Enemies: USSR
 	PlayerReference@Greece:
 		Name: Greece
 		Faction: allies
 		Color: ABB7E4
-		Allies: Allies, Germany
+		Allies: GoodGuy, France
 		Enemies: USSR
-	PlayerReference@Germany:
-		Name: Germany
+	PlayerReference@France:
+		Name: France
 		Faction: allies
 		Color: 5CC1A3
-		Allies: Allies, Greece
+		Allies: GoodGuy, Greece
 		Enemies: USSR
 	PlayerReference@USSR:
 		Name: USSR
@@ -37,7 +37,7 @@ Players:
 		Color: FE1100
 		LockSpawn: True
 		LockTeam: True
-		Enemies: Allies, Greece, Germany, Creeps
+		Enemies: GoodGuy, Greece, France, Creeps
 	PlayerReference@Neutral:
 		Name: Neutral
 		OwnsWorld: True
@@ -205,264 +205,264 @@ Actors:
 		Location: 38,125
 		TurretFacing: 92
 	Actor55: brik
-		Owner: Germany
+		Owner: France
 		Location: 10,3
 	Actor56: brik
-		Owner: Germany
+		Owner: France
 		Location: 11,3
 	Actor57: brik
-		Owner: Germany
+		Owner: France
 		Location: 9,3
 	Actor63: brik
-		Owner: Germany
+		Owner: France
 		Location: 6,6
 	Actor64: brik
-		Owner: Germany
+		Owner: France
 		Location: 6,7
 	Actor65: brik
-		Owner: Germany
+		Owner: France
 		Location: 6,8
 	Actor66: brik
-		Owner: Germany
+		Owner: France
 		Location: 6,9
 	Actor67: brik
-		Owner: Germany
+		Owner: France
 		Location: 6,10
 	Actor68: brik
-		Owner: Germany
+		Owner: France
 		Location: 6,11
 	Actor70: brik
-		Owner: Germany
+		Owner: France
 		Location: 7,12
 	Actor74: brik
-		Owner: Germany
+		Owner: France
 		Location: 7,11
 	Actor69: brik
-		Owner: Germany
+		Owner: France
 		Location: 8,12
 	Actor71: brik
-		Owner: Germany
+		Owner: France
 		Location: 8,13
 	Actor72: brik
-		Owner: Germany
+		Owner: France
 		Location: 9,13
 	Actor73: brik
-		Owner: Germany
+		Owner: France
 		Location: 9,4
 	Actor75: brik
-		Owner: Germany
+		Owner: France
 		Location: 8,4
 	Actor76: brik
-		Owner: Germany
+		Owner: France
 		Location: 8,5
 	Actor77: brik
-		Owner: Germany
+		Owner: France
 		Location: 7,5
 	Actor78: brik
-		Owner: Germany
+		Owner: France
 		Location: 7,6
 	Actor79: brik
-		Owner: Germany
+		Owner: France
 		Location: 10,13
 	Actor80: brik
-		Owner: Germany
+		Owner: France
 		Location: 11,13
 	Actor81: brik
-		Owner: Germany
+		Owner: France
 		Location: 12,13
 	Actor82: brik
-		Owner: Germany
+		Owner: France
 		Location: 12,14
 	Actor83: brik
-		Owner: Germany
+		Owner: France
 		Location: 11,14
 	Actor84: brik
-		Owner: Germany
+		Owner: France
 		Location: 16,13
 	Actor85: brik
-		Owner: Germany
+		Owner: France
 		Location: 16,14
 	Actor86: brik
-		Owner: Germany
+		Owner: France
 		Location: 17,14
 	Actor87: brik
-		Owner: Germany
+		Owner: France
 		Location: 17,13
 	Actor88: brik
-		Owner: Germany
+		Owner: France
 		Location: 18,13
 	Actor89: brik
-		Owner: Germany
+		Owner: France
 		Location: 19,13
 	Actor90: brik
-		Owner: Germany
+		Owner: France
 		Location: 19,12
 	Actor91: brik
-		Owner: Germany
+		Owner: France
 		Location: 20,12
 	Actor92: brik
-		Owner: Germany
+		Owner: France
 		Location: 20,11
 	Actor93: brik
-		Owner: Germany
+		Owner: France
 		Location: 21,11
 	Actor94: brik
-		Owner: Germany
+		Owner: France
 		Location: 21,10
 	Actor95: brik
-		Owner: Germany
+		Owner: France
 		Location: 21,9
 	Actor96: brik
-		Owner: Germany
+		Owner: France
 		Location: 21,8
 	Actor97: brik
-		Owner: Germany
+		Owner: France
 		Location: 21,7
 	Actor98: brik
-		Owner: Germany
+		Owner: France
 		Location: 21,6
 	Actor99: brik
-		Owner: Germany
+		Owner: France
 		Location: 21,5
 	Actor100: brik
-		Owner: Germany
+		Owner: France
 		Location: 20,5
 	Actor101: brik
-		Owner: Germany
+		Owner: France
 		Location: 20,4
 	Actor102: brik
-		Owner: Germany
+		Owner: France
 		Location: 19,4
 	Actor103: brik
-		Owner: Germany
+		Owner: France
 		Location: 19,3
 	Actor104: brik
-		Owner: Germany
+		Owner: France
 		Location: 18,3
 	Actor105: brik
-		Owner: Germany
+		Owner: France
 		Location: 17,3
 	Actor107: apwr
-		Owner: Germany
+		Owner: France
 		Location: 18,6
 	EinsteinLab: miss
-		Owner: Germany
+		Owner: France
 		Location: 13,7
 	EinsteinChrono: pdox
-		Owner: Germany
+		Owner: France
 		Location: 8,9
 	Actor110: pbox
-		Owner: Germany
+		Owner: France
 		Location: 12,15
 		TurretFacing: 92
 	Actor111: pbox
-		Owner: Germany
+		Owner: France
 		Location: 16,15
 		TurretFacing: 92
 	LabGap1: gap
-		Owner: Germany
+		Owner: France
 		Location: 12,8
 	LabGap2: gap
-		Owner: Germany
+		Owner: France
 		Location: 16,8
 	Actor114: powr
-		Owner: Germany
+		Owner: France
 		Location: 8,6
 	Actor115: chan
-		Owner: Germany
+		Owner: France
 		Location: 9,11
 		SubCell: 3
 		Facing: 92
 	Actor116: chan
-		Owner: Germany
+		Owner: France
 		Location: 10,7
 		SubCell: 3
 		Facing: 92
 	Actor117: chan
-		Owner: Germany
+		Owner: France
 		Location: 19,9
 		SubCell: 3
 		Facing: 92
 	Actor118: chan
-		Owner: Germany
+		Owner: France
 		Location: 17,6
 		SubCell: 3
 		Facing: 92
 	Actor119: e1
-		Owner: Germany
+		Owner: France
 		Location: 13,9
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor120: e1
-		Owner: Germany
+		Owner: France
 		Location: 15,9
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor121: e1
-		Owner: Germany
+		Owner: France
 		Location: 14,10
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor122: dog
-		Owner: Germany
+		Owner: France
 		Location: 16,9
 		SubCell: 3
 		Facing: 92
 	Actor123: dog
-		Owner: Germany
+		Owner: France
 		Location: 12,9
 		SubCell: 3
 		Facing: 92
 	Actor124: brik
-		Owner: Germany
+		Owner: France
 		Location: 17,2
 	Actor125: brik
-		Owner: Germany
+		Owner: France
 		Location: 16,2
 	Actor126: brik
-		Owner: Germany
+		Owner: France
 		Location: 16,3
 	Actor127: brik
-		Owner: Germany
+		Owner: France
 		Location: 11,2
 	Actor128: brik
-		Owner: Germany
+		Owner: France
 		Location: 12,2
 	Actor129: brik
-		Owner: Germany
+		Owner: France
 		Location: 12,3
 	Actor130: minv
-		Owner: Germany
+		Owner: France
 		Location: 13,13
 	Actor131: minv
-		Owner: Germany
+		Owner: France
 		Location: 15,13
 	Actor132: minv
-		Owner: Germany
+		Owner: France
 		Location: 14,14
 	Actor133: minv
-		Owner: Germany
+		Owner: France
 		Location: 13,15
 	Actor134: minv
-		Owner: Germany
+		Owner: France
 		Location: 15,15
 	Actor135: minv
-		Owner: Germany
+		Owner: France
 		Location: 13,2
 	Actor136: minv
-		Owner: Germany
+		Owner: France
 		Location: 15,2
 	Actor137: minv
-		Owner: Germany
+		Owner: France
 		Location: 14,3
 	Actor138: minv
-		Owner: Germany
+		Owner: France
 		Location: 13,4
 	Actor139: minv
-		Owner: Germany
+		Owner: France
 		Location: 15,4
 	Actor140: brl3
 		Owner: Creeps
@@ -501,46 +501,46 @@ Actors:
 		Owner: Neutral
 		Location: 1,3
 	Actor152: agun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 4,24
 		TurretFacing: 92
 	Actor153: agun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 10,23
 		TurretFacing: 92
 	Actor154: agun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 16,22
 		TurretFacing: 92
 	Actor155: agun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 22,22
 		TurretFacing: 92
 	Actor156: agun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 28,22
 		TurretFacing: 92
 	Actor157: agun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 31,17
 		TurretFacing: 92
 	Actor158: agun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 35,13
 		TurretFacing: 92
 	Actor159: agun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 36,8
 		TurretFacing: 92
 	Actor160: agun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 37,4
 		TurretFacing: 92
 	Actor161: apwr
-		Owner: Germany
+		Owner: France
 		Location: 10,4
 	StolenTechCentre: stek
-		Owner: Germany
+		Owner: France
 		Location: 77,103
 	Actor163: brik
 		Owner: Greece
@@ -802,13 +802,13 @@ Actors:
 		Owner: Greece
 		Location: 71,103
 	LabAlertSpawnN: waypoint
-		Owner: Germany
+		Owner: France
 		Location: 25,1
 	LabAlertSpawnW: waypoint
-		Owner: Germany
+		Owner: France
 		Location: 1,15
 	LabAlertSpawnMove: waypoint
-		Owner: Germany
+		Owner: France
 		Location: 13,10
 	Actor248: mine
 		Owner: Neutral
@@ -829,343 +829,343 @@ Actors:
 		Owner: Neutral
 		Location: 37,90
 	RealDome: dome
-		Owner: Germany
+		Owner: France
 		Location: 136,5
 	Actor257: mgg
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 108,64
 		Facing: 92
 	Actor258: mgg
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 135,6
 		Facing: 66
 	Actor259: fact
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 115,21
 	Actor260: syrd
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 126,10
 	Actor261: syrd
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 102,36
 	Actor262: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 88,32
 	Actor263: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 88,33
 	Actor264: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 89,33
 	Actor265: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 91,33
 	Actor266: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 90,33
 	Actor267: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 92,33
 	Actor268: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 93,33
 	Actor269: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 95,33
 	Actor270: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 94,33
 	Actor271: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 89,32
 	Actor272: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 88,26
 	Actor273: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 89,26
 	Actor274: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 89,25
 	Actor275: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 88,25
 	Actor276: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 87,25
 	Actor277: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 87,24
 	Actor278: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 86,24
 	Actor279: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 85,24
 	Actor280: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 84,24
 	Actor281: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 83,24
 	Actor283: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 82,24
 	Actor282: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 82,23
 	Actor284: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 83,23
 	Actor285: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 82,12
 	Actor286: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 83,12
 	Actor287: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 83,13
 	Actor288: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 82,13
 	Actor289: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 82,14
 	Actor290: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 82,16
 	Actor291: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 82,15
 	Actor292: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 82,17
 	Actor293: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 82,18
 	Actor294: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 82,19
 	Actor295: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 82,20
 	Actor296: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 82,21
 	Actor297: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 82,22
 	Actor298: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 82,4
 	Actor299: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 83,4
 	Actor300: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 83,3
 	Actor301: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 82,3
 	Actor302: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 84,4
 	Actor303: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 85,4
 	Actor304: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 87,4
 	Actor305: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 86,4
 	Actor306: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 88,4
 	Actor307: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 89,4
 	Actor308: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 90,4
 	Actor309: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 90,3
 	Actor310: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 90,2
 	Actor311: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 90,1
 	Actor313: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 95,32
 	Actor314: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 94,32
 	Actor315: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 110,34
 	Actor316: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 109,34
 	Actor317: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 109,33
 	Actor318: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 110,33
 	Actor319: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 111,33
 	Actor320: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 112,33
 	Actor321: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 113,33
 	Actor322: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 114,33
 	Actor323: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 115,33
 	Actor324: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 116,33
 	Actor325: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 116,32
 	Actor326: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 115,32
 	Actor327: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 121,33
 	Actor328: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 121,32
 	Actor329: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 122,32
 	Actor330: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 122,33
 	Actor331: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 123,33
 	Actor332: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 123,34
 	Actor333: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 123,35
 	Actor334: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 124,36
 	Actor335: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 123,36
 	Actor336: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 125,36
 	Actor337: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 126,36
 	Actor338: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 126,35
 	Actor339: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 127,35
 	Actor340: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 127,34
 	Actor341: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 128,34
 	Actor342: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 128,35
 	Actor343: pbox
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 87,26
 		TurretFacing: 92
 	Actor344: pbox
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 87,32
 		TurretFacing: 92
 	Actor345: pbox
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 82,5
 		TurretFacing: 92
 	Actor346: pbox
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 82,11
 		TurretFacing: 92
 	Actor347: gun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 81,18
 		TurretFacing: 92
 	Actor348: gun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 84,7
 		TurretFacing: 92
 	Actor349: gun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 91,29
 		TurretFacing: 92
 	Actor350: pbox
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 116,34
 		TurretFacing: 92
 	Actor351: pbox
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 121,34
 		TurretFacing: 92
 	Actor352: hbox
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 104,54
 		TurretFacing: 92
 	Actor353: hbox
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 108,61
 		TurretFacing: 92
 	Actor354: hbox
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 110,61
 		TurretFacing: 92
 	Actor355: hbox
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 102,75
 		TurretFacing: 92
 	Actor356: hbox
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 109,79
 		TurretFacing: 92
 	Actor357: hbox
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 106,68
 		TurretFacing: 92
 	Actor358: hbox
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 102,62
 		TurretFacing: 92
 	Actor359: hbox
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 110,54
 		TurretFacing: 92
 	Actor360: gun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 97,35
 		TurretFacing: 92
 	Actor361: gun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 129,19
 		TurretFacing: 92
 	Actor362: gun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 133,6
 		TurretFacing: 92
 	Actor363: oilb
@@ -1178,460 +1178,460 @@ Actors:
 		Owner: Neutral
 		Location: 101,132
 	FakeDome1: domf
-		Owner: Germany
+		Owner: France
 		Location: 108,103
 	FakeDome2: domf
-		Owner: Germany
+		Owner: France
 		Location: 109,64
 	Actor368: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 33,74
 	Actor369: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 32,74
 	Actor370: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 31,74
 	Actor371: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 30,74
 	Actor372: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 30,75
 	Actor373: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 37,75
 	Actor374: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 38,75
 	Actor375: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 38,76
 	Actor376: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 38,77
 	Actor377: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 38,78
 	Actor378: sbag
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 37,78
 	Actor379: gun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 37,76
 		TurretFacing: 92
 	Actor380: gun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 33,75
 		TurretFacing: 92
 	Actor381: hbox
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 38,17
 		TurretFacing: 92
 	Actor382: gun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 47,58
 		TurretFacing: 92
 	Actor383: gun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 61,30
 		TurretFacing: 92
 	Actor384: gun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 52,38
 		TurretFacing: 92
 	Actor385: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 107,45
 	Actor386: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 108,45
 	Actor387: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 109,45
 	Actor388: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 113,57
 	Actor389: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 114,57
 	Actor390: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 115,57
 	Actor391: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 116,57
 	Actor392: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 117,57
 	Actor393: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 110,73
 	Actor394: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 111,73
 	Actor395: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 112,73
 	Actor396: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 113,73
 	Actor397: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 112,74
 	Actor398: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 111,74
 	Actor399: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 110,75
 	Actor400: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 113,75
 	Actor401: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 112,75
 	Actor402: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 111,75
 	Actor403: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 104,76
 	Actor404: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 106,76
 	Actor405: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 105,77
 	Actor406: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 104,78
 	Actor407: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 106,78
 	Actor408: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 101,68
 	Actor409: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 103,68
 	Actor410: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 105,68
 	Actor411: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 104,69
 	Actor412: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 102,69
 	Actor413: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 103,70
 	Actor414: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 105,70
 	Actor415: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 105,59
 	Actor416: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 103,59
 	Actor417: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 104,58
 	Actor418: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 105,57
 	Actor419: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 103,57
 	Actor420: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 109,61
 	Actor421: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 108,62
 	Actor422: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 110,62
 	Actor423: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 110,60
 	Actor424: minv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 108,60
 	Actor425: proc
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 91,2
 	Actor426: proc
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 85,19
 	Actor427: tent
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 99,25
 	Actor428: tent
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 98,5
 	Actor429: weap
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 125,22
 	Actor430: weap
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 107,5
 	Actor431: hpad
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 130,2
 	Actor432: hpad
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 128,2
 	Actor433: hpad
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 132,2
 	Actor434: hpad
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 126,2
 	Actor435: fix
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 103,9
 	Actor436: dome
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 124,33
 	Actor437: silo
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 83,14
 	Actor438: silo
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 83,16
 	Actor439: silo
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 83,18
 	Actor440: silo
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 83,20
 	Actor441: silo
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 83,22
 	Actor442: agun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 90,32
 		TurretFacing: 92
 	Actor443: agun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 84,23
 		TurretFacing: 92
 	Actor444: agun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 84,13
 		TurretFacing: 92
 	Actor445: agun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 113,32
 		TurretFacing: 92
 	Actor446: agun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 128,18
 		TurretFacing: 92
 	Actor447: agun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 134,4
 		TurretFacing: 92
 	Actor448: agun
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 110,7
 		TurretFacing: 92
 	Actor449: hbox
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 124,7
 		TurretFacing: 92
 	Actor450: hbox
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 124,3
 		TurretFacing: 92
 	Actor451: atek
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 105,5
 	Actor452: apwr
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 96,15
 	Actor453: apwr
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 99,15
 	Actor454: apwr
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 102,15
 	Actor455: apwr
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 105,15
 	Actor456: apwr
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 105,18
 	Actor457: apwr
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 102,18
 	Actor458: apwr
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 99,18
 	Actor459: apwr
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 96,18
 	Actor460: apwr
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 93,18
 	Actor461: apwr
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 93,15
 	Actor462: apwr
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 128,30
 	Actor463: apwr
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 128,27
 	Actor464: apwr
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 125,18
 	Actor465: apwr
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 101,31
 	Actor466: apwr
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 98,30
 	Actor467: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 92,21
 	Actor468: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 93,21
 	Actor469: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 95,21
 	Actor470: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 94,21
 	Actor471: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 96,21
 	Actor472: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 97,21
 	Actor473: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 98,21
 	Actor474: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 100,21
 	Actor475: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 99,21
 	Actor476: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 101,21
 	Actor477: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 102,21
 	Actor478: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 103,21
 	Actor479: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 104,21
 	Actor480: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 105,21
 	Actor481: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 106,21
 	Actor482: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 107,21
 	Actor483: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 108,21
 	Actor484: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 108,20
 	Actor485: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 108,14
 	Actor486: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 108,15
 	Actor487: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 108,16
 	Actor488: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 108,17
 	Actor489: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 108,18
 	Actor490: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 108,19
 	Actor491: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 92,14
 	Actor492: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 92,15
 	Actor493: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 92,16
 	Actor494: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 92,17
 	Actor495: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 92,18
 	Actor496: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 92,19
 	Actor497: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 92,20
 	Actor498: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 93,14
 	Actor499: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 94,14
 	Actor500: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 95,14
 	Actor501: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 96,14
 	Actor502: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 97,14
 	Actor503: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 98,14
 	Actor504: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 99,14
 	Actor505: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 100,14
 	Actor506: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 101,14
 	Actor507: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 102,14
 	Actor508: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 103,14
 	Actor509: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 104,14
 	Actor510: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 105,14
 	Actor511: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 106,14
 	Actor512: brik
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 107,14
 	Actor513: v01
 		Owner: Neutral
@@ -2707,34 +2707,34 @@ Actors:
 		Facing: 40
 		TurretFacing: 40
 	Actor863: 2tnk
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 13,104
 		Facing: 173
 		TurretFacing: 173
 	Actor864: 1tnk
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 21,92
 		Facing: 137
 		TurretFacing: 137
 	Actor865: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 65,75
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor866: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 65,75
 		SubCell: 1
 		Facing: 92
 		TurretFacing: 92
 	Actor867: dog
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 65,76
 		SubCell: 3
 		Facing: 92
 	Actor868: e3
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 65,74
 		SubCell: 3
 		Facing: 92
@@ -2877,520 +2877,520 @@ Actors:
 		Owner: Creeps
 		Location: 69,104
 	Actor906: e3
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 27,22
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor907: e3
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 28,23
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor908: e3
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 15,23
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor909: e3
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 7,24
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor910: e3
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 12,23
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor911: e3
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 32,17
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor912: e3
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 36,9
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor913: e3
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 34,15
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor914: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 17,34
 		SubCell: 3
 		Facing: 17
 		TurretFacing: 17
 	Actor915: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 18,34
 		SubCell: 3
 		Facing: 155
 		TurretFacing: 155
 	Actor916: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 6,35
 		SubCell: 3
 		Facing: 211
 		TurretFacing: 211
 	Actor917: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 6,35
 		SubCell: 1
 		Facing: 21
 		TurretFacing: 21
 	Actor918: 2tnk
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 7,34
 		Facing: 217
 		TurretFacing: 217
 	Actor919: 1tnk
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 18,31
 		Facing: 92
 		TurretFacing: 92
 	Actor920: arty
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 84,15
 		Facing: 65
 	Actor921: arty
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 84,19
 		Facing: 65
 	Actor922: 2tnk
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 115,25
 		Facing: 130
 		TurretFacing: 130
 	Actor923: 2tnk
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 117,25
 		Facing: 130
 		TurretFacing: 130
 	Actor924: 1tnk
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 103,5
 		Facing: 92
 		TurretFacing: 92
 	Actor925: 1tnk
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 89,5
 		Facing: 129
 		TurretFacing: 129
 	Actor926: 1tnk
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 16,55
 		Facing: 171
 		TurretFacing: 171
 	Actor927: 1tnk
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 31,60
 		Facing: 92
 		TurretFacing: 92
 	Actor928: 2tnk
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 36,74
 		Facing: 92
 		TurretFacing: 92
 	Actor929: 2tnk
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 61,5
 		Facing: 92
 		TurretFacing: 92
 	Actor930: 2tnk
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 133,5
 		Facing: 66
 		TurretFacing: 66
 	Actor931: 2tnk
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 136,4
 		Facing: 4
 		TurretFacing: 4
 	Actor932: 2tnk
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 137,4
 		Facing: 2
 		TurretFacing: 2
 	Actor933: jeep
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 103,22
 		Facing: 92
 		TurretFacing: 92
 	Actor934: jeep
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 98,12
 		Facing: 44
 		TurretFacing: 44
 	Actor935: harv
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 91,11
 		Facing: 65
 	Actor936: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 15,56
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor937: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 17,55
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor938: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 31,61
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor939: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 30,60
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor940: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 32,75
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor941: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 37,77
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor942: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 15,103
 		SubCell: 3
 		Facing: 149
 		TurretFacing: 149
 	Actor943: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 19,97
 		SubCell: 3
 		Facing: 149
 		TurretFacing: 149
 	Actor944: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 24,92
 		SubCell: 3
 		Facing: 148
 		TurretFacing: 148
 	Actor945: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 12,106
 		SubCell: 3
 		Facing: 148
 		TurretFacing: 148
 	Actor946: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 12,106
 		SubCell: 1
 		Facing: 127
 		TurretFacing: 127
 	Actor947: e3
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 45,38
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor948: e3
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 45,38
 		SubCell: 1
 		Facing: 92
 		TurretFacing: 92
 	Actor949: e3
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 60,30
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor950: e3
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 61,29
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor951: e3
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 52,37
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor952: e3
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 15,56
 		SubCell: 1
 		Facing: 92
 		TurretFacing: 92
 	Actor953: medi
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 31,59
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor954: e3
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 22,94
 		SubCell: 3
 		Facing: 147
 		TurretFacing: 147
 	Actor955: e3
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 15,103
 		SubCell: 1
 		Facing: 150
 		TurretFacing: 150
 	Actor956: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 114,24
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor957: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 114,24
 		SubCell: 1
 		Facing: 92
 		TurretFacing: 92
 	Actor958: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 119,24
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor959: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 119,24
 		SubCell: 1
 		Facing: 92
 		TurretFacing: 92
 	Actor960: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 127,25
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor961: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 124,23
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor962: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 110,15
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor963: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 101,6
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor964: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 88,5
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor965: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 88,5
 		SubCell: 1
 		Facing: 92
 		TurretFacing: 92
 	Actor966: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 86,17
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor967: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 85,14
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor968: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 95,31
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor969: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 95,30
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor970: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 95,31
 		SubCell: 1
 		Facing: 92
 		TurretFacing: 92
 	Actor971: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 103,75
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor972: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 107,75
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor973: e3
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 106,74
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor974: e3
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 103,74
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor975: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 108,63
 		SubCell: 3
 		Facing: 7
 		TurretFacing: 7
 	Actor976: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 110,63
 		SubCell: 3
 		Facing: 9
 		TurretFacing: 9
 	Actor977: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 135,5
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor978: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 135,5
 		SubCell: 1
 		Facing: 92
 		TurretFacing: 92
 	Actor979: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 135,5
 		SubCell: 2
 		Facing: 92
 		TurretFacing: 92
 	Actor980: e3
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 125,3
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor981: e3
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 125,7
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor982: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 117,4
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor983: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 119,3
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor984: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 116,4
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor985: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 54,133
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor986: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 54,133
 		SubCell: 1
 		Facing: 92
 		TurretFacing: 92
 	Actor987: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 56,130
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor988: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 56,130
 		SubCell: 1
 		Facing: 92
 		TurretFacing: 92
 	Actor989: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 56,130
 		SubCell: 2
 		Facing: 92
 		TurretFacing: 92
 	Actor990: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 38,122
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor991: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 38,122
 		SubCell: 1
 		Facing: 92
 		TurretFacing: 92
 	Actor992: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 73,107
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor993: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 80,107
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
 	Actor994: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 81,108
 		SubCell: 3
 		Facing: 64
 		TurretFacing: 64
 	Actor995: e1
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 82,108
 		SubCell: 3
 		Facing: 118
@@ -3536,122 +3536,122 @@ Actors:
 		SubCell: 3
 		Facing: 211
 	Actor1022: ca
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 97,40
 		Facing: 92
 		TurretFacing: 92
 	Actor1023: ca
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 122,13
 		Facing: 170
 		TurretFacing: 170
 	Actor1024: dd
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 137,12
 		Facing: 92
 		TurretFacing: 92
 	Actor1025: dd
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 133,36
 		Facing: 126
 		TurretFacing: 126
 	Actor1026: dd
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 140,36
 		Facing: 128
 		TurretFacing: 128
 	Actor1027: dd
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 130,56
 		Facing: 92
 		TurretFacing: 92
 	Actor1028: dd
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 79,52
 		Facing: 151
 		TurretFacing: 151
 	Actor1029: dd
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 94,57
 		Facing: 92
 		TurretFacing: 92
 	Actor1030: dd
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 81,76
 		Facing: 92
 		TurretFacing: 92
 	Actor1031: dd
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 7,121
 		Facing: 174
 		TurretFacing: 174
 	Actor1032: dd
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 19,133
 		Facing: 31
 		TurretFacing: 31
 	Actor1033: dd
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 53,91
 		Facing: 155
 		TurretFacing: 155
 	Actor1034: pt
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 62,102
 		Facing: 38
 		TurretFacing: 38
 	Actor1035: dd
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 109,90
 		Facing: 70
 		TurretFacing: 70
 	Actor1036: pt
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 78,87
 		Facing: 92
 		TurretFacing: 92
 	Actor1037: pt
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 89,88
 		Facing: 139
 		TurretFacing: 139
 	Actor1039: pt
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 102,118
 		Facing: 169
 		TurretFacing: 169
 	Actor1040: pt
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 87,110
 		Facing: 160
 		TurretFacing: 160
 	Actor1041: 2tnk
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 31,26
 		Facing: 161
 		TurretFacing: 161
 	Actor1042: 2tnk
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 57,21
 		Facing: 92
 		TurretFacing: 92
 	Actor1045: dd
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 139,34
 		Facing: 123
 		TurretFacing: 123
 	Actor1046: dd
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 142,34
 		Facing: 128
 		TurretFacing: 128
 	Actor1043: dd
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 134,34
 		Facing: 121
 		TurretFacing: 121
 	Actor1044: dd
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 135,36
 		Facing: 122
 		TurretFacing: 122
@@ -3674,7 +3674,7 @@ Actors:
 		Owner: USSR
 		Location: 135,140
 	Actor1038: pt
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 118,97
 		Facing: 157
 		TurretFacing: 157
@@ -3744,67 +3744,67 @@ Actors:
 		Facing: 156
 		TurretFacing: 156
 	wp1: waypoint
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 76,6
 	wp2: waypoint
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 59,7
 	wp3: waypoint
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 48,20
 	wp4: waypoint
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 47,29
 	wp5: waypoint
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 33,30
 	wp6: waypoint
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 31,43
 	wp7: waypoint
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 18,57
 	wp8: waypoint
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 11,88
 	wp9: waypoint
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 83,30
 	wp10: waypoint
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 66,34
 	wp11: waypoint
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 49,46
 	wp12: waypoint
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 40,59
 	wp13: waypoint
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 37,73
 	wp14: waypoint
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 28,81
 	wp15: waypoint
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 134,1
 	wp16: waypoint
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 89,93
 	wp17: waypoint
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 55,99
 	wp18: waypoint
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 15,115
 	AlliesBoatSpawn: waypoint
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 12,144
 	AlliesBoatUnload1: waypoint
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 25,104
 	AlliesBoatUnload2: waypoint
-		Owner: Allies
+		Owner: GoodGuy
 		Location: 52,107
 	Patrol1: waypoint
 		Owner: Greece
@@ -3824,5 +3824,5 @@ Actors:
 	DefaultCameraPosition: waypoint
 		Owner: Neutral
 		Location: 132,132
-Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, rules.yaml
+Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, ra|rules/campaign-palettes.yaml, rules.yaml
 Weapons: weapons.yaml

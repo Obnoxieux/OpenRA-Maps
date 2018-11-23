@@ -1,21 +1,12 @@
 MapFormat: 11
-
 RequiresMod: ra
-
 Title: Test Soviet
-
 Author: Seth
-
 Tileset: SNOW
-
 MapSize: 42,42
-
 Bounds: 1,1,40,40
-
 Visibility: MissionSelector
-
 Categories: Mission
-
 Players:
 	PlayerReference@Allies:
 		Name: Allies
@@ -48,7 +39,6 @@ Players:
 	PlayerReference@Creeps:
 		Name: Creeps
 		NonCombatant: True
-
 Actors:
 	Actor0: mine
 		Owner: Neutral
@@ -263,9 +253,6 @@ Actors:
 	Actor56: apwr
 		Owner: Allies
 		Location: 34,5
-	Actor57: apwr
-		Owner: Allies
-		Location: 34,8
 	Actor58: apwr
 		Owner: Allies
 		Location: 37,8
@@ -353,7 +340,98 @@ Actors:
 	TeslaSpawn: waypoint
 		Owner: Neutral
 		Location: 29,28
-
+	Actor84: brik
+		Owner: Allies
+		Location: 34,11
+	Actor85: brik
+		Owner: Allies
+		Location: 35,11
+	Actor86: brik
+		Owner: Allies
+		Location: 36,11
+	Actor87: brik
+		Owner: Allies
+		Location: 37,11
+	Actor88: brik
+		Owner: Allies
+		Location: 38,11
+	Actor89: brik
+		Owner: Allies
+		Location: 39,11
+	Actor90: brik
+		Owner: Allies
+		Location: 40,11
+	Actor91: brik
+		Owner: Allies
+		Location: 40,12
+	Actor92: brik
+		Owner: Allies
+		Location: 39,12
+	Actor93: brik
+		Owner: Allies
+		Location: 33,11
+	Actor94: brik
+		Owner: Allies
+		Location: 33,10
+	Actor95: brik
+		Owner: Allies
+		Location: 32,10
+	Actor97: brik
+		Owner: Allies
+		Location: 32,9
+	Actor98: brik
+		Owner: Allies
+		Location: 32,8
+	Actor99: brik
+		Owner: Allies
+		Location: 32,7
+	Actor100: brik
+		Owner: Allies
+		Location: 32,6
+	Actor101: brl3
+		Owner: Creeps
+		Location: 33,9
+	Actor102: brl3
+		Owner: Creeps
+		Location: 33,8
+	Actor103: barl
+		Owner: Creeps
+		Location: 33,7
+	Actor104: brl3
+		Owner: Creeps
+		Location: 33,6
+	Actor105: brl3
+		Owner: Creeps
+		Location: 38,12
+	Actor106: brl3
+		Owner: Creeps
+		Location: 37,12
+	Actor107: brl3
+		Owner: Creeps
+		Location: 36,12
+	Actor108: barl
+		Owner: Creeps
+		Location: 37,13
+	Actor109: barl
+		Owner: Creeps
+		Location: 35,12
+	Actor110: brl3
+		Owner: Creeps
+		Location: 34,15
+	Actor111: barl
+		Owner: Creeps
+		Location: 33,15
+	Actor112: brl3
+		Owner: Creeps
+		Location: 31,11
+	Actor113: brl3
+		Owner: Creeps
+		Location: 32,11
+	Actor114: barl
+		Owner: Creeps
+		Location: 30,11
+	Actor115: brl3
+		Owner: Creeps
+		Location: 32,15
 Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, rules.yaml
-
 Weapons: weapons.yaml

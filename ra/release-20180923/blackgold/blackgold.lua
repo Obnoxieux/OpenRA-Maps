@@ -334,9 +334,9 @@ StartDogPatrol = function()
 end
 
 WorldLoaded = function()
-	allies = Player.GetPlayer("Allies")
+	allies = Player.GetPlayer("GoodGuy")
 	greece = Player.GetPlayer("Greece")
-  einstein = Player.GetPlayer("Germany")
+  einstein = Player.GetPlayer("France")
 	ussr1 = Player.GetPlayer("USSR")
   --ussr2 = Player.GetPlayer("USSR2")
 
