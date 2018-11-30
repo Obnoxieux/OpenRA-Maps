@@ -1,0 +1,20 @@
+MapFormat: 11
+RequiresMod: ra
+Title: Chronoexitus
+Author: Seth
+Tileset: INTERIOR
+MapSize: 98,68
+Bounds: 1,1,96,66
+Visibility: MissionSelector
+Categories: Mission
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: england
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: england
+Actors:

@@ -1,23 +1,12 @@
 MapFormat: 11
-
 RequiresMod: ra
-
 Title: Lua Orbiter
-
 Author: Seth
-
 Tileset: SNOW
-
 MapSize: 130,130
-
 Bounds: 1,1,128,128
-
 Visibility: MissionSelector
-
 Categories: Mission
-
-LockPreview: True
-
 Players:
 	PlayerReference@Allies:
 		Name: Allies
@@ -45,7 +34,6 @@ Players:
 		Name: Creeps
 		NonCombatant: True
 		Faction: england
-
 Actors:
 	Actor0: v01
 		Owner: Neutral
@@ -56,27 +44,27 @@ Actors:
 	Actor2: mcv
 		Owner: Allies
 		Location: 64,84
-		Facing: 92
+		Facing: 2
 	Actor3: 2tnk
 		Owner: Allies
 		Location: 62,84
-		Facing: 92
-		TurretFacing: 92
+		Facing: 0
+		TurretFacing: 0
 	Actor4: 2tnk
 		Owner: Allies
 		Location: 64,85
-		Facing: 92
-		TurretFacing: 92
+		Facing: 3
+		TurretFacing: 3
 	Actor5: 1tnk
 		Owner: Allies
 		Location: 64,82
-		Facing: 92
-		TurretFacing: 92
+		Facing: -1
+		TurretFacing: -1
 	Actor6: 1tnk
 		Owner: Allies
 		Location: 66,83
-		Facing: 92
-		TurretFacing: 92
+		Facing: -3
+		TurretFacing: -3
 	Actor7: mine
 		Owner: Neutral
 		Location: 85,58
@@ -862,8 +850,8 @@ Actors:
 	Actor257: 3tnk
 		Owner: USSR
 		Location: 52,51
-		Facing: 92
-		TurretFacing: 92
+		Facing: 3
+		TurretFacing: 3
 	Actor258: truk
 		Owner: USSR
 		Location: 66,26
@@ -871,13 +859,13 @@ Actors:
 	Actor259: 3tnk
 		Owner: USSR
 		Location: 87,40
-		Facing: 92
-		TurretFacing: 92
+		Facing: 59
+		TurretFacing: 59
 	Actor260: 3tnk
 		Owner: USSR
 		Location: 87,42
-		Facing: 92
-		TurretFacing: 92
+		Facing: 67
+		TurretFacing: 67
 	Actor261: 3tnk
 		Owner: USSR
 		Location: 33,45
@@ -886,31 +874,31 @@ Actors:
 	Actor262: 3tnk
 		Owner: USSR
 		Location: 40,35
-		Facing: 92
-		TurretFacing: 92
+		Facing: 97
+		TurretFacing: 97
 	Actor263: 3tnk
 		Owner: USSR
 		Location: 62,38
-		Facing: 92
-		TurretFacing: 92
+		Facing: 96
+		TurretFacing: 96
 	Actor264: 3tnk
 		Owner: USSR
 		Location: 65,39
-		Facing: 92
-		TurretFacing: 92
+		Facing: 97
+		TurretFacing: 97
 	Actor265: 3tnk
 		Owner: USSR
 		Location: 60,68
-		Facing: 92
-		TurretFacing: 92
+		Facing: 148
+		TurretFacing: 148
 	Actor266: v2rl
 		Owner: USSR
 		Location: 37,31
-		Facing: 92
+		Facing: 149
 	Actor267: v2rl
 		Owner: USSR
 		Location: 24,35
-		Facing: 92
+		Facing: 168
 	Actor268: 4tnk
 		Owner: USSR
 		Location: 24,19
@@ -919,8 +907,8 @@ Actors:
 	Actor269: 4tnk
 		Owner: USSR
 		Location: 26,21
-		Facing: 92
-		TurretFacing: 92
+		Facing: 130
+		TurretFacing: 130
 	Actor270: dog
 		Owner: USSR
 		Location: 32,24
@@ -946,8 +934,8 @@ Actors:
 		Owner: USSR
 		Location: 61,68
 		SubCell: 3
-		Facing: 92
-		TurretFacing: 92
+		Facing: 106
+		TurretFacing: 106
 	Actor275: e2
 		Owner: USSR
 		Location: 51,51
@@ -1257,27 +1245,26 @@ Actors:
 	Actor326: 2tnk
 		Owner: Allies
 		Location: 61,85
-		Facing: 92
-		TurretFacing: 92
+		Facing: 0
+		TurretFacing: 0
 	Actor327: 2tnk
 		Owner: Allies
 		Location: 61,84
-		Facing: 92
-		TurretFacing: 92
+		Facing: -1
+		TurretFacing: -1
 	Actor328: 2tnk
 		Owner: Allies
 		Location: 63,87
-		Facing: 92
-		TurretFacing: 92
+		Facing: -2
+		TurretFacing: -2
 	Actor329: 2tnk
 		Owner: Allies
 		Location: 64,87
-		Facing: 92
-		TurretFacing: 92
+		Facing: 2
+		TurretFacing: 2
 	Actor330: 2tnk
 		Owner: Allies
 		Location: 68,84
-		Facing: 92
-		TurretFacing: 92
-
+		Facing: 4
+		TurretFacing: 4
 Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, rules.yaml
