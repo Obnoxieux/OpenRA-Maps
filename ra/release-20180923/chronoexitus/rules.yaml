@@ -6,28 +6,31 @@ Player:
 		FogCheckboxLocked: True
 		FogCheckboxEnabled: False
 		ExploredMapCheckboxLocked: True
-		ExploredMapCheckboxEnabled: True
+		ExploredMapCheckboxEnabled: False
 	PlayerResources:
 		DefaultCashLocked: True
-		DefaultCash: 10000
+		DefaultCash: 0
 World:
 	-SpawnMPUnits:
 	-MPStartLocations:
 	LuaScript:
-		Scripts: testsov.lua
+		Scripts: chronoexitus.lua
 	ObjectivesPanel:
 		PanelName: MISSION_OBJECTIVES
-	MissionData:
-		Briefing: MOT
-	-CrateSpawner:
 	MapBuildRadius:
 		AllyBuildRadiusCheckboxLocked: True
 		AllyBuildRadiusCheckboxEnabled: True
 		BuildRadiusCheckboxLocked: True
 		BuildRadiusCheckboxEnabled: False
+	MissionData:
+		WinVideo: cronfail.vqa
+		LossVideo: crontest.vqa
+		Briefing: text here
+	-CrateSpawner:
 	MapOptions:
 		ShortGameLocked: True
-		ShortGameEnabled: False	
+		ShortGameEnabled: False
+
 VOLK:
 	Inherits: GNRL
 	Buildable:
@@ -63,21 +66,23 @@ VOLK:
 	RenderSprites:
 		Image: GNRL
 
+#------------------------------RA classic mode--------------------------------#
+
 APC:
 	Buildable:
 		Prerequisites: ~vehicles.allies
 HIND:
 	Buildable:
-		Prerequisites: ~vehicles.soviet
+		Prerequisites: ~aircraft.soviet
 HPAD:
 	Buildable:
 		Prerequisites: dome, ~techlevel.medium
+	ProvidesPrerequisite@soviet:
+		Factions: soviet, russia, ukraine
+		Prerequisite: aircraft.soviet
 SHOK:
 	Buildable:
 		Prerequisites: stek, tsla, ~infantry.soviet
-E3:
-	Buildable:
-		Prerequisites: ~infantry.allies
 HELI:
 	Buildable:
 		Prerequisites: ~vehicles.allies
@@ -85,14 +90,10 @@ TRUK:
 	Buildable:
 		Prerequisites: ~disabled
 	SpawnActorOnDeath:
-		Actor: scrate
-SCRATE:
-	Inherits: ^Crate
-	Tooltip:
-		Name: Nuclear Bomb
-	ExplodeCrateAction:
-		Weapon: Atomic
-		SelectionShares: 1
+		Actor: moneycrate
+V01:
+	SpawnActorOnDeath:
+		Actor: moneycrate
 MGG:
 	Buildable:
 		Prerequisites: atek, ~vehicles.allies
@@ -129,10 +130,18 @@ AFLD:
 		ClockSequence: clock
 		CircleSequence: circles
 
-############################
-1TNK:
+
+^Vehicle:
+	-Demolishable:
+THF:
 	Buildable:
-		Prerequisites: ~vehicles.allies
-2TNK:
+		Queue: Infantry
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 210
+		Prerequisites: tent, dome, ~infantry.allies
+		Description: Steals cash from enemy refineries and silos.\n  Unarmed
+	Infiltrates:
+		InfiltrateTypes: Cash
+SNIPER:
 	Buildable:
-		Prerequisites: ~vehicles.allies
+		Prerequisites: tent, dome, ~infantry.allies

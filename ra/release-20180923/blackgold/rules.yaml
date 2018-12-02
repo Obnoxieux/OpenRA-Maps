@@ -23,8 +23,10 @@ World:
 		Briefing: The Allies have captured one of our tech centres in this region. Our intelligence believes the reason behind this is to steal our technology and reverse-engineer it at Albert Einstein's secret research lab nearby.\n\nEinstein has been a thorn in Stalin's side for way too long. You have been tasked with his elimination.\n\nGet our spy into our research centre to assess the damage and prevent further leaks. Afterwards, proceed to locate Einstein's lab by capturing the Allied Radar Dome.\n\nVolkov will aid you in this mission and carry out the lab infiltration as well. Do not lose him, or face the concequences.
 	-CrateSpawner:
 	MapBuildRadius:
-		AllyBuildRadiusLocked: True
-		AllyBuildRadiusEnabled: True
+		AllyBuildRadiusCheckboxLocked: True
+		AllyBuildRadiusCheckboxEnabled: True
+		BuildRadiusCheckboxLocked: True
+		BuildRadiusCheckboxEnabled: False
 	MapOptions:
 		ShortGameLocked: True
 		ShortGameEnabled: False
