@@ -1,3 +1,5 @@
+--Siberian Conflict 2: Trapped
+
 PlayerStartUnits = { "1tnk", "1tnk", "e1", "e1", "e1", "e3", "e3", "e3", "arty", "arty", "2tnk", "2tnk", "mcv" }
 InvasionTeams = { { "3tnk", "e1", "e1", "e1", "e2" }, { "3tnk", "e1", "e4", "e1", "e1" }, { "3tnk", "e1", "e4", "e1", "e1" }, { "e2", "e1", "e4", "e1", "e1" }, { "e4", "4tnk", "e1", "e1", "e1" }, { "ttnk", "e1", "e4", "shok", "e1" } }
 

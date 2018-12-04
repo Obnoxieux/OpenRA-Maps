@@ -50,34 +50,34 @@ Players:
 		NonCombatant: True
 		Faction: england
 Actors:
-	Actor0: pdox
+	Chronosphere: pdox
 		Owner: France
 		Location: 91,61
-	Actor1: pbox
+	ExitBox1: pbox
 		Owner: France
 		Location: 94,18
 		TurretFacing: 92
-	Actor2: pbox
+	ExitBox2: pbox
 		Owner: France
 		Location: 94,26
 		TurretFacing: 92
-	Actor3: pbox
+	ExitBox3: pbox
 		Owner: France
 		Location: 92,35
 		TurretFacing: 92
-	Actor4: pbox
+	ExitBox4: pbox
 		Owner: France
 		Location: 80,35
 		TurretFacing: 92
-	Actor5: pbox
+	ExitBox5: pbox
 		Owner: France
 		Location: 80,42
 		TurretFacing: 92
-	Actor6: pbox
+	ExitBox6: pbox
 		Owner: France
 		Location: 84,48
 		TurretFacing: 92
-	Actor7: pbox
+	ExitBox7: pbox
 		Owner: France
 		Location: 89,53
 		TurretFacing: 92
@@ -90,150 +90,150 @@ Actors:
 	Actor10: apwr
 		Owner: France
 		Location: 63,3
-	Actor11: einstein
+	Einstein: einstein
 		Owner: France
 		Location: 94,6
 		SubCell: 3
 		Facing: 92
-	Actor12: e7
+	Tanya: e7
 		Owner: France
 		Location: 93,6
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
-	Actor13: pbox
+	Turret1: pbox
 		Owner: France
 		Location: 76,21
 		TurretFacing: 92
-	Actor14: pbox
+	Turret2: pbox
 		Owner: France
 		Location: 76,22
 		TurretFacing: 92
-	Actor15: pbox
+	Turret3: pbox
 		Owner: France
 		Location: 76,23
 		TurretFacing: 92
-	Actor16: pbox
+	Turret4: pbox
 		Owner: France
 		Location: 76,24
 		TurretFacing: 92
-	Actor17: pbox
+	Turret5: pbox
 		Owner: France
 		Location: 76,25
 		TurretFacing: 92
-	Actor18: pbox
+	Turret6: pbox
 		Owner: France
 		Location: 76,26
 		TurretFacing: 92
-	Actor19: gun
+	Turret7: gun
 		Owner: France
 		Location: 77,21
 		TurretFacing: 92
-	Actor20: gun
+	Turret8: gun
 		Owner: France
 		Location: 77,22
 		TurretFacing: 92
-	Actor21: gun
+	Turret9: gun
 		Owner: France
 		Location: 77,23
 		TurretFacing: 92
-	Actor22: gun
+	Turret10: gun
 		Owner: France
 		Location: 77,24
 		TurretFacing: 92
-	Actor23: gun
+	Turret11: gun
 		Owner: France
 		Location: 77,25
 		TurretFacing: 92
-	Actor24: gun
+	Turret12: gun
 		Owner: France
 		Location: 77,26
 		TurretFacing: 92
-	Actor25: minv
+	Mine1: minv
 		Owner: France
 		Location: 84,18
-	Actor26: minv
+	Mine2: minv
 		Owner: France
 		Location: 85,18
-	Actor27: minv
+	Mine3: minv
 		Owner: France
 		Location: 86,18
-	Actor28: minv
+	Mine4: minv
 		Owner: France
 		Location: 87,18
-	Actor29: minv
+	Mine5: minv
 		Owner: France
 		Location: 87,17
-	Actor30: minv
+	Mine6: minv
 		Owner: France
 		Location: 86,17
-	Actor31: minv
+	Mine7: minv
 		Owner: France
 		Location: 85,17
-	Actor32: minv
+	Mine8: minv
 		Owner: France
 		Location: 84,17
-	Actor33: minv
+	Mine9: minv
 		Owner: France
 		Location: 84,16
-	Actor34: minv
+	Mine10: minv
 		Owner: France
 		Location: 85,16
-	Actor35: minv
+	Mine11: minv
 		Owner: France
 		Location: 86,16
-	Actor36: minv
+	Mine12: minv
 		Owner: France
 		Location: 87,16
-	Actor37: minv
+	Mine13: minv
 		Owner: France
 		Location: 87,15
-	Actor38: minv
+	Mine14: minv
 		Owner: France
 		Location: 86,15
-	Actor39: minv
+	Mine15: minv
 		Owner: France
 		Location: 85,15
-	Actor40: minv
+	Mine16: minv
 		Owner: France
 		Location: 84,15
-	Actor41: minv
+	Mine17: minv
 		Owner: France
 		Location: 84,14
-	Actor42: minv
+	Mine18: minv
 		Owner: France
 		Location: 85,14
-	Actor43: minv
+	Mine19: minv
 		Owner: France
 		Location: 86,14
-	Actor44: minv
+	Mine20: minv
 		Owner: France
 		Location: 87,14
-	Actor45: minv
+	Mine21: minv
 		Owner: France
 		Location: 87,13
-	Actor46: minv
+	Mine22: minv
 		Owner: France
 		Location: 86,13
-	Actor47: minv
+	Mine23: minv
 		Owner: France
 		Location: 85,13
-	Actor48: minv
+	Mine24: minv
 		Owner: France
 		Location: 84,13
-	Actor49: minv
+	Mine25: minv
 		Owner: France
 		Location: 84,12
-	Actor50: minv
+	Mine26: minv
 		Owner: France
 		Location: 85,12
-	Actor51: minv
+	Mine27: minv
 		Owner: France
 		Location: 86,12
-	Actor52: minv
+	Mine28: minv
 		Owner: France
 		Location: 87,12
-	Actor53: volk
+	Volkov: volk
 		Owner: USSR
 		Location: 26,54
 		SubCell: 3
@@ -328,91 +328,91 @@ Actors:
 		Owner: France
 		Location: 50,36
 		Facing: 92
-	Actor72: flare
+	Flare1: flare
 		Owner: England
 		Location: 81,24
-	Actor73: flare
+	Flare2: flare
 		Owner: England
 		Location: 85,24
-	Actor74: flare
+	Flare3: flare
 		Owner: England
 		Location: 83,22
-	Actor75: flare
+	Flare4: flare
 		Owner: England
 		Location: 86,21
-	Actor76: e4
+	POW1: e4
 		Owner: Turkey
 		Location: 13,58
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
-	Actor77: e4
+	POW2: e4
 		Owner: Turkey
 		Location: 13,58
 		SubCell: 1
 		Facing: 92
 		TurretFacing: 92
-	Actor78: e4
+	POW3: e4
 		Owner: Turkey
 		Location: 5,58
 		SubCell: 3
 		Facing: 156
 		TurretFacing: 156
-	Actor79: e4
+	POW4: e4
 		Owner: Turkey
 		Location: 13,54
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
-	Actor80: shok
+	POW5: shok
 		Owner: Turkey
 		Location: 5,62
 		SubCell: 3
 		Facing: 154
 		TurretFacing: 154
-	Actor81: shok
+	POW6: shok
 		Owner: Turkey
 		Location: 5,54
 		SubCell: 3
 		Facing: 155
 		TurretFacing: 155
-	Actor82: shok
+	POW7: shok
 		Owner: Turkey
 		Location: 5,54
 		SubCell: 1
 		Facing: 153
 		TurretFacing: 153
-	Actor83: shok
+	POW8: shok
 		Owner: Turkey
 		Location: 12,54
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
-	Actor84: medi
+	POW9: medi
 		Owner: Turkey
 		Location: 6,54
 		SubCell: 3
 		Facing: 154
 		TurretFacing: 154
-	Actor85: e6
+	POW10: e6
 		Owner: Turkey
 		Location: 5,57
 		SubCell: 3
 		Facing: 119
 		TurretFacing: 119
-	Actor86: e6
+	POW11: e6
 		Owner: Turkey
 		Location: 5,57
 		SubCell: 1
 		Facing: 146
 		TurretFacing: 146
-	Actor87: e1
+	POW12: e1
 		Owner: Turkey
 		Location: 12,58
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
-	Actor88: e1
+	POW13: e1
 		Owner: Turkey
 		Location: 12,58
 		SubCell: 1
@@ -637,10 +637,6 @@ Actors:
 		Owner: France
 		Location: 66,5
 		Facing: 133
-	Actor160: gun
-		Owner: France
-		Location: 43,54
-		TurretFacing: 92
 	Actor161: gun
 		Owner: France
 		Location: 46,54
@@ -648,10 +644,6 @@ Actors:
 	Actor162: gun
 		Owner: France
 		Location: 4,22
-		TurretFacing: 92
-	Actor163: gun
-		Owner: France
-		Location: 7,22
 		TurretFacing: 92
 	Actor164: gun
 		Owner: France
@@ -739,7 +731,7 @@ Actors:
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
-	Actor179: pbox
+	POWGuardPillbox: pbox
 		Owner: France
 		Location: 15,63
 		TurretFacing: 92
@@ -1764,22 +1756,22 @@ Actors:
 		Location: 56,55
 		SubCell: 3
 		Facing: 92
-	Actor357: brik
+	Wall1: brik
 		Owner: France
 		Location: 79,58
-	Actor358: brik
+	Wall2: brik
 		Owner: France
 		Location: 80,58
-	Actor359: brik
+	Wall3: brik
 		Owner: France
 		Location: 80,59
-	Actor360: brik
+	Wall4: brik
 		Owner: France
 		Location: 79,59
-	Actor361: brik
+	Wall5: brik
 		Owner: France
 		Location: 79,60
-	Actor362: brik
+	Wall6: brik
 		Owner: France
 		Location: 80,60
 	Actor363: sniper
@@ -1800,11 +1792,59 @@ Actors:
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
-	Actor367: waypoint
+	Camstart: waypoint
 		Owner: Neutral
 		Location: 26,53
-	Actor368: waypoint
+	DefenceCam: waypoint
 		Owner: Neutral
 		Location: 82,21
+	RevealDefence: waypoint
+		Owner: Neutral
+		Location: 71,29
+	FleeTrigger: waypoint
+		Owner: Neutral
+		Location: 86,13
+	TerminalTurrets: waypoint
+		Owner: Neutral
+		Location: 9,18
+	TerminalGas: waypoint
+		Owner: Neutral
+		Location: 68,41
+	TerminalMines: waypoint
+		Owner: Neutral
+		Location: 36,17
+	TerminalWall: waypoint
+		Owner: Neutral
+		Location: 77,58
+	Actor374: medi
+		Owner: USSR
+		Location: 2,13
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor375: medi
+		Owner: USSR
+		Location: 2,13
+		SubCell: 1
+		Facing: 92
+		TurretFacing: 92
+	TerminalExitPillboxes: waypoint
+		Owner: Neutral
+		Location: 94,2
+	EinsteinCam: waypoint
+		Owner: Neutral
+		Location: 91,6
+	TankCam: waypoint
+		Owner: Neutral
+		Location: 52,34
+	ChronoCam: waypoint
+		Owner: Neutral
+		Location: 88,60
+	GasKill: waypoint
+		Owner: Neutral
+		Location: 83,24
+	EinsteinDestination: waypoint
+		Owner: Neutral
+		Location: 91,63
 Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, ra|rules/campaign-palettes.yaml, rules.yaml
 Weapons: weapons.yaml

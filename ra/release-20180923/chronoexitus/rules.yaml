@@ -25,7 +25,7 @@ World:
 	MissionData:
 		WinVideo: cronfail.vqa
 		LossVideo: crontest.vqa
-		Briefing: text here
+		Briefing: Volkov has infiltrated Einstein's Lab. He has discovered a huge underground facility underneath it.\n\nNothing will stop the might of the Soviet Union this time. Your objective is simple - you finish the job and eliminate Prof. Einstein while keeping Volkov intact.
 	-CrateSpawner:
 	MapOptions:
 		ShortGameLocked: True
@@ -66,6 +66,12 @@ VOLK:
 	RenderSprites:
 		Image: GNRL
 
+PDOX:
+	Power:
+		Amount: 200
+APWR:
+	Power:
+		Amount: 2000
 #------------------------------RA classic mode--------------------------------#
 
 APC:
@@ -90,7 +96,7 @@ TRUK:
 	Buildable:
 		Prerequisites: ~disabled
 	SpawnActorOnDeath:
-		Actor: moneycrate
+		Actor: healcrate
 V01:
 	SpawnActorOnDeath:
 		Actor: moneycrate
@@ -145,3 +151,5 @@ THF:
 SNIPER:
 	Buildable:
 		Prerequisites: tent, dome, ~infantry.allies
+	AutoTarget:
+		InitialStanceAI: AttackAnything
