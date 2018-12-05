@@ -28,6 +28,10 @@ World:
 	MapOptions:
 		ShortGameLocked: True
 		ShortGameEnabled: False	
+
+^Bridge:
+	Health:
+		HP: 2500
 VOLK:
 	Inherits: GNRL
 	Buildable:

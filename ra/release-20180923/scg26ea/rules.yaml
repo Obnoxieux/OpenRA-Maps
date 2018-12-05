@@ -37,6 +37,10 @@ SHOK:
 HELI:
 	Buildable:
 		Prerequisites: hpad, ~vehicles.allies
+
+^Bridge:
+	Health:
+		HP: 2500
 TRUK:
 	Buildable:
 		Prerequisites: ~disabled

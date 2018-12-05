@@ -1,21 +1,12 @@
 MapFormat: 11
-
 RequiresMod: ra
-
 Title: Siberian Conflict 1: Fresh Tracks
-
 Author: Westwood Studios
-
 Tileset: SNOW
-
 MapSize: 128,128
-
 Bounds: 28,42,90,46
-
 Visibility: MissionSelector
-
 Categories: Mission
-
 Players:
 	PlayerReference@Neutral:
 		Name: Neutral
@@ -38,7 +29,7 @@ Players:
 		LockSpawn: True
 		LockTeam: True
 		Allies: England
-		Enemies: USSR
+		Enemies: USSR, Creeps
 	PlayerReference@England:
 		Name: England
 		Faction: allies
@@ -50,7 +41,6 @@ Players:
 		Faction: soviet
 		Color: FF1400
 		Enemies: Allies, England
-
 Actors:
 	Actor0: brik
 		Location: 39,72
@@ -372,10 +362,10 @@ Actors:
 		Facing: 191
 	BridgeBarrel3: brl3
 		Location: 105,78
-		Owner: USSR
+		Owner: Creeps
 	Actor106: barl
 		Location: 104,77
-		Owner: USSR
+		Owner: Creeps
 	Actor107: v19
 		Location: 104,78
 		Owner: Neutral
@@ -384,28 +374,28 @@ Actors:
 		Owner: Allies
 	BridgeBarrel2: brl3
 		Location: 42,45
-		Owner: USSR
+		Owner: Creeps
 	Actor110: v19
 		Location: 41,45
 		Owner: Neutral
 	Actor111: barl
 		Location: 41,44
-		Owner: USSR
+		Owner: Creeps
 	Actor112: brl3
 		Location: 89,51
-		Owner: USSR
+		Owner: Creeps
 	Actor113: barl
 		Location: 88,52
-		Owner: USSR
+		Owner: Creeps
 	Actor114: barl
 		Location: 90,50
-		Owner: USSR
+		Owner: Creeps
 	BridgeBarrel1: brl3
 		Location: 91,47
-		Owner: USSR
+		Owner: Creeps
 	Actor116: barl
 		Location: 91,46
-		Owner: USSR
+		Owner: Creeps
 	Actor117: v19
 		Location: 91,45
 		Owner: Neutral
@@ -414,7 +404,7 @@ Actors:
 		Owner: Neutral
 	Actor119: barl
 		Location: 90,45
-		Owner: USSR
+		Owner: Creeps
 	Actor120: harv
 		Location: 43,76
 		Owner: Allies
@@ -706,7 +696,44 @@ Actors:
 	BridgePoint3: waypoint
 		Owner: Neutral
 		Location: 106,80
-
+	Actor198: brl3
+		Owner: Creeps
+		Location: 90,47
+	Actor199: brl3
+		Owner: Creeps
+		Location: 91,50
+	Actor200: brl3
+		Owner: Creeps
+		Location: 87,48
+	Actor203: barl
+		Owner: Creeps
+		Location: 90,51
+	Actor204: brl3
+		Owner: Creeps
+		Location: 46,46
+	Actor205: barl
+		Owner: Creeps
+		Location: 46,47
+	Actor206: brl3
+		Owner: Creeps
+		Location: 43,45
+	Actor207: barl
+		Owner: Creeps
+		Location: 43,44
+	Actor208: barl
+		Owner: Creeps
+		Location: 43,49
+	Actor209: brl3
+		Owner: Creeps
+		Location: 44,49
+	Actor210: brl3
+		Owner: Creeps
+		Location: 109,79
+	Actor211: brl3
+		Owner: Creeps
+		Location: 106,82
+	Actor212: brl3
+		Owner: Creeps
+		Location: 105,82
 Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, rules.yaml
-
 Weapons: weapons.yaml
