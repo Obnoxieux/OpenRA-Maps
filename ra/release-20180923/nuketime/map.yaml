@@ -2708,3 +2708,4 @@ Actors:
 		Location: 45,18
 
 Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, rules.yaml
+Weapons: weapons.yaml
