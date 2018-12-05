@@ -114,6 +114,9 @@ Zombie:
 Ant:
 	Buildable:
 		Prerequisites: ~disabled
+^Bridge:
+	Health:
+		HP: 20000
 SS:
 	AutoTarget:
 		InitialStanceAI: AttackAnything
