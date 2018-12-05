@@ -30,19 +30,13 @@ Players:
 		Name: USSR
 		Faction: soviet
 		Color: FF1400
-		Allies: Ukraine, Turkey, BadGuy
+		Allies: Turkey, BadGuy
 		Enemies: Greece
 	PlayerReference@BadGuy:
 		Name: BadGuy
 		Faction: soviet
 		Color: FF1400
-		Allies: USSR, Ukraine, Turkey
-		Enemies: Greece
-	PlayerReference@Ukraine:
-		Name: Ukraine
-		Faction: soviet
-		Color: FFE695
-		Allies: USSR, Turkey, BadGuy
+		Allies: USSR, Turkey
 		Enemies: Greece
 	PlayerReference@Greece:
 		Name: Greece
@@ -55,7 +49,7 @@ Players:
 		Color: ABB7E4
 		LockSpawn: True
 		LockTeam: True
-		Enemies: USSR, BadGuy, Ukraine
+		Enemies: USSR, BadGuy
 	PlayerReference@Turkey:
 		Name: Turkey
 		Faction: soviet
@@ -493,25 +487,25 @@ Actors:
 		Owner: USSR
 	Actor143: v02
 		Location: 41,41
-		Owner: Ukraine
+		Owner: Neutral
 	Actor144: v03
 		Location: 48,42
-		Owner: Ukraine
+		Owner: Neutral
 	Actor145: v04
 		Location: 50,36
-		Owner: Ukraine
+		Owner: Neutral
 	Actor146: v05
 		Location: 46,36
-		Owner: Ukraine
+		Owner: Neutral
 	Actor147: v07
 		Location: 42,37
-		Owner: Ukraine
+		Owner: Neutral
 	Actor148: v08
 		Location: 46,41
-		Owner: Ukraine
+		Owner: Neutral
 	Actor149: v10
 		Location: 56,40
-		Owner: Ukraine
+		Owner: Neutral
 	Actor150: apwr
 		Location: 65,62
 		Owner: USSR
@@ -753,35 +747,35 @@ Actors:
 		SubCell: 2
 	Actor212: c1
 		Location: 43,41
-		Owner: Ukraine
+		Owner: Neutral
 		SubCell: 2
 	Actor213: c2
 		Location: 46,38
-		Owner: Ukraine
+		Owner: Neutral
 		SubCell: 0
 	Actor214: c3
 		Location: 49,41
-		Owner: Ukraine
+		Owner: Neutral
 		SubCell: 4
 	Actor215: c4
 		Location: 41,37
-		Owner: Ukraine
+		Owner: Neutral
 		SubCell: 0
 	Actor216: c4
 		Location: 50,38
-		Owner: Ukraine
+		Owner: Neutral
 		SubCell: 3
 	Actor217: c5
 		Location: 47,42
-		Owner: Ukraine
+		Owner: Neutral
 		SubCell: 3
 	Actor218: c6
 		Location: 45,41
-		Owner: Ukraine
+		Owner: Neutral
 		SubCell: 3
 	Actor219: c8
 		Location: 49,37
-		Owner: Ukraine
+		Owner: Neutral
 		SubCell: 1
 	Actor220: e1
 		Location: 64,57
@@ -1148,5 +1142,5 @@ Actors:
 		Owner: Neutral
 		Location: 26,58
 
-Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, rules.yaml
+Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, ra|rules/campaign-palettes.yaml, rules.yaml
 Weapons: weapons.yaml

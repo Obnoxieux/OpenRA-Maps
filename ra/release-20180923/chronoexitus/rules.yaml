@@ -139,6 +139,9 @@ AFLD:
 
 ^Vehicle:
 	-Demolishable:
+E7.noautotarget:
+	Buildable:
+		Prerequisites: ~disabled
 THF:
 	Buildable:
 		Queue: Infantry
