@@ -1,23 +1,12 @@
 MapFormat: 11
-
 RequiresMod: ra
-
-Title: Test
-
+Title: Test Allies
 Author: Seth
-
 Tileset: SNOW
-
 MapSize: 58,58
-
 Bounds: 1,1,56,56
-
 Visibility: MissionSelector
-
 Categories: Mission
-
-LockPreview: True
-
 Players:
 	PlayerReference@Neutral:
 		Name: Neutral
@@ -41,7 +30,6 @@ Players:
 		LockSpawn: True
 		LockTeam: True
 		Enemies: USSR
-
 Actors:
 	Actor0: pdox
 		Owner: Greece
@@ -886,5 +874,4 @@ Actors:
 	ConvoyMove: waypoint
 		Owner: Neutral
 		Location: 32,26
-
-Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, rules.yaml
+Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, ra|rules/campaign-palettes.yaml, rules.yaml
