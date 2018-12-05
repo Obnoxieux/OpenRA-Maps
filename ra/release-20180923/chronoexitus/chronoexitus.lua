@@ -3,9 +3,17 @@ DefenceTurrets = { Turret1, Turret2, Turret3, Turret4, Turret5, Turret6, Turret7
 Minefield = { Mine1, Mine2, Mine3, Mine4, Mine5, Mine6, Mine7, Mine7, Mine8, Mine9, Mine10, Mine11, Mine12, Mine13, Mine14, Mine15, Mine16, Mine17, Mine18, Mine19, Mine20, Mine21, Mine22, Mine23, Mine24, Mine25, Mine26, Mine27, Mine28 }
 ExitPillboxes = { ExitBox1, ExitBox2, ExitBox3, ExitBox4, ExitBox5, ExitBox6, ExitBox7 }
 
+EinsteinGuards = { Guard1, Guard2, Guard3, Guard4, Guard5, Guard6, Guard7, Guard8, Guard9, Guard10 }
+
 GasKillArea = { CPos.New(80, 21), CPos.New(80, 22), CPos.New(80, 23), CPos.New(80, 24),CPos.New(80, 25), CPos.New(80, 26), CPos.New(81, 21), CPos.New(81, 22), CPos.New(81, 23), CPos.New(81, 24), CPos.New(81, 25), CPos.New(81, 26), CPos.New(82, 21), CPos.New(82, 22), CPos.New(82, 23), CPos.New(82, 23), CPos.New(82, 24), CPos.New(82, 25), CPos.New(82, 26) }
 
 SovietPOWs = { POW1, POW2, POW3, POW4, POW5, POW6, POW7, POW8, POW9, POW10, POW11, POW12, POW13 }
+
+AlliedVehiclePatrols = { { "1tnk", "1tnk", "jeep" }, { "1tnk", "2tnk" }, { "apc", "1tnk" }, { "ctnk", "jeep" } }
+AlliedInfantryPatrols = { { "e1", "e1", "e1", "e1", "e3", "e3" }, { "e1", "e1", "e1", "e1", "e1", "e3" }, { "e1", "e1", "e1", "dog", "e3", "e3" } }
+
+
+AlliedPatrolPath = { Patrol1.Location, Patrol2.Location, Patrol3.Location, Patrol4.Location, Patrol5.Location, Patrol6.Location, Patrol7.Location, Patrol8.Location, Patrol9.Location, Patrol10.Location, Patrol11.Location, Patrol12.Location, Patrol13.Location, Patrol14.Location }
 
 GasActive = true
 SecurityObjectiveShown = false
@@ -17,6 +25,30 @@ Tick = function()
 	if ussr1.HasNoRequiredUnits() then
 		allies.MarkCompletedObjective(enemyobj)
 	end
+end
+
+SendInfantryPatrols = function()
+	local units = Utils.Random(AlliedInfantryPatrols)
+	Reinforcements.Reinforce(allies, units, { AlliedInfantrySpawn.Location, AlliedInfantryMove.Location }, 7, function(infpatrol)
+    infpatrol.Patrol(AlliedPatrolPath, true, 11)
+		Trigger.OnDamaged(infpatrol, function()
+			infpatrol.Hunt()
+		end)
+	end)
+--test
+	Trigger.AfterDelay(DateTime.Seconds(120), SendInfantryPatrols)
+end
+
+SendVehiclePatrols = function()
+	local units = Utils.Random(AlliedVehiclePatrols)
+	Reinforcements.Reinforce(allies, units, { AlliedVehicleSpawn.Location, AlliedVehicleMove.Location }, 7, function(vehiclepatrol)
+    vehiclepatrol.Patrol(AlliedPatrolPath, true, 11)
+		Trigger.OnDamaged(vehiclepatrol, function()
+			vehiclepatrol.Hunt()
+		end)
+	end)
+
+	Trigger.AfterDelay(DateTime.Seconds(280), SendVehiclePatrols)
 end
 
 SetupTriggers = function()
@@ -130,6 +162,7 @@ SetupTriggers = function()
 		end
 	end)
 
+--TODO: system uses destroy instead of kill
 	Trigger.OnEnteredFootprint(GasKillArea, function(actor, trigger)
 		if GasActive == true and actor.Owner == ussr1 and actor.IsMobile then
 			--Trigger.RemoveProximityTrigger(trigger)
@@ -160,6 +193,16 @@ SetupTriggers = function()
 			EndingSequence = true
 			
 			Einstein.Move(EinsteinDestination.Location)
+			
+			Utils.Do(EinsteinGuards, function(guards)
+				if not guards.IsDead then
+					guards.AttackMove(FleeTrigger.Location)
+				end
+			end)
+		
+			Reinforcements.Reinforce(allies, { "e1", "e1", "e1", "e1", "e1", "e3", "e3", "e3" } , { LateReinIN.Location, LateReinfMove.Location }, 7, function(latereinf)
+				latereinf.AttackMove(EinsteinCam.Location)
+			end)
 			
 			Actor.Create("camera", true, { Owner = ussr1, Location = EinsteinCam.Location })
 			Actor.Create("camera", true, { Owner = ussr1, Location = ChronoCam.Location })
@@ -234,7 +277,11 @@ WorldLoaded = function()
     Media.PlaySpeechNotification(ussr2, "MissionFailed")
   end)]]
 
-  --[[Trigger.AfterDelay(DateTime.Seconds(5), function()
-		insertsomethinghere
-	end)]]
+  Trigger.AfterDelay(DateTime.Seconds(240), function()
+		SendVehiclePatrols()
+	end)
+
+	Trigger.AfterDelay(DateTime.Seconds(120), function()
+		SendInfantryPatrols()
+	end)
 end

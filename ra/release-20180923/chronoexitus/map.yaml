@@ -442,12 +442,6 @@ Actors:
 	Actor96: ammobox2
 		Owner: Neutral
 		Location: 63,42
-	Actor97: healcrate
-		Owner: Neutral
-		Location: 28,6
-	Actor98: healcrate
-		Owner: Neutral
-		Location: 28,3
 	Actor99: brl3
 		Owner: Creeps
 		Location: 33,48
@@ -1322,60 +1316,60 @@ Actors:
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
-	Actor281: dog
+	Guard1: dog
 		Owner: France
 		Location: 88,7
 		SubCell: 3
 		Facing: 92
-	Actor282: e1
+	Guard2: e1
 		Owner: France
 		Location: 90,6
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
-	Actor283: e1
+	Guard3: e1
 		Owner: France
 		Location: 90,6
 		SubCell: 1
 		Facing: 92
 		TurretFacing: 92
-	Actor284: e1
+	Guard4: e1
 		Owner: France
 		Location: 90,6
 		SubCell: 2
 		Facing: 92
 		TurretFacing: 92
-	Actor285: e1
+	Guard5: e1
 		Owner: France
 		Location: 90,6
 		SubCell: 4
 		Facing: 92
 		TurretFacing: 92
-	Actor286: e1
+	Guard6: e1
 		Owner: France
 		Location: 90,6
 		SubCell: 5
 		Facing: 92
 		TurretFacing: 92
-	Actor287: e3
+	Guard7: e3
 		Owner: France
 		Location: 92,6
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
-	Actor288: e3
+	Guard8: e3
 		Owner: France
 		Location: 92,6
 		SubCell: 1
 		Facing: 92
 		TurretFacing: 92
-	Actor289: e3
+	Guard9: e3
 		Owner: France
 		Location: 92,6
 		SubCell: 2
 		Facing: 92
 		TurretFacing: 92
-	Actor290: e1
+	Guard10: e1
 		Owner: France
 		Location: 91,8
 		SubCell: 3
@@ -1846,5 +1840,76 @@ Actors:
 	EinsteinDestination: waypoint
 		Owner: Neutral
 		Location: 91,63
+	AlliedVehicleSpawn: waypoint
+		Owner: Neutral
+		Location: 49,66
+	AlliedVehicleMove: waypoint
+		Owner: Neutral
+		Location: 49,62
+	AlliedInfantrySpawn: waypoint
+		Owner: Neutral
+		Location: 46,1
+	AlliedInfantryMove: waypoint
+		Owner: Neutral
+		Location: 46,6
+	Patrol1: waypoint
+		Owner: Neutral
+		Location: 51,57
+	Patrol2: waypoint
+		Owner: Neutral
+		Location: 34,56
+	Patrol3: waypoint
+		Owner: Neutral
+		Location: 15,48
+	Patrol4: waypoint
+		Owner: Neutral
+		Location: 15,31
+	Patrol5: waypoint
+		Owner: Neutral
+		Location: 21,22
+	Patrol6: waypoint
+		Owner: Neutral
+		Location: 28,28
+	Patrol7: waypoint
+		Owner: Neutral
+		Location: 32,37
+	Patrol8: waypoint
+		Owner: Neutral
+		Location: 43,27
+	Patrol9: waypoint
+		Owner: Neutral
+		Location: 45,11
+	Patrol10: waypoint
+		Owner: Neutral
+		Location: 54,30
+	Patrol11: waypoint
+		Owner: Neutral
+		Location: 56,41
+	Patrol12: waypoint
+		Owner: Neutral
+		Location: 70,37
+	Patrol13: waypoint
+		Owner: Neutral
+		Location: 71,54
+	Patrol14: waypoint
+		Owner: Neutral
+		Location: 64,62
+	LateReinIN: waypoint
+		Owner: Neutral
+		Location: 96,48
+	LateReinfMove: waypoint
+		Owner: Neutral
+		Location: 89,48
+	Actor400: truk
+		Owner: France
+		Location: 28,3
+		Facing: 162
+	Actor401: truk
+		Owner: France
+		Location: 28,6
+		Facing: -26
+	Actor402: fact
+		Owner: USSR
+		Location: 2,5
 Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, ra|rules/campaign-palettes.yaml, rules.yaml
 Weapons: weapons.yaml
