@@ -1,5 +1,7 @@
 This is just a working repository of my personal OpenRA maps. Feel free to clone/play/whatever.
 
+lazy reminder of git commands because I am a n00b:
+
 git clone https://github.com/BooooB159/OpenRA-Maps.git <directoryName>
 
 git status                                  // show all new/changed files
