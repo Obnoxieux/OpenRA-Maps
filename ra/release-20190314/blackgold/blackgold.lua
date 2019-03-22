@@ -30,6 +30,9 @@ SovietReinforcementsSea = { "3tnk", "3tnk", "4tnk", "4tnk", "v2rl" }
 SovietReinforcementsMCV = { "3tnk", "3tnk", "4tnk", "4tnk", "mcv" }
 SovietReinforcementsLand = { "qtnk", "qtnk", "dtrk", "dtrk", "shok", "mnly", "shok", "e1", "e1", "e1", "e1", "e4", "e4", "e6", "e6", "e6", "e6" }
 
+Domf1Kill = { CPos.New(110, 103), CPos.New(110, 104), CPos.New(110, 105), CPos.New(110, 106), CPos.New(111, 104), CPos.New(111, 105), CPos.New(111, 106) }
+Domf2Kill = { CPos.New(108, 63), CPos.New(109, 63), CPos.New(110, 63), CPos.New(108, 62), CPos.New(109, 62), CPos.New(110, 62) }
+
 
 Tick = function()
 	if allies.HasNoRequiredUnits() and greece.HasNoRequiredUnits() then
@@ -282,9 +285,9 @@ SetupTriggers = function()
 	
 	--kill off the fake domes
 	
-  Trigger.OnEnteredProximityTrigger(CamDomf1.CenterPosition, WDist.FromCells(3), function(actor, trigger)
+  Trigger.OnEnteredFootprint(Domf1Kill, function(actor, trigger)
 		if actor.Owner == ussr1 then
-			Trigger.RemoveProximityTrigger(trigger)
+			Trigger.RemoveFootprintTrigger(trigger)
 			Media.DisplayMessage("This Radar Dome was just a decoy.")
 			if not FakeDome1.IsDead then
 				FakeDome1.Kill()
@@ -292,9 +295,9 @@ SetupTriggers = function()
 		end
 	end)
 
-	Trigger.OnEnteredProximityTrigger(CamDomf2.CenterPosition, WDist.FromCells(3), function(actor, trigger2)
+	Trigger.OnEnteredFootprint(Domf2Kill, function(actor, trigger2)
 		if actor.Owner == ussr1 then
-			Trigger.RemoveProximityTrigger(trigger2)
+			Trigger.RemoveFootprintTrigger(trigger2)
 			Media.DisplayMessage("This Radar Dome was just a decoy.")
 			if not FakeDome2.IsDead then
 				FakeDome2.Kill()

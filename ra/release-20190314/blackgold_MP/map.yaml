@@ -1,34 +1,33 @@
 MapFormat: 11
 RequiresMod: ra
-Title: Black Gold
+Title: Black Gold MP
 Author: Seth
 Tileset: SNOW
 MapSize: 146,146
 Bounds: 1,1,144,144
-Visibility: MissionSelector
-Categories: Mission
+Visibility: Lobby
+Categories: Mission, Cooperative Mission
 Players:
 	PlayerReference@GoodGuy:
 		Name: GoodGuy
 		Faction: allies
 		Color: ABB7E4
 		Allies: Greece, France
-		Enemies: USSR
+		Enemies: USSR, Ukraine
 	PlayerReference@Greece:
 		Name: Greece
 		Faction: allies
 		Color: ABB7E4
 		Allies: GoodGuy, France
-		Enemies: USSR
+		Enemies: USSR, Ukraine
 	PlayerReference@France:
 		Name: France
 		Faction: allies
 		Color: 5CC1A3
 		Allies: GoodGuy, Greece
-		Enemies: USSR
+		Enemies: USSR, Ukraine
 	PlayerReference@USSR:
 		Name: USSR
-		AllowBots: False
 		Playable: True
 		Required: True
 		LockFaction: True
@@ -37,6 +36,19 @@ Players:
 		Color: FE1100
 		LockSpawn: True
 		LockTeam: True
+		Allies: Ukraine
+		Enemies: GoodGuy, Greece, France, Creeps
+	PlayerReference@Ukraine:
+		Name: Ukraine
+		Playable: True
+		Required: True
+		LockFaction: True
+		Faction: soviet
+		LockColor: True
+		Color: FC8800
+		LockSpawn: True
+		LockTeam: True
+		Allies: USSR
 		Enemies: GoodGuy, Greece, France, Creeps
 	PlayerReference@Neutral:
 		Name: Neutral
@@ -51,18 +63,18 @@ Actors:
 	Actor0: tc01
 		Owner: Neutral
 		Location: 61,134
-	Actor2: hijacker
-		Owner: USSR
+	Actor2: thf
+		Owner: Ukraine
 		Location: 137,139
 		SubCell: 1
 		Facing: 92
-	Actor3: hijacker
-		Owner: USSR
+	Actor3: thf
+		Owner: Ukraine
 		Location: 137,139
 		SubCell: 2
 		Facing: 92
-	Actor4: hijacker
-		Owner: USSR
+	Actor4: thf
+		Owner: Ukraine
 		Location: 137,139
 		SubCell: 4
 		Facing: 92
@@ -655,13 +667,13 @@ Actors:
 	GreeceKenn: kenn
 		Owner: Greece
 		Location: 74,121
-	Actor200: hijacker
-		Owner: USSR
+	Actor200: thf
+		Owner: Ukraine
 		Location: 137,139
 		SubCell: 3
 		Facing: 92
-	Actor201: hijacker
-		Owner: USSR
+	Actor201: thf
+		Owner: Ukraine
 		Location: 137,139
 		SubCell: 5
 		Facing: 92
@@ -2699,7 +2711,7 @@ Actors:
 		Facing: 133
 		TurretFacing: 133
 	Actor862: stnk
-		Owner: USSR
+		Owner: Ukraine
 		Location: 138,140
 		Facing: 40
 		TurretFacing: 40
