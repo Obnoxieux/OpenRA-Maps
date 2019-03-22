@@ -3821,8 +3821,5 @@ Actors:
 		Owner: GoodGuy
 		Location: 54,6
 		Facing: 92
-	Actor1075: fact
-		Owner: USSR
-		Location: 135,142
 Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, ra|rules/campaign-palettes.yaml, rules.yaml
 Weapons: weapons.yaml

@@ -183,12 +183,12 @@ Actors:
 		Location: 100,84
 		SubCell: 3
 		Facing: 92
-	Actor25: hijacker
+	Actor25: thf
 		Owner: USSR2
 		Location: 102,82
 		SubCell: 3
 		Facing: 92
-	Actor26: hijacker
+	Actor26: thf
 		Owner: USSR2
 		Location: 97,85
 		SubCell: 3
