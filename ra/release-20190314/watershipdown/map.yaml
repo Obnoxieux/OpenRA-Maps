@@ -6,48 +6,50 @@ Tileset: TEMPERAT
 MapSize: 128,128
 Bounds: 32,32,64,64
 Visibility: MissionSelector
-Categories: Conquest
+Categories: Mission
 Players:
 	PlayerReference@Neutral:
 		Name: Neutral
 		OwnsWorld: True
 		NonCombatant: True
 		Faction: england
-	PlayerReference@Creeps:
-		Name: Creeps
-		NonCombatant: True
-		Faction: england
+	PlayerReference@Greece:
+		Name: Greece
+		AllowBots: False
+		Playable: True
+		Required: True
+		LockFaction: True
+		Faction: allies
+		LockColor: True
+		Color: ABB7E4
+		LockSpawn: True
+		LockTeam: True
+		Allies: England
+		Enemies: USSR, BadGuy
 	PlayerReference@BadGuy:
 		Name: BadGuy
 		Faction: soviet
 		Color: FF1400
 		Allies: USSR
-		Enemies: BadGuy, England
+		Enemies: England, Greece
 	PlayerReference@USSR:
 		Name: USSR
 		Faction: soviet
 		Color: FF1400
 		Allies: BadGuy
-		Enemies: USSR, England
+		Enemies: England, Greece
 	PlayerReference@England:
 		Name: England
 		Faction: allies
 		Color: A0F08C
+		Allies: Greece
+		Enemies: USSR, BadGuy
 Actors:
-	Actor0: tc03
-		Location: 35,32
-		Owner: Neutral
 	Actor1: tc02
 		Location: 37,32
 		Owner: Neutral
 	Actor2: tc02
 		Location: 52,32
-		Owner: Neutral
-	Actor3: tc05
-		Location: 32,32
-		Owner: Neutral
-	Actor4: t15
-		Location: 36,33
 		Owner: Neutral
 	Actor5: mine
 		Location: 44,34
@@ -105,9 +107,6 @@ Actors:
 		Owner: Neutral
 	Actor25: tc01
 		Location: 56,39
-		Owner: Neutral
-	Actor27: tc05
-		Location: 32,39
 		Owner: Neutral
 	Actor28: tc02
 		Location: 36,40
@@ -387,9 +386,6 @@ Actors:
 		Owner: Neutral
 	Actor134: t17
 		Location: 71,81
-		Owner: Neutral
-	Actor135: mine
-		Location: 85,82
 		Owner: Neutral
 	Actor136: t16
 		Location: 69,82
@@ -681,10 +677,6 @@ Actors:
 		Location: 43,68
 		Owner: USSR
 		SubCell: 4
-	Actor268: dog
-		Location: 77,69
-		Owner: USSR
-		SubCell: 1
 	Actor269: e2
 		Location: 83,69
 		Owner: USSR
@@ -693,14 +685,6 @@ Actors:
 		Location: 53,70
 		Owner: USSR
 		SubCell: 3
-	Actor271: e2
-		Location: 73,70
-		Owner: USSR
-		SubCell: 0
-	Actor272: e2
-		Location: 77,70
-		Owner: USSR
-		SubCell: 0
 	Actor273: e2
 		Location: 87,70
 		Owner: USSR
@@ -721,22 +705,6 @@ Actors:
 		Location: 49,71
 		Owner: USSR
 		SubCell: 2
-	Actor278: e1
-		Location: 69,71
-		Owner: USSR
-		SubCell: 3
-	Actor279: e1
-		Location: 70,71
-		Owner: USSR
-		SubCell: 0
-	Actor280: e1
-		Location: 76,71
-		Owner: USSR
-		SubCell: 0
-	Actor281: e1
-		Location: 78,71
-		Owner: USSR
-		SubCell: 0
 	Actor282: e4
 		Location: 81,71
 		Owner: USSR
@@ -749,10 +717,6 @@ Actors:
 		Location: 49,72
 		Owner: USSR
 		SubCell: 2
-	Actor285: e1
-		Location: 70,72
-		Owner: USSR
-		SubCell: 1
 	Actor286: shok
 		Location: 84,72
 		Owner: USSR
@@ -761,97 +725,6 @@ Actors:
 		Location: 48,74
 		Owner: USSR
 		SubCell: 1
-	Actor288: e4
-		Location: 69,75
-		Owner: USSR
-		SubCell: 3
-	Actor289: e2
-		Location: 82,76
-		Owner: USSR
-		SubCell: 3
-	Actor290: e1
-		Location: 68,77
-		Owner: USSR
-		SubCell: 3
-	Actor291: e1
-		Location: 54,78
-		Owner: USSR
-		SubCell: 2
-	Actor292: e4
-		Location: 68,78
-		Owner: USSR
-		SubCell: 0
-	Actor293: dog
-		Location: 70,78
-		Owner: USSR
-		SubCell: 4
-	Actor294: e4
-		Location: 54,79
-		Owner: USSR
-		SubCell: 1
-	Actor295: shok
-		Location: 55,79
-		Owner: USSR
-		SubCell: 3
-	Actor296: shok
-		Location: 55,79
-		Owner: USSR
-		SubCell: 1
-	Actor297: dog
-		Location: 56,79
-		Owner: USSR
-		SubCell: 0
-	Actor298: shok
-		Location: 67,79
-		Owner: USSR
-		SubCell: 4
-	Actor299: e1
-		Location: 68,79
-		Owner: USSR
-		SubCell: 1
-	Actor300: dog
-		Location: 70,79
-		Owner: USSR
-		SubCell: 3
-	Actor301: dog
-		Location: 71,79
-		Owner: USSR
-		SubCell: 1
-	Actor302: e1
-		Location: 54,80
-		Owner: USSR
-		SubCell: 0
-	Actor303: e4
-		Location: 71,80
-		Owner: USSR
-		SubCell: 4
-	waypoint28: waypoint
-		Location: 85,46
-		Owner: Neutral
-	waypoint52: waypoint
-		Location: 48,73
-		Owner: Neutral
-	waypoint48: waypoint
-		Location: 77,73
-		Owner: Neutral
-	waypoint92: waypoint
-		Location: 76,78
-		Owner: Neutral
-	waypoint22: waypoint
-		Location: 60,79
-		Owner: Neutral
-	waypoint19: waypoint
-		Location: 55,81
-		Owner: Neutral
-	waypoint16: waypoint
-		Location: 65,81
-		Owner: Neutral
-	waypoint12: waypoint
-		Location: 63,96
-		Owner: Neutral
-	waypoint17: waypoint
-		Location: 64,96
-		Owner: Neutral
 	Actor309: tc03.husk
 		Owner: Neutral
 		Location: 73,51
@@ -1166,3 +1039,359 @@ Actors:
 	Actor405: silo
 		Owner: USSR
 		Location: 40,54
+	Actor406: sbag
+		Owner: England
+		Location: 80,90
+	Actor407: sbag
+		Owner: England
+		Location: 81,90
+	Actor408: sbag
+		Owner: England
+		Location: 81,89
+	Actor409: sbag
+		Owner: England
+		Location: 80,89
+	Actor410: sbag
+		Owner: England
+		Location: 80,88
+	Actor411: sbag
+		Owner: England
+		Location: 80,87
+	Actor412: sbag
+		Owner: England
+		Location: 79,87
+	Actor413: sbag
+		Owner: England
+		Location: 78,87
+	Actor414: sbag
+		Owner: England
+		Location: 78,86
+	Actor415: sbag
+		Owner: England
+		Location: 78,85
+	Actor416: sbag
+		Owner: England
+		Location: 78,84
+	Actor417: sbag
+		Owner: England
+		Location: 78,83
+	Actor418: sbag
+		Owner: England
+		Location: 79,83
+	Actor419: sbag
+		Owner: England
+		Location: 80,83
+	Actor420: sbag
+		Owner: England
+		Location: 81,83
+	Actor421: sbag
+		Owner: England
+		Location: 82,83
+	Actor423: sbag
+		Owner: England
+		Location: 87,83
+	Actor424: sbag
+		Owner: England
+		Location: 87,84
+	Actor425: sbag
+		Owner: England
+		Location: 87,85
+	Actor426: sbag
+		Owner: England
+		Location: 87,86
+	Actor427: sbag
+		Owner: England
+		Location: 87,87
+	Actor428: sbag
+		Owner: England
+		Location: 87,88
+	Actor429: sbag
+		Owner: England
+		Location: 87,89
+	Actor430: sbag
+		Owner: England
+		Location: 87,90
+	Actor431: sbag
+		Owner: England
+		Location: 86,90
+	Actor432: sbag
+		Owner: England
+		Location: 86,89
+	Actor433: tent
+		Owner: England
+		Location: 79,84
+	Actor434: powr
+		Owner: England
+		Location: 85,86
+	Actor435: agun
+		Owner: England
+		Location: 81,88
+		TurretFacing: 28
+	Actor436: pbox
+		Owner: England
+		Location: 86,82
+		TurretFacing: 92
+	Actor437: gun
+		Owner: England
+		Location: 81,82
+		TurretFacing: 24
+	Actor438: sbag
+		Owner: England
+		Location: 82,82
+	Actor422: sbag
+		Owner: England
+		Location: 87,82
+	Actor439: sbag
+		Owner: England
+		Location: 86,83
+	Actor440: arty
+		Owner: England
+		Location: 86,84
+		Facing: 255
+		Stance: ReturnFire
+	Actor441: 1tnk
+		Owner: England
+		Location: 81,84
+		TurretFacing: 193
+		Facing: 193
+	Actor442: 1tnk
+		Owner: England
+		Location: 81,85
+		TurretFacing: 191
+		Facing: 191
+	Actor443: jeep
+		Owner: England
+		Location: 84,86
+		TurretFacing: 44
+		Facing: 44
+	Actor444: e1
+		Owner: England
+		Location: 80,82
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor445: e1
+		Owner: England
+		Location: 80,82
+		SubCell: 1
+		Facing: 92
+		TurretFacing: 92
+	Actor446: e1
+		Owner: England
+		Location: 87,81
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor447: e1
+		Owner: England
+		Location: 87,81
+		SubCell: 1
+		Facing: 92
+		TurretFacing: 92
+	Actor448: e3
+		Owner: England
+		Location: 86,81
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor449: e3
+		Owner: England
+		Location: 85,85
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor450: e3
+		Owner: England
+		Location: 85,85
+		SubCell: 1
+		Facing: 92
+		TurretFacing: 92
+	Actor451: mine
+		Owner: Neutral
+		Location: 92,79
+	Actor452: v01
+		Owner: Neutral
+		Location: 39,71
+	Actor453: lhus
+		Owner: Neutral
+		Location: 69,62
+	Actor454: asianhut
+		Owner: Neutral
+		Location: 73,61
+	Actor455: oilb
+		Owner: Neutral
+		Location: 47,88
+	Actor456: v03
+		Owner: Neutral
+		Location: 35,71
+	Actor457: v02
+		Owner: Neutral
+		Location: 33,73
+	Actor458: v07
+		Owner: Neutral
+		Location: 44,78
+	Actor459: v06
+		Owner: Neutral
+		Location: 49,80
+	Actor460: v14
+		Owner: Neutral
+		Location: 49,81
+	Actor461: v14
+		Owner: Neutral
+		Location: 50,81
+	Actor462: v16
+		Owner: Neutral
+		Location: 51,82
+	Actor463: v16
+		Owner: Neutral
+		Location: 50,82
+	Actor464: v10
+		Owner: Neutral
+		Location: 44,80
+	Actor465: v08
+		Owner: Neutral
+		Location: 41,80
+	Actor466: v04
+		Owner: Neutral
+		Location: 43,81
+	Actor467: v03
+		Owner: Neutral
+		Location: 50,75
+	Actor468: v02
+		Owner: Neutral
+		Location: 46,75
+	Actor469: ammobox2
+		Owner: Neutral
+		Location: 43,80
+	Actor470: ammobox1
+		Owner: Neutral
+		Location: 40,80
+	Actor471: v19
+		Owner: Neutral
+		Location: 39,80
+	Actor472: v09
+		Owner: Neutral
+		Location: 36,74
+	Actor473: v05
+		Owner: Neutral
+		Location: 34,70
+	Actor474: v15
+		Owner: Neutral
+		Location: 33,71
+	Actor475: v15
+		Owner: Neutral
+		Location: 33,72
+	Actor476: v12
+		Owner: Neutral
+		Location: 42,81
+	Actor477: v13
+		Owner: Neutral
+		Location: 41,81
+	Actor478: t01
+		Owner: Neutral
+		Location: 32,31
+	Actor479: t06
+		Owner: Neutral
+		Location: 34,31
+	Actor480: t08
+		Owner: Neutral
+		Location: 33,33
+	Actor481: t14
+		Owner: Neutral
+		Location: 32,41
+	Actor482: tc01
+		Owner: Neutral
+		Location: 32,38
+	Actor483: t16
+		Owner: Neutral
+		Location: 34,40
+	Actor484: wood
+		Owner: Neutral
+		Location: 39,81
+	Actor485: wood
+		Owner: Neutral
+		Location: 40,81
+	Actor486: wood
+		Owner: Neutral
+		Location: 40,82
+	Actor487: wood
+		Owner: Neutral
+		Location: 41,82
+	Actor488: wood
+		Owner: Neutral
+		Location: 42,82
+	Actor489: wood
+		Owner: Neutral
+		Location: 42,83
+	Actor490: wood
+		Owner: Neutral
+		Location: 43,83
+	Actor491: wood
+		Owner: Neutral
+		Location: 44,83
+	Actor492: wood
+		Owner: Neutral
+		Location: 45,83
+	Actor493: wood
+		Owner: Neutral
+		Location: 45,82
+	Actor494: wood
+		Owner: Neutral
+		Location: 45,81
+	Actor495: wood
+		Owner: Neutral
+		Location: 45,80
+	Actor496: wood
+		Owner: Neutral
+		Location: 38,81
+	Actor497: wood
+		Owner: Neutral
+		Location: 38,80
+	Actor498: wood
+		Owner: Neutral
+		Location: 38,79
+	Actor499: boxes05
+		Owner: Neutral
+		Location: 81,87
+	Actor500: boxes02
+		Owner: Neutral
+		Location: 86,85
+	Actor501: ss
+		Owner: USSR
+		Location: 59,73
+		Facing: 234
+		Stance: AttackAnything
+	Actor502: ss
+		Owner: USSR
+		Location: 68,57
+		Facing: 37
+		Stance: AttackAnything
+	Actor503: ss
+		Owner: USSR
+		Location: 61,48
+		Stance: AttackAnything
+		Facing: 222
+	Actor504: flare
+		Owner: Greece
+		Location: 85,89
+	Actor505: t11.husk
+		Owner: Neutral
+		Location: 68,64
+	Actor506: t02
+		Owner: Neutral
+		Location: 71,61
+	Actor507: t13
+		Owner: Neutral
+		Location: 74,60
+	Actor508: t16
+		Owner: Neutral
+		Location: 72,62
+	Actor509: t07
+		Owner: Neutral
+		Location: 71,62
+	Actor510: harv
+		Owner: USSR
+		Location: 50,34
+		Facing: 57
+Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, ra|rules/campaign-palettes.yaml, rules.yaml
+Weapons: weapons.yaml
