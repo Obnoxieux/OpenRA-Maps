@@ -603,33 +603,34 @@ Actors:
 	Actor208: tc05
 		Location: 35,94
 		Owner: Neutral
-	Actor211: ftur
+	barrflame1: ftur
 		Location: 84,67
 		Owner: USSR
-	Actor212: powr
+	barrpp1: powr
 		Location: 87,67
 		Owner: BadGuy
-	Actor213: powr
+	barrpp2: powr
 		Location: 89,67
 		Owner: USSR
-	Actor214: barr
+	barrrax: barr
 		Location: 83,70
 		Owner: USSR
-	Actor215: powr
+	barrpp3: powr
 		Location: 87,70
 		Owner: BadGuy
-	Actor216: ftur
+	barrflame2: ftur
 		Location: 81,72
 		Owner: USSR
-	Actor226: e4
+	start2: e4
 		Location: 73,43
 		Owner: USSR
 		SubCell: 3
-	Actor228: e1
+		Facing: 79
+	start1: e1
 		Location: 74,43
 		Owner: USSR
 		SubCell: 1
-	Actor229: e2
+	start4: e2
 		Location: 72,44
 		Owner: USSR
 		SubCell: 4
@@ -637,10 +638,6 @@ Actors:
 		Location: 84,52
 		Owner: USSR
 		SubCell: 0
-	Actor252: e2
-		Location: 93,54
-		Owner: USSR
-		SubCell: 2
 	Actor258: e1
 		Location: 84,56
 		Owner: USSR
@@ -657,14 +654,11 @@ Actors:
 		Location: 54,65
 		Owner: USSR
 		SubCell: 3
+		Facing: 103
 	Actor263: e4
 		Location: 79,66
 		Owner: USSR
 		SubCell: 1
-	Actor264: shok
-		Location: 85,66
-		Owner: USSR
-		SubCell: 3
 	Actor265: e1
 		Location: 85,66
 		Owner: USSR
@@ -681,50 +675,50 @@ Actors:
 		Location: 83,69
 		Owner: USSR
 		SubCell: 1
+		Facing: 92
 	Actor270: e4
 		Location: 53,70
 		Owner: USSR
 		SubCell: 3
-	Actor273: e2
-		Location: 87,70
-		Owner: USSR
-		SubCell: 3
+		Facing: 97
 	Actor274: e2
 		Location: 91,70
 		Owner: USSR
 		SubCell: 2
-	Actor275: e1
+	villpatrol4: e1
 		Location: 47,71
 		Owner: USSR
 		SubCell: 2
-	Actor276: e1
+		Facing: 116
+	villpatrol3: e1
 		Location: 48,71
 		Owner: USSR
 		SubCell: 0
-	Actor277: e1
+		Facing: 154
+	villpatrol1: e1
 		Location: 49,71
 		Owner: USSR
 		SubCell: 2
+		Facing: 139
 	Actor282: e4
 		Location: 81,71
 		Owner: USSR
 		SubCell: 2
-	Actor283: e4
+	villpatrol5: e4
 		Location: 47,72
 		Owner: USSR
 		SubCell: 1
-	Actor284: e4
+		Facing: 157
+	villpatrol2: e4
 		Location: 49,72
 		Owner: USSR
 		SubCell: 2
-	Actor286: shok
-		Location: 84,72
-		Owner: USSR
-		SubCell: 3
-	Actor287: shok
+		Facing: 114
+	villpatrol6: shok
 		Location: 48,74
 		Owner: USSR
 		SubCell: 1
+		Facing: 154
 	Actor309: tc03.husk
 		Owner: Neutral
 		Location: 73,51
@@ -1017,7 +1011,7 @@ Actors:
 		Owner: USSR
 		Location: 55,45
 		TurretFacing: 92
-	Actor400: sam
+	barrsam: sam
 		Owner: USSR
 		Location: 89,70
 		TurretFacing: 92
@@ -1117,21 +1111,21 @@ Actors:
 	Actor432: sbag
 		Owner: England
 		Location: 86,89
-	Actor433: tent
+	engpostrax: tent
 		Owner: England
 		Location: 79,84
-	Actor434: powr
+	engpostpp: powr
 		Owner: England
 		Location: 85,86
-	Actor435: agun
+	engpostflak: agun
 		Owner: England
 		Location: 81,88
 		TurretFacing: 28
-	Actor436: pbox
+	engpostpbox: pbox
 		Owner: England
 		Location: 86,82
 		TurretFacing: 92
-	Actor437: gun
+	engpostgun: gun
 		Owner: England
 		Location: 81,82
 		TurretFacing: 24
@@ -1393,5 +1387,479 @@ Actors:
 		Owner: USSR
 		Location: 50,34
 		Facing: 57
+	Actor511: 4tnk
+		Owner: USSR
+		Location: 52,80
+		TurretFacing: 212
+		Facing: 212
+	Actor512: pbox
+		Owner: Greece
+		Location: 76,41
+		TurretFacing: 92
+	Actor513: sbag
+		Owner: Greece
+		Location: 76,40
+	Actor514: sbag
+		Owner: Greece
+		Location: 77,40
+	Actor515: sbag
+		Owner: Greece
+		Location: 77,41
+	Actor528: sbag
+		Owner: Greece
+		Location: 88,39
+	Actor529: sbag
+		Owner: Greece
+		Location: 88,38
+	Actor530: sbag
+		Owner: Greece
+		Location: 88,37
+	Actor532: sbag
+		Owner: Greece
+		Location: 88,35
+	Actor534: sbag
+		Owner: Greece
+		Location: 88,34
+	Actor533: sbag
+		Owner: Greece
+		Location: 88,33
+	Actor538: sbag
+		Owner: Greece
+		Location: 80,33
+	Actor539: sbag
+		Owner: Greece
+		Location: 79,33
+	Actor540: sbag
+		Owner: Greece
+		Location: 78,33
+	Actor541: sbag
+		Owner: Greece
+		Location: 77,33
+	Actor542: sbag
+		Owner: Greece
+		Location: 76,33
+	Actor543: sbag
+		Owner: Greece
+		Location: 76,34
+	Actor544: sbag
+		Owner: Greece
+		Location: 76,35
+	Actor545: sbag
+		Owner: Greece
+		Location: 76,36
+	Actor546: sbag
+		Owner: Greece
+		Location: 76,37
+	Actor547: gun
+		Owner: Greece
+		Location: 75,37
+		TurretFacing: 92
+	Actor531: proc
+		Owner: Greece
+		Location: 85,33
+	Actor535: sbag
+		Owner: Greece
+		Location: 88,32
+	Actor536: sbag
+		Owner: Greece
+		Location: 87,32
+	Actor537: sbag
+		Owner: Greece
+		Location: 86,32
+	Actor548: sbag
+		Owner: Greece
+		Location: 85,32
+	Actor549: sbag
+		Owner: Greece
+		Location: 85,33
+	Actor550: sbag
+		Owner: Greece
+		Location: 80,32
+	Actor551: silo
+		Owner: Greece
+		Location: 87,33
+	Actor552: tent
+		Owner: Greece
+		Location: 77,34
+	Actor554: dome
+		Owner: Greece
+		Location: 89,37
+	Actor553: apwr
+		Owner: Greece
+		Location: 79,34
+	Actor516: weap
+		Owner: Greece
+		Location: 83,38
+	Actor517: hpad
+		Owner: Greece
+		Location: 80,39
+	Actor518: hbox
+		Owner: Greece
+		Location: 82,40
+		TurretFacing: 92
+	Actor519: agun
+		Owner: Greece
+		Location: 82,36
+		TurretFacing: 92
+	Actor520: 4tnk
+		Owner: USSR
+		Location: 53,77
+		TurretFacing: 165
+		Facing: 165
+	start3: 3tnk
+		Owner: USSR
+		Location: 72,43
+		TurretFacing: 228
+		Facing: 228
+	barrtank1: 3tnk
+		Owner: USSR
+		Location: 70,70
+		Facing: 92
+		TurretFacing: 92
+	barrtank2: 3tnk
+		Owner: USSR
+		Location: 75,69
+		TurretFacing: 128
+		Facing: 128
+	barrtank3: 3tnk
+		Owner: USSR
+		Location: 79,69
+		TurretFacing: 132
+		Facing: 132
+	barrtank4: 3tnk
+		Owner: USSR
+		Location: 88,56
+		Facing: 92
+		TurretFacing: 92
+	Actor526: v2rl
+		Owner: USSR
+		Location: 37,54
+		Facing: 92
+	Actor527: v2rl
+		Owner: USSR
+		Location: 48,56
+		Facing: 147
+	Actor555: minv
+		Owner: USSR
+		Location: 56,32
+	Actor556: minv
+		Owner: USSR
+		Location: 57,33
+	Actor557: minv
+		Owner: USSR
+		Location: 58,32
+	Actor558: minv
+		Owner: USSR
+		Location: 58,34
+	Actor559: minv
+		Owner: USSR
+		Location: 55,33
+	Actor560: minv
+		Owner: USSR
+		Location: 58,38
+	Actor561: minv
+		Owner: USSR
+		Location: 56,38
+	Actor562: 4tnk
+		Owner: USSR
+		Location: 53,51
+		TurretFacing: 127
+		Facing: 127
+	Actor564: minv
+		Owner: USSR
+		Location: 91,54
+	Actor565: minv
+		Owner: USSR
+		Location: 92,54
+	Actor566: minv
+		Owner: USSR
+		Location: 93,54
+	Actor567: minv
+		Owner: USSR
+		Location: 93,55
+	Actor568: minv
+		Owner: USSR
+		Location: 92,55
+	Actor569: minv
+		Owner: USSR
+		Location: 91,55
+	Actor570: e1
+		Owner: USSR
+		Location: 90,57
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor571: e1
+		Owner: USSR
+		Location: 90,57
+		SubCell: 1
+		Facing: 92
+		TurretFacing: 92
+	Actor572: e1
+		Owner: USSR
+		Location: 83,61
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor573: e1
+		Owner: USSR
+		Location: 75,68
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor574: e1
+		Owner: USSR
+		Location: 75,68
+		SubCell: 1
+		Facing: 92
+		TurretFacing: 92
+	Actor575: e1
+		Owner: USSR
+		Location: 79,68
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor576: e2
+		Owner: USSR
+		Location: 79,68
+		SubCell: 1
+		Facing: 92
+		TurretFacing: 92
+	Actor577: e1
+		Owner: USSR
+		Location: 46,53
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor578: e1
+		Owner: USSR
+		Location: 46,53
+		SubCell: 1
+		Facing: 92
+		TurretFacing: 92
+	Actor579: e1
+		Owner: USSR
+		Location: 52,51
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor580: e1
+		Owner: USSR
+		Location: 51,48
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor581: e1
+		Owner: USSR
+		Location: 47,43
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor582: e1
+		Owner: USSR
+		Location: 49,52
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor583: e2
+		Owner: USSR
+		Location: 56,49
+		SubCell: 3
+		TurretFacing: 186
+		Facing: 186
+	Actor584: e2
+		Owner: USSR
+		Location: 56,46
+		SubCell: 3
+		TurretFacing: 225
+		Facing: 225
+	Actor585: sniper
+		Owner: Greece
+		Location: 81,37
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor586: e1
+		Owner: Greece
+		Location: 77,37
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor587: e1
+		Owner: Greece
+		Location: 77,37
+		SubCell: 1
+		Facing: 92
+		TurretFacing: 92
+	Actor588: e1
+		Owner: Greece
+		Location: 77,37
+		SubCell: 2
+		Facing: 92
+		TurretFacing: 92
+	Actor589: e1
+		Owner: Greece
+		Location: 77,37
+		SubCell: 4
+		Facing: 92
+		TurretFacing: 92
+	Actor590: e1
+		Owner: Greece
+		Location: 77,37
+		SubCell: 5
+		Facing: 92
+		TurretFacing: 92
+	Actor591: e3
+		Owner: Greece
+		Location: 79,37
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	Actor592: e3
+		Owner: Greece
+		Location: 79,37
+		SubCell: 1
+		Facing: 92
+		TurretFacing: 92
+	Actor593: e3
+		Owner: Greece
+		Location: 79,37
+		SubCell: 2
+		Facing: 92
+		TurretFacing: 92
+	Actor594: e3
+		Owner: Greece
+		Location: 79,37
+		SubCell: 4
+		Facing: 92
+		TurretFacing: 92
+	Actor595: e3
+		Owner: Greece
+		Location: 79,37
+		SubCell: 5
+		Facing: 92
+		TurretFacing: 92
+	Actor596: medi
+		Owner: Greece
+		Location: 80,37
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	alliesspawn: waypoint
+		Owner: Greece
+		Location: 83,32
+	alliesmove: waypoint
+		Owner: Greece
+		Location: 83,37
+	boatspawn: waypoint
+		Owner: Greece
+		Location: 82,95
+	boatunload: waypoint
+		Owner: Greece
+		Location: 82,92
+	barrpatrol1: e1
+		Owner: USSR
+		Location: 91,62
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	barrpatrol2: e1
+		Owner: USSR
+		Location: 92,62
+		SubCell: 3
+		Facing: 92
+		TurretFacing: 92
+	barrpatrol3: dog
+		Owner: USSR
+		Location: 92,63
+		SubCell: 3
+		Facing: 92
+	Actor525: dog
+		Owner: USSR
+		Location: 41,43
+		SubCell: 3
+		Facing: 92
+	Actor597: dog
+		Owner: USSR
+		Location: 42,51
+		SubCell: 3
+		Facing: 92
+	Actor598: dog
+		Owner: USSR
+		Location: 50,52
+		SubCell: 3
+		Facing: 92
+	Actor599: dog
+		Owner: USSR
+		Location: 48,49
+		SubCell: 3
+		Facing: 92
+	Actor600: dog
+		Owner: USSR
+		Location: 46,41
+		SubCell: 3
+		Facing: 92
+	att1: waypoint
+		Owner: USSR
+		Location: 53,58
+	att2: waypoint
+		Owner: USSR
+		Location: 48,65
+	att3: waypoint
+		Owner: USSR
+		Location: 49,79
+	att4: waypoint
+		Owner: USSR
+		Location: 79,80
+	att5: waypoint
+		Owner: USSR
+		Location: 77,63
+	att6: waypoint
+		Owner: USSR
+		Location: 85,58
+	att7: waypoint
+		Owner: USSR
+		Location: 85,48
+	att8: waypoint
+		Owner: USSR
+		Location: 75,46
+	att9: waypoint
+		Owner: USSR
+		Location: 84,35
+	sovboatspawn: waypoint
+		Owner: USSR
+		Location: 65,32
+	sovboatunload: waypoint
+		Owner: USSR
+		Location: 70,41
+	patrol1: waypoint
+		Owner: USSR
+		Location: 95,66
+	patrol2: waypoint
+		Owner: USSR
+		Location: 90,79
+	patrol3: waypoint
+		Owner: USSR
+		Location: 38,78
+	patrol4: waypoint
+		Owner: USSR
+		Location: 37,66
+	Actor601: heli
+		Owner: Greece
+		Location: 82,38
+		Facing: 92
+	Actor602: pt
+		Owner: Greece
+		Location: 70,33
+		Facing: 92
+		TurretFacing: 92
+	Actor563: 3tnk
+		Owner: USSR
+		Location: 37,47
+		TurretFacing: 193
+		Facing: 193
+	DefaultCameraPosition: waypoint
+		Owner: Neutral
+		Location: 78,41
 Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, ra|rules/campaign-palettes.yaml, rules.yaml
 Weapons: weapons.yaml

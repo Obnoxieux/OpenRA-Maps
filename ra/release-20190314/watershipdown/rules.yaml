@@ -135,9 +135,6 @@ AFLD:
 		ClockSequence: clock
 		CircleSequence: circles
 
-
-^Vehicle:
-	-Demolishable:
 THF:
 	Buildable:
 		Queue: Infantry
