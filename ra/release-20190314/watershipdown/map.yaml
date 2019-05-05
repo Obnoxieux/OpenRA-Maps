@@ -608,7 +608,7 @@ Actors:
 		Owner: USSR
 	barrpp1: powr
 		Location: 87,67
-		Owner: BadGuy
+		Owner: USSR
 	barrpp2: powr
 		Location: 89,67
 		Owner: USSR
@@ -617,7 +617,7 @@ Actors:
 		Owner: USSR
 	barrpp3: powr
 		Location: 87,70
-		Owner: BadGuy
+		Owner: USSR
 	barrflame2: ftur
 		Location: 81,72
 		Owner: USSR
@@ -1861,5 +1861,14 @@ Actors:
 	DefaultCameraPosition: waypoint
 		Owner: Neutral
 		Location: 78,41
+	Actor605: powr
+		Owner: Greece
+		Location: 89,32
+	Actor603: apwr
+		Owner: England
+		Location: 83,106
+	Actor604: apwr
+		Owner: England
+		Location: 86,106
 Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, ra|rules/campaign-palettes.yaml, rules.yaml
 Weapons: weapons.yaml
