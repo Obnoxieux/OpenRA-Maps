@@ -1506,11 +1506,6 @@ Actors:
 		Location: 53,77
 		TurretFacing: 165
 		Facing: 165
-	start3: 3tnk
-		Owner: USSR
-		Location: 72,43
-		TurretFacing: 228
-		Facing: 228
 	barrtank1: 3tnk
 		Owner: USSR
 		Location: 70,70
@@ -1870,5 +1865,10 @@ Actors:
 	Actor604: apwr
 		Owner: England
 		Location: 86,106
+	start3: ftrk
+		Owner: USSR
+		Location: 72,43
+		TurretFacing: 208
+		Facing: 208
 Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, ra|rules/campaign-palettes.yaml, rules.yaml
 Weapons: weapons.yaml

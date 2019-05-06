@@ -30,7 +30,7 @@ Tick = function()
 		if not allies.IsObjectiveFailed(objSaveEngland) then
 			allies.MarkCompletedObjective(objSaveEngland)
 		end
-		Trigger.AfterDelay(DateTime.Seconds(5), function()
+		Trigger.AfterDelay(DateTime.Seconds(3), function()
 			allies.MarkCompletedObjective(objKillAll)
 		end)
 	end

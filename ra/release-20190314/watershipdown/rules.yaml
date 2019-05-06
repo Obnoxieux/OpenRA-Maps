@@ -18,8 +18,8 @@ World:
 	ObjectivesPanel:
 		PanelName: MISSION_OBJECTIVES
 	MissionData:
-		WinVideo: flare.vqa
-		LossVideo: sfrozen.vqa
+		WinVideo: sovbatl.vqa
+		LossVideo: bmap.vqa
 		Briefing: In this sector a big river has marked the frontline. The Soviets hold the western bank and have tried to take the eastern bank as well by driving a wedge between two of our forward bases.\n\nYour objective is simple - you destroy the barricade and reestablish contact with our southern outpost.\n\nOnce we send you reinforcements, you end the Soviet threat and take the western river bank.\nLeave no Soviets alive and prevent civilian casualties.
 	-CrateSpawner:
 	MapBuildRadius:
