@@ -93,6 +93,9 @@ TRUK:
 		Prerequisites: ~disabled
 	SpawnActorOnDeath:
 		Actor: moneycrate
+E7.noautotarget:
+	Buildable:
+		Prerequisites: ~disabled
 HOSP:
 	SpawnActorOnDeath:
 		Actor: moneycrate
