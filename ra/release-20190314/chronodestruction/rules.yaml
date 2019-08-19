@@ -1,0 +1,115 @@
+Player:
+	-ConquestVictoryConditions:
+	MissionObjectives:
+		EarlyGameOver: true
+	Shroud:
+		FogCheckboxLocked: True
+		FogCheckboxEnabled: False
+		ExploredMapCheckboxLocked: True
+		ExploredMapCheckboxEnabled: False
+	PlayerResources:
+		DefaultCashLocked: True
+		DefaultCash: 20000
+
+World:
+	-SpawnMPUnits:
+	-MPStartLocations:
+	LuaScript:
+		Scripts: chronodestruction.lua
+	ObjectivesPanel:
+		PanelName: MISSION_OBJECTIVES
+	-StartGameNotification:
+	-CrateSpawner:
+	MissionData:
+		Briefing: TEMP
+		WinVideo: sovtstar.vqa
+		LossVideo: sovtstar.vqa
+	MapBuildRadius:
+		AllyBuildRadiusLocked: True
+		AllyBuildRadiusEnabled: True
+	MapOptions:
+		ShortGameLocked: True
+		ShortGameEnabled: False
+
+^Palettes:
+	IndexedPlayerPalette@supertanks:
+		BasePalette: player
+		BaseName: supertanks
+		RemapIndex: 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95
+		PlayerIndex:
+			USSR: 200, 200, 201, 202, 203, 203, 204, 205, 206, 206, 207, 221, 222, 222, 223, 223
+			Turkey: 200, 200, 201, 202, 203, 203, 204, 205, 206, 206, 207, 221, 222, 222, 223, 223
+
+5TNK:
+	Inherits: ^TrackedVehicle
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 180
+		Prerequisites: fix, stek, ~vehicles.soviet, ~techlevel.high
+		BuildDurationModifier: 50
+		Description: Dr. Demitri's Super Tank. A rolling fortress made for destroying any opposition to Stalin.\nCan crush concrete walls.\nCan detect cloaked units.\n  Strong vs Everything\n  Weak vs Nothing
+	Valued:
+		Cost: 10000
+	Tooltip:
+		Name: Super Tank
+		GenericName: Super Tank
+	Health:
+		HP: 2000000
+	Armor:
+		Type: Concrete
+	Mobile:
+		Speed: 42
+	RevealsShroud:
+		Range: 7c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	Turreted:
+		TurnSpeed: 2
+	Armament@PRIMARY:
+		Weapon: SuperTankPrimary
+		LocalOffset: 900,180,340, 900,-180,340
+		Recoil: 171
+		RecoilRecovery: 30
+		MuzzleSequence: muzzle
+	Armament@SECONDARY:
+		Name: secondary
+		Weapon: MammothTusk
+		LocalOffset: -85,384,340, -85,-384,340
+		LocalYaw: -100,100
+		Recoil: 43
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	Explodes:
+		Weapon: MiniNuke
+		EmptyWeapon: MiniNuke
+	SpawnActorOnDeath:
+		Actor: 5TNK.Husk
+	SelfHealing:
+		Step: 100
+		Delay: 1
+		HealIfBelow: 100
+		DamageCooldown: 150
+	Selectable:
+		Bounds: 44,38,0,-4
+	RenderSprites:
+		Image: 4TNK
+		PlayerPalette: supertanks
+
+5TNK.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Husk (Super Tank)
+	ThrowsParticle@turret:
+		Anim: turret
+	Health:
+		HP: 200000
+	RenderSprites:
+		Image: 4TNK
+		PlayerPalette: supertanks
+	-Capturable:
+	-TransformOnCapture:
+	-InfiltrateForTransform:
