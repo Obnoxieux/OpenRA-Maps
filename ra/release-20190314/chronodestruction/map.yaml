@@ -48,72 +48,6 @@ Players:
 		LockTeam: True
 		Enemies: GoodGuy, Greece, France, Creeps
 Actors:
-	Actor0: brik
-		Location: 63,19
-		Owner: Neutral
-	Actor1: brik
-		Location: 64,19
-		Owner: Neutral
-	Actor2: brik
-		Location: 65,19
-		Owner: Neutral
-	Actor3: brik
-		Location: 66,19
-		Owner: Neutral
-	Actor4: brik
-		Location: 67,19
-		Owner: Neutral
-	Actor5: brik
-		Location: 68,19
-		Owner: Neutral
-	Actor6: brik
-		Location: 69,19
-		Owner: Neutral
-	Actor7: brik
-		Location: 70,19
-		Owner: Neutral
-	Actor8: brik
-		Location: 63,20
-		Owner: Neutral
-	Actor9: brik
-		Location: 64,20
-		Owner: Neutral
-	Actor10: brik
-		Location: 69,20
-		Owner: Neutral
-	Actor11: brik
-		Location: 70,20
-		Owner: Neutral
-	Actor12: brik
-		Location: 63,21
-		Owner: Neutral
-	Actor13: brik
-		Location: 70,21
-		Owner: Neutral
-	Actor14: brik
-		Location: 63,22
-		Owner: Neutral
-	Actor15: brik
-		Location: 70,22
-		Owner: Neutral
-	Actor16: brik
-		Location: 63,23
-		Owner: Neutral
-	Actor17: brik
-		Location: 64,23
-		Owner: Neutral
-	Actor18: brik
-		Location: 65,23
-		Owner: Neutral
-	Actor19: brik
-		Location: 68,23
-		Owner: Neutral
-	Actor20: brik
-		Location: 69,23
-		Owner: Neutral
-	Actor21: brik
-		Location: 70,23
-		Owner: Neutral
 	Actor22: brik
 		Location: 43,24
 		Owner: Neutral
@@ -126,32 +60,11 @@ Actors:
 	Actor25: brik
 		Location: 47,24
 		Owner: Neutral
-	Actor26: brik
-		Location: 63,24
-		Owner: Neutral
-	Actor27: brik
-		Location: 64,24
-		Owner: Neutral
-	Actor28: brik
-		Location: 65,24
-		Owner: Neutral
-	Actor29: brik
-		Location: 68,24
-		Owner: Neutral
-	Actor30: brik
-		Location: 69,24
-		Owner: Neutral
-	Actor31: brik
-		Location: 70,24
-		Owner: Neutral
 	Actor32: brik
 		Location: 43,25
 		Owner: Neutral
 	Actor33: brik
 		Location: 47,25
-		Owner: Neutral
-	Actor34: v13
-		Location: 16,27
 		Owner: Neutral
 	Actor35: brik
 		Location: 43,27
@@ -170,9 +83,6 @@ Actors:
 		Owner: Neutral
 	Actor40: brik
 		Location: 47,28
-		Owner: Neutral
-	Actor41: v12
-		Location: 52,39
 		Owner: Neutral
 	Actor42: v14
 		Location: 27,54
@@ -318,9 +228,6 @@ Actors:
 	Actor92: t01
 		Location: 58,18
 		Owner: Neutral
-	Actor93: mine
-		Location: 90,19
-		Owner: Neutral
 	Actor94: t11
 		Location: 30,22
 		Owner: Neutral
@@ -347,12 +254,6 @@ Actors:
 		Owner: Neutral
 	Actor103: t05
 		Location: 59,28
-		Owner: Neutral
-	Actor104: t13
-		Location: 47,32
-		Owner: Neutral
-	Actor105: t12
-		Location: 44,33
 		Owner: Neutral
 	Actor106: t16
 		Location: 96,33
@@ -693,9 +594,6 @@ Actors:
 	Actor230: tc04
 		Location: 57,78
 		Owner: Neutral
-	Actor231: mine
-		Location: 17,83
-		Owner: Neutral
 	Actor232: t15
 		Location: 75,82
 		Owner: Neutral
@@ -792,15 +690,6 @@ Actors:
 	Actor265: hbox
 		Location: 52,17
 		Owner: Greece
-	Actor266: apwr
-		Location: 16,17
-		Owner: GoodGuy
-	Actor267: apwr
-		Location: 19,17
-		Owner: GoodGuy
-	Actor268: apwr
-		Location: 22,17
-		Owner: GoodGuy
 	Actor269: apwr
 		Location: 26,17
 		Owner: GoodGuy
@@ -825,83 +714,8 @@ Actors:
 	Actor276: proc
 		Location: 48,16
 		Owner: GoodGuy
-	Actor277: gun
-		Location: 63,18
-		Owner: GoodGuy
-	Actor278: gun
-		Location: 64,18
-		Owner: GoodGuy
-	Actor279: gun
-		Location: 65,18
-		Owner: GoodGuy
-	Actor280: gap
-		Location: 67,18
-		Owner: GoodGuy
-	Actor281: gun
-		Location: 68,18
-		Owner: GoodGuy
-	Actor282: gun
-		Location: 69,18
-		Owner: GoodGuy
-	Actor283: gun
-		Location: 70,18
-		Owner: GoodGuy
-	Actor284: gap
-		Location: 25,19
-		Owner: GoodGuy
-	Actor285: gap
-		Location: 53,19
-		Owner: GoodGuy
-	Actor286: gun
-		Location: 62,19
-		Owner: GoodGuy
-	Actor287: gun
-		Location: 71,19
-		Owner: GoodGuy
-	Actor288: gap
-		Location: 33,20
-		Owner: GoodGuy
-	Actor289: gun
-		Location: 62,20
-		Owner: GoodGuy
-	Actor290: agun
-		Location: 65,20
-		Owner: GoodGuy
-	Actor291: gap
-		Location: 66,20
-		Owner: GoodGuy
-	Actor292: agun
-		Location: 67,20
-		Owner: GoodGuy
-	Actor293: agun
-		Location: 68,20
-		Owner: GoodGuy
-	Actor294: gun
-		Location: 71,20
-		Owner: GoodGuy
-	Actor295: apwr
-		Location: 16,20
-		Owner: GoodGuy
-	Actor296: apwr
-		Location: 19,20
-		Owner: GoodGuy
-	Actor297: apwr
-		Location: 22,20
-		Owner: GoodGuy
 	Actor298: tent
 		Location: 52,20
-		Owner: GoodGuy
-	Actor299: gun
-		Location: 62,21
-		Owner: GoodGuy
-	Actor300: agun
-		Location: 64,21
-		Owner: GoodGuy
-	Actor301: agun
-		Location: 69,21
-		Owner: GoodGuy
-	Actor302: gun
-		Location: 71,21
 		Owner: GoodGuy
 	Actor303: hbox
 		Location: 30,22
@@ -918,30 +732,6 @@ Actors:
 	Actor307: proc
 		Location: 48,20
 		Owner: GoodGuy
-	Actor308: gap
-		Location: 61,22
-		Owner: GoodGuy
-	Actor309: gun
-		Location: 62,22
-		Owner: GoodGuy
-	Actor310: agun
-		Location: 64,22
-		Owner: GoodGuy
-	Actor311: agun
-		Location: 65,22
-		Owner: GoodGuy
-	Actor312: pdox
-		Location: 66,21
-		Owner: GoodGuy
-	Actor313: agun
-		Location: 68,22
-		Owner: GoodGuy
-	Actor314: gun
-		Location: 71,22
-		Owner: GoodGuy
-	Actor315: gap
-		Location: 72,22
-		Owner: GoodGuy
 	Actor316: apwr
 		Location: 27,22
 		Owner: Greece
@@ -954,27 +744,6 @@ Actors:
 	Actor319: hbox
 		Location: 46,23
 		Owner: GoodGuy
-	Actor320: gun
-		Location: 62,23
-		Owner: GoodGuy
-	Actor321: hbox
-		Location: 66,23
-		Owner: GoodGuy
-	Actor322: hbox
-		Location: 67,23
-		Owner: GoodGuy
-	Actor323: gun
-		Location: 71,23
-		Owner: GoodGuy
-	Actor324: apwr
-		Location: 16,23
-		Owner: GoodGuy
-	Actor325: apwr
-		Location: 19,23
-		Owner: GoodGuy
-	Actor326: apwr
-		Location: 22,23
-		Owner: GoodGuy
 	Actor327: hbox
 		Location: 25,24
 		Owner: GoodGuy
@@ -984,38 +753,8 @@ Actors:
 	Actor329: hbox
 		Location: 42,24
 		Owner: GoodGuy
-	Actor330: gun
-		Location: 62,24
-		Owner: GoodGuy
-	Actor331: gun
-		Location: 71,24
-		Owner: GoodGuy
 	Actor332: fact
 		Location: 35,23
-		Owner: GoodGuy
-	Actor333: gun
-		Location: 63,25
-		Owner: GoodGuy
-	Actor334: gun
-		Location: 64,25
-		Owner: GoodGuy
-	Actor335: gun
-		Location: 65,25
-		Owner: GoodGuy
-	Actor336: gap
-		Location: 67,25
-		Owner: GoodGuy
-	Actor337: gun
-		Location: 68,25
-		Owner: GoodGuy
-	Actor338: gun
-		Location: 69,25
-		Owner: GoodGuy
-	Actor339: gun
-		Location: 70,25
-		Owner: GoodGuy
-	Actor340: hbox
-		Location: 16,26
 		Owner: GoodGuy
 	Actor341: hpad
 		Location: 38,25
@@ -1028,9 +767,6 @@ Actors:
 		Owner: GoodGuy
 	Actor344: atek
 		Location: 45,25
-		Owner: GoodGuy
-	Actor345: gap
-		Location: 22,27
 		Owner: GoodGuy
 	Actor346: apwr
 		Location: 26,26
@@ -1050,23 +786,11 @@ Actors:
 	Actor351: hbox
 		Location: 76,27
 		Owner: GoodGuy
-	Actor352: apwr
-		Location: 18,27
-		Owner: GoodGuy
 	Actor353: hbox
 		Location: 42,28
 		Owner: GoodGuy
-	Actor354: powr
-		Location: 16,28
-		Owner: GoodGuy
 	Actor355: weap
 		Location: 21,28
-		Owner: GoodGuy
-	Actor356: hpad
-		Location: 38,28
-		Owner: GoodGuy
-	Actor357: hpad
-		Location: 40,28
 		Owner: GoodGuy
 	Actor358: hbox
 		Location: 43,29
@@ -1077,30 +801,9 @@ Actors:
 	Actor360: apwr
 		Location: 26,29
 		Owner: GoodGuy
-	Actor361: apwr
-		Location: 29,29
-		Owner: GoodGuy
-	Actor362: apwr
-		Location: 32,29
-		Owner: GoodGuy
-	Actor363: apwr
-		Location: 18,30
-		Owner: GoodGuy
 	Actor364: hbox
 		Location: 37,31
 		Owner: GoodGuy
-	Actor365: gun
-		Location: 39,31
-		Owner: GoodGuy
-	Actor366: powr
-		Location: 16,31
-		Owner: GoodGuy
-	Actor367: gun
-		Location: 47,32
-		Owner: Greece
-	Actor368: apwr
-		Location: 26,32
-		Owner: Greece
 	Actor369: hbox
 		Location: 37,33
 		Owner: GoodGuy
@@ -1109,9 +812,6 @@ Actors:
 		Owner: GoodGuy
 	Actor371: hbox
 		Location: 44,33
-		Owner: Greece
-	Actor372: apwr
-		Location: 30,33
 		Owner: Greece
 	Actor373: hbox
 		Location: 66,35
@@ -1122,9 +822,7 @@ Actors:
 	Actor375: gun
 		Location: 40,36
 		Owner: GoodGuy
-	Actor376: gun
-		Location: 48,36
-		Owner: Greece
+		TurretFacing: 127
 	Actor377: hbox
 		Location: 55,36
 		Owner: Greece
@@ -1172,6 +870,7 @@ Actors:
 	Actor393: gun
 		Location: 66,55
 		Owner: Greece
+		TurretFacing: 114
 	Actor395: agun
 		Location: 44,56
 		Owner: GoodGuy
@@ -1192,9 +891,6 @@ Actors:
 		Owner: GoodGuy
 	Actor401: agun
 		Location: 35,60
-		Owner: GoodGuy
-	Actor402: agun
-		Location: 39,60
 		Owner: GoodGuy
 	Actor404: minv
 		Location: 49,62
@@ -1301,9 +997,6 @@ Actors:
 	Actor445: minv
 		Location: 65,78
 		Owner: Greece
-	Actor446: agun
-		Location: 19,79
-		Owner: GoodGuy
 	Actor447: hbox
 		Location: 97,82
 		Owner: Greece
@@ -1337,9 +1030,6 @@ Actors:
 	Actor457: gun
 		Location: 40,96
 		Owner: Greece
-	Actor458: agun
-		Location: 32,97
-		Owner: Greece
 	Actor460: gun
 		Location: 43,97
 		Owner: Greece
@@ -1349,14 +1039,12 @@ Actors:
 	Actor464: gun
 		Location: 61,98
 		Owner: Greece
+		TurretFacing: 218
 	Actor465: hbox
 		Location: 59,99
 		Owner: Greece
 	Actor466: gun
 		Location: 32,100
-		Owner: Greece
-	Actor467: gap
-		Location: 34,100
 		Owner: Greece
 	Actor468: gun
 		Location: 37,100
@@ -1364,6 +1052,7 @@ Actors:
 	Actor469: gun
 		Location: 64,100
 		Owner: Greece
+		TurretFacing: 230
 	Actor470: powr
 		Location: 30,100
 		Owner: Greece
@@ -1373,26 +1062,8 @@ Actors:
 	Actor472: dome
 		Location: 51,100
 		Owner: Greece
-	Actor473: hpad
-		Location: 35,101
-		Owner: Greece
-	Actor474: hpad
-		Location: 37,101
-		Owner: Greece
 	Actor475: hbox
 		Location: 63,102
-		Owner: Greece
-	Actor476: gap
-		Location: 53,103
-		Owner: Greece
-	Actor477: gap
-		Location: 29,105
-		Owner: Greece
-	Actor478: hpad
-		Location: 35,104
-		Owner: Greece
-	Actor479: hpad
-		Location: 37,104
 		Owner: Greece
 	Actor482: gun
 		Location: 46,105
@@ -1408,9 +1079,6 @@ Actors:
 		Owner: Greece
 	Actor488: hbox
 		Location: 53,106
-		Owner: Greece
-	Actor489: apwr
-		Location: 25,106
 		Owner: Greece
 	Actor490: agun
 		Location: 28,107
@@ -1443,6 +1111,7 @@ Actors:
 		Location: 74,108
 		Owner: Greece
 		Facing: 191
+		TurretFacing: 193
 	Actor501: minv
 		Location: 106,108
 		Owner: Greece
@@ -1467,12 +1136,6 @@ Actors:
 	Actor509: apwr
 		Location: 31,109
 		Owner: Greece
-	Actor510: gun
-		Location: 39,110
-		Owner: Greece
-	Actor511: gun
-		Location: 48,110
-		Owner: Greece
 	Actor513: hbox
 		Location: 41,111
 		Owner: Greece
@@ -1483,19 +1146,7 @@ Actors:
 		Location: 74,111
 		Owner: Greece
 		Facing: 191
-	Actor517: 2tnk
-		Location: 64,17
-		Owner: GoodGuy
-	Actor518: 2tnk
-		Location: 68,17
-		Owner: GoodGuy
-	Actor519: 1tnk
-		Location: 66,18
-		Owner: GoodGuy
-	Actor520: 1tnk
-		Location: 80,18
-		Owner: GoodGuy
-		Facing: 191
+		TurretFacing: 193
 	Actor521: arty
 		Location: 81,18
 		Owner: GoodGuy
@@ -1512,22 +1163,6 @@ Actors:
 		Location: 81,19
 		Owner: GoodGuy
 		Facing: 191
-	Actor525: jeep
-		Location: 82,19
-		Owner: GoodGuy
-		Facing: 191
-	Actor526: 1tnk
-		Location: 61,20
-		Owner: GoodGuy
-		Facing: 63
-	Actor527: 2tnk
-		Location: 72,20
-		Owner: GoodGuy
-		Facing: 191
-	Actor528: 1tnk
-		Location: 80,20
-		Owner: GoodGuy
-		Facing: 191
 	Actor529: arty
 		Location: 81,20
 		Owner: GoodGuy
@@ -1540,34 +1175,10 @@ Actors:
 		Location: 45,21
 		Owner: GoodGuy
 		Facing: 159
-	Actor532: 2tnk
-		Location: 59,21
-		Owner: GoodGuy
-		Facing: 63
-	Actor533: 1tnk
-		Location: 74,21
-		Owner: GoodGuy
-		Facing: 191
-	Actor534: 2tnk
-		Location: 59,22
-		Owner: GoodGuy
-		Facing: 63
-	Actor535: 2tnk
-		Location: 72,23
-		Owner: GoodGuy
-		Facing: 191
 	Actor536: 1tnk
 		Location: 74,23
 		Owner: GoodGuy
 		Facing: 191
-	Actor537: 1tnk
-		Location: 61,24
-		Owner: GoodGuy
-		Facing: 63
-	Actor538: 1tnk
-		Location: 65,26
-		Owner: GoodGuy
-		Facing: 127
 	Actor539: 1tnk
 		Location: 69,26
 		Owner: GoodGuy
@@ -1576,14 +1187,6 @@ Actors:
 		Location: 50,27
 		Owner: GoodGuy
 		Facing: 95
-	Actor541: 2tnk
-		Location: 66,27
-		Owner: GoodGuy
-		Facing: 127
-	Actor542: 2tnk
-		Location: 68,27
-		Owner: GoodGuy
-		Facing: 127
 	Actor543: 1tnk
 		Location: 44,29
 		Owner: GoodGuy
@@ -1592,34 +1195,10 @@ Actors:
 		Location: 46,29
 		Owner: GoodGuy
 		Facing: 127
-	Actor545: 2tnk
-		Location: 21,30
-		Owner: GoodGuy
-		Facing: 63
-	Actor546: 2tnk
-		Location: 23,30
-		Owner: GoodGuy
-		Facing: 191
-	Actor547: arty
-		Location: 21,31
-		Owner: GoodGuy
-		Facing: 95
-	Actor548: 1tnk
-		Location: 22,31
-		Owner: GoodGuy
-		Facing: 127
-	Actor549: jeep
-		Location: 23,31
-		Owner: GoodGuy
-		Facing: 159
 	Actor550: 3tnk
 		Location: 106,31
 		Owner: USSR
 		Facing: 63
-	Actor551: harv
-		Location: 52,32
-		Owner: GoodGuy
-		Facing: 95
 	Actor552: 4tnk
 		Location: 104,32
 		Owner: USSR
@@ -1660,10 +1239,6 @@ Actors:
 		Location: 110,34
 		Owner: USSR
 		Facing: 63
-	Actor562: 1tnk
-		Location: 36,35
-		Owner: GoodGuy
-		Facing: 127
 	Actor563: 1tnk
 		Location: 37,35
 		Owner: GoodGuy
@@ -1687,22 +1262,17 @@ Actors:
 	Actor568: 2tnk
 		Location: 17,37
 		Owner: GoodGuy
-	Actor569: 1tnk
-		Location: 19,37
-		Owner: GoodGuy
+		Facing: 128
 	Actor570: arty
 		Location: 18,38
 		Owner: GoodGuy
+		Facing: 127
 	Actor571: jeep
 		Location: 54,39
 		Owner: GoodGuy
 		Facing: 159
 	Actor572: arty
 		Location: 70,40
-		Owner: GoodGuy
-		Facing: 95
-	Actor573: 2tnk
-		Location: 69,41
 		Owner: GoodGuy
 		Facing: 95
 	Actor574: arty
@@ -1716,12 +1286,15 @@ Actors:
 	Actor576: 2tnk
 		Location: 27,49
 		Owner: GoodGuy
+		Facing: 178
 	Actor577: jeep
 		Location: 31,49
 		Owner: GoodGuy
+		Facing: 84
 	Actor578: 2tnk
 		Location: 36,49
 		Owner: GoodGuy
+		Facing: 99
 	Actor579: 2tnk
 		Location: 25,53
 		Owner: GoodGuy
@@ -1751,14 +1324,6 @@ Actors:
 		Location: 51,69
 		Owner: Greece
 		Facing: 191
-	Actor588: arty
-		Location: 24,70
-		Owner: Greece
-		Facing: 223
-	Actor589: arty
-		Location: 25,70
-		Owner: Greece
-		Facing: 223
 	Actor590: 2tnk
 		Location: 27,70
 		Owner: Greece
@@ -1902,30 +1467,10 @@ Actors:
 		Location: 58,18
 		Owner: GoodGuy
 		SubCell: 3
-	Actor629: e3
-		Location: 18,19
-		Owner: GoodGuy
-		Facing: 223
-		SubCell: 1
-	Actor630: e3
-		Location: 21,19
-		Owner: GoodGuy
-		Facing: 223
-		SubCell: 1
 	Actor631: e3
 		Location: 28,21
 		Owner: GoodGuy
 		SubCell: 2
-	Actor632: e3
-		Location: 18,22
-		Owner: GoodGuy
-		Facing: 223
-		SubCell: 2
-	Actor633: e3
-		Location: 22,22
-		Owner: GoodGuy
-		Facing: 223
-		SubCell: 0
 	Actor634: e1
 		Location: 26,22
 		Owner: GoodGuy
@@ -1953,16 +1498,6 @@ Actors:
 		Location: 26,24
 		Owner: GoodGuy
 		SubCell: 2
-	Actor642: e3
-		Location: 17,25
-		Owner: GoodGuy
-		Facing: 223
-		SubCell: 0
-	Actor643: e3
-		Location: 21,25
-		Owner: GoodGuy
-		Facing: 223
-		SubCell: 0
 	Actor644: e3
 		Location: 31,25
 		Owner: GoodGuy
@@ -2003,16 +1538,6 @@ Actors:
 		Owner: Greece
 		Facing: 191
 		SubCell: 4
-	Actor657: e1
-		Location: 17,34
-		Owner: Greece
-		Facing: 223
-		SubCell: 3
-	Actor658: e1
-		Location: 20,34
-		Owner: Greece
-		Facing: 223
-		SubCell: 3
 	Actor659: e3
 		Location: 61,34
 		Owner: GoodGuy
@@ -2225,5 +1750,900 @@ Actors:
 	Actor717: apwr
 		Owner: France
 		Location: 8,99
+	Actor573: brik
+		Owner: GoodGuy
+		Location: 56,31
+	Actor640: brik
+		Owner: GoodGuy
+		Location: 56,30
+	Actor641: brik
+		Owner: GoodGuy
+		Location: 56,29
+	Actor647: brik
+		Owner: GoodGuy
+		Location: 56,27
+	Actor648: brik
+		Owner: GoodGuy
+		Location: 56,28
+	Actor653: brik
+		Owner: GoodGuy
+		Location: 56,26
+	Actor654: brik
+		Owner: GoodGuy
+		Location: 56,25
+	Actor669: brik
+		Owner: GoodGuy
+		Location: 56,24
+	Actor671: brik
+		Owner: GoodGuy
+		Location: 56,23
+	Actor678: brik
+		Owner: GoodGuy
+		Location: 56,22
+	Actor690: brik
+		Owner: GoodGuy
+		Location: 56,21
+	Actor718: brik
+		Owner: GoodGuy
+		Location: 56,20
+	Actor719: brik
+		Owner: GoodGuy
+		Location: 56,19
+	Actor720: brik
+		Owner: GoodGuy
+		Location: 56,18
+	Actor721: brik
+		Owner: GoodGuy
+		Location: 56,17
+	Actor722: brik
+		Owner: GoodGuy
+		Location: 56,16
+	Actor723: brik
+		Owner: GoodGuy
+		Location: 55,16
+	Actor724: brik
+		Owner: GoodGuy
+		Location: 55,17
+	Actor725: brik
+		Owner: GoodGuy
+		Location: 57,31
+	Actor726: brik
+		Owner: GoodGuy
+		Location: 57,30
+	Actor727: brik
+		Owner: GoodGuy
+		Location: 53,38
+	Actor728: brik
+		Owner: GoodGuy
+		Location: 53,39
+	Actor729: brik
+		Owner: GoodGuy
+		Location: 52,39
+	Actor730: brik
+		Owner: GoodGuy
+		Location: 52,38
+	Actor731: brik
+		Owner: GoodGuy
+		Location: 51,38
+	Actor732: brik
+		Owner: GoodGuy
+		Location: 50,38
+	Actor733: brik
+		Owner: GoodGuy
+		Location: 49,38
+	Actor734: brik
+		Owner: GoodGuy
+		Location: 49,37
+	Actor735: brik
+		Owner: GoodGuy
+		Location: 49,36
+	Actor736: brik
+		Owner: GoodGuy
+		Location: 49,35
+	Actor737: brik
+		Owner: GoodGuy
+		Location: 49,34
+	Actor738: brik
+		Owner: GoodGuy
+		Location: 49,33
+	Actor739: brik
+		Owner: GoodGuy
+		Location: 49,32
+	Actor740: brik
+		Owner: GoodGuy
+		Location: 49,31
+	Actor741: brik
+		Owner: GoodGuy
+		Location: 48,31
+	Actor742: brik
+		Owner: GoodGuy
+		Location: 47,31
+	Actor743: brik
+		Owner: GoodGuy
+		Location: 45,31
+	Actor744: brik
+		Owner: GoodGuy
+		Location: 46,31
+	Actor745: brik
+		Owner: GoodGuy
+		Location: 44,31
+	Actor746: brik
+		Owner: GoodGuy
+		Location: 43,31
+	Actor747: brik
+		Owner: GoodGuy
+		Location: 42,31
+	Actor749: brik
+		Owner: GoodGuy
+		Location: 41,31
+	Actor748: brik
+		Owner: GoodGuy
+		Location: 41,32
+	Actor750: brik
+		Owner: GoodGuy
+		Location: 42,32
+	Actor751: brik
+		Owner: GoodGuy
+		Location: 39,29
+	Actor752: brik
+		Owner: GoodGuy
+		Location: 38,29
+	Actor753: brik
+		Owner: GoodGuy
+		Location: 37,29
+	Actor754: brik
+		Owner: GoodGuy
+		Location: 36,29
+	Actor755: brik
+		Owner: GoodGuy
+		Location: 35,29
+	Actor756: brik
+		Owner: GoodGuy
+		Location: 34,29
+	Actor757: brik
+		Owner: GoodGuy
+		Location: 39,28
+	Actor758: brik
+		Owner: GoodGuy
+		Location: 38,28
+	Actor759: brik
+		Owner: GoodGuy
+		Location: 37,28
+	Actor760: brik
+		Owner: GoodGuy
+		Location: 36,28
+	Actor761: brik
+		Owner: GoodGuy
+		Location: 35,28
+	Actor762: brik
+		Owner: GoodGuy
+		Location: 34,28
+	Actor763: brik
+		Owner: GoodGuy
+		Location: 33,29
+	Actor764: brik
+		Owner: GoodGuy
+		Location: 32,29
+	Actor765: brik
+		Owner: GoodGuy
+		Location: 32,30
+	Actor766: brik
+		Owner: GoodGuy
+		Location: 32,31
+	Actor767: brik
+		Owner: GoodGuy
+		Location: 32,32
+	Actor768: brik
+		Owner: GoodGuy
+		Location: 32,33
+	Actor769: brik
+		Owner: GoodGuy
+		Location: 31,34
+	Actor770: brik
+		Owner: GoodGuy
+		Location: 32,34
+	Actor771: brik
+		Owner: GoodGuy
+		Location: 30,34
+	Actor772: brik
+		Owner: GoodGuy
+		Location: 31,33
+	Actor773: brik
+		Owner: GoodGuy
+		Location: 29,34
+	Actor774: brik
+		Owner: GoodGuy
+		Location: 27,34
+	Actor775: brik
+		Owner: GoodGuy
+		Location: 28,34
+	Actor776: brik
+		Owner: GoodGuy
+		Location: 26,34
+	Actor777: brik
+		Owner: GoodGuy
+		Location: 25,34
+	Actor778: brik
+		Owner: GoodGuy
+		Location: 24,34
+	Actor779: brik
+		Owner: GoodGuy
+		Location: 23,34
+	Actor780: brik
+		Owner: GoodGuy
+		Location: 22,34
+	Actor657: brik
+		Owner: GoodGuy
+		Location: 21,34
+	Actor781: brik
+		Owner: GoodGuy
+		Location: 20,33
+	Actor782: brik
+		Owner: GoodGuy
+		Location: 21,33
+	Actor783: brik
+		Owner: GoodGuy
+		Location: 16,33
+	Actor784: brik
+		Owner: GoodGuy
+		Location: 17,33
+	Actor786: brik
+		Owner: GoodGuy
+		Location: 16,34
+	Actor787: brik
+		Owner: GoodGuy
+		Location: 55,19
+	Actor788: brik
+		Owner: GoodGuy
+		Location: 54,19
+	Actor789: brik
+		Owner: GoodGuy
+		Location: 54,20
+	Actor790: brik
+		Owner: GoodGuy
+		Location: 54,21
+	Actor791: brik
+		Owner: GoodGuy
+		Location: 55,21
+	Actor792: brik
+		Owner: GoodGuy
+		Location: 25,33
+	Actor793: brik
+		Owner: GoodGuy
+		Location: 25,32
+	Actor794: brik
+		Owner: GoodGuy
+		Location: 26,32
+	Actor795: brik
+		Owner: GoodGuy
+		Location: 27,32
+	Actor796: brik
+		Owner: GoodGuy
+		Location: 27,33
+	Actor642: pdox
+		Owner: GoodGuy
+		Location: 19,19
+	Actor643: agun
+		Owner: GoodGuy
+		Location: 18,18
+		TurretFacing: 92
+	Actor797: agun
+		Owner: GoodGuy
+		Location: 21,18
+		TurretFacing: 92
+	Actor798: agun
+		Owner: GoodGuy
+		Location: 21,21
+		TurretFacing: 92
+	Actor799: agun
+		Owner: GoodGuy
+		Location: 18,21
+		TurretFacing: 92
+	Actor802: brik
+		Owner: GoodGuy
+		Location: 18,17
+	Actor803: brik
+		Owner: GoodGuy
+		Location: 19,17
+	Actor804: brik
+		Owner: GoodGuy
+		Location: 20,17
+	Actor805: brik
+		Owner: GoodGuy
+		Location: 21,17
+	Actor806: brik
+		Owner: GoodGuy
+		Location: 22,17
+	Actor807: brik
+		Owner: GoodGuy
+		Location: 17,17
+	Actor808: brik
+		Owner: GoodGuy
+		Location: 17,18
+	Actor809: brik
+		Owner: GoodGuy
+		Location: 17,19
+	Actor810: brik
+		Owner: GoodGuy
+		Location: 17,20
+	Actor811: brik
+		Owner: GoodGuy
+		Location: 17,21
+	Actor812: brik
+		Owner: GoodGuy
+		Location: 17,22
+	Actor813: brik
+		Owner: GoodGuy
+		Location: 18,22
+	Actor814: brik
+		Owner: GoodGuy
+		Location: 21,22
+	Actor815: brik
+		Owner: GoodGuy
+		Location: 22,22
+	Actor816: brik
+		Owner: GoodGuy
+		Location: 22,21
+	Actor817: brik
+		Owner: GoodGuy
+		Location: 22,20
+	Actor818: brik
+		Owner: GoodGuy
+		Location: 22,19
+	Actor819: brik
+		Owner: GoodGuy
+		Location: 22,18
+	Actor820: brik
+		Owner: GoodGuy
+		Location: 22,16
+	Actor821: brik
+		Owner: GoodGuy
+		Location: 21,16
+	Actor822: brik
+		Owner: GoodGuy
+		Location: 20,16
+	Actor823: brik
+		Owner: GoodGuy
+		Location: 19,16
+	Actor824: brik
+		Owner: GoodGuy
+		Location: 18,16
+	Actor825: brik
+		Owner: GoodGuy
+		Location: 17,16
+	Actor826: brik
+		Owner: GoodGuy
+		Location: 16,16
+	Actor827: brik
+		Owner: GoodGuy
+		Location: 16,17
+	Actor828: brik
+		Owner: GoodGuy
+		Location: 16,18
+	Actor829: brik
+		Owner: GoodGuy
+		Location: 23,16
+	Actor830: brik
+		Owner: GoodGuy
+		Location: 23,17
+	Actor831: brik
+		Owner: GoodGuy
+		Location: 23,18
+	Actor832: brik
+		Owner: GoodGuy
+		Location: 21,23
+	Actor833: brik
+		Owner: GoodGuy
+		Location: 22,23
+	Actor834: brik
+		Owner: GoodGuy
+		Location: 23,22
+	Actor835: brik
+		Owner: GoodGuy
+		Location: 23,23
+	Actor836: brik
+		Owner: GoodGuy
+		Location: 18,23
+	Actor837: brik
+		Owner: GoodGuy
+		Location: 17,23
+	Actor838: brik
+		Owner: GoodGuy
+		Location: 16,23
+	Actor839: brik
+		Owner: GoodGuy
+		Location: 16,22
+	Actor840: pbox
+		Owner: GoodGuy
+		Location: 23,19
+		TurretFacing: 92
+	Actor841: pbox
+		Owner: GoodGuy
+		Location: 23,20
+		TurretFacing: 92
+	Actor842: pbox
+		Owner: GoodGuy
+		Location: 23,21
+		TurretFacing: 92
+	Actor843: gun
+		Owner: GoodGuy
+		Location: 21,24
+		TurretFacing: 130
+	Actor844: gun
+		Owner: GoodGuy
+		Location: 22,24
+		TurretFacing: 127
+	Actor845: gun
+		Owner: GoodGuy
+		Location: 23,24
+		TurretFacing: 134
+	Actor846: gun
+		Owner: GoodGuy
+		Location: 18,24
+		TurretFacing: 131
+	Actor847: gun
+		Owner: GoodGuy
+		Location: 17,24
+		TurretFacing: 132
+	Actor848: gun
+		Owner: GoodGuy
+		Location: 16,24
+		TurretFacing: 126
+	Actor849: gap
+		Owner: GoodGuy
+		Location: 19,18
+	Actor850: gap
+		Owner: GoodGuy
+		Location: 20,18
+	Actor851: gap
+		Owner: GoodGuy
+		Location: 26,33
+	Actor852: gap
+		Owner: GoodGuy
+		Location: 55,20
+	Actor853: sbag
+		Owner: GoodGuy
+		Location: 82,17
+	Actor854: sbag
+		Owner: GoodGuy
+		Location: 81,17
+	Actor855: sbag
+		Owner: GoodGuy
+		Location: 80,17
+	Actor856: sbag
+		Owner: GoodGuy
+		Location: 82,21
+	Actor857: sbag
+		Owner: GoodGuy
+		Location: 83,21
+	Actor858: sbag
+		Owner: GoodGuy
+		Location: 83,22
+	Actor859: sbag
+		Owner: GoodGuy
+		Location: 81,21
+	Actor860: sbag
+		Owner: GoodGuy
+		Location: 80,21
+	Actor861: sbag
+		Owner: GoodGuy
+		Location: 79,21
+	Actor862: sbag
+		Owner: GoodGuy
+		Location: 79,20
+	Actor863: sbag
+		Owner: GoodGuy
+		Location: 79,17
+	Actor864: sbag
+		Owner: GoodGuy
+		Location: 79,18
+	Actor865: sbag
+		Owner: GoodGuy
+		Location: 66,41
+	Actor866: sbag
+		Owner: GoodGuy
+		Location: 66,40
+	Actor867: sbag
+		Owner: GoodGuy
+		Location: 67,40
+	Actor869: sbag
+		Owner: GoodGuy
+		Location: 68,40
+	Actor868: sbag
+		Owner: GoodGuy
+		Location: 68,39
+	Actor870: sbag
+		Owner: GoodGuy
+		Location: 68,38
+	Actor871: sbag
+		Owner: GoodGuy
+		Location: 67,38
+	Actor872: cycl
+		Owner: GoodGuy
+		Location: 21,19
+	Actor873: cycl
+		Owner: GoodGuy
+		Location: 21,20
+	Actor874: cycl
+		Owner: GoodGuy
+		Location: 18,19
+	Actor875: cycl
+		Owner: GoodGuy
+		Location: 18,20
+	Actor800: cycl
+		Owner: GoodGuy
+		Location: 19,21
+	Actor801: cycl
+		Owner: GoodGuy
+		Location: 20,21
+	Actor876: gun
+		Owner: GoodGuy
+		Location: 19,24
+		TurretFacing: 127
+	Actor877: gun
+		Owner: GoodGuy
+		Location: 20,24
+		TurretFacing: 126
+	Actor878: minv
+		Owner: GoodGuy
+		Location: 19,22
+	Actor879: minv
+		Owner: GoodGuy
+		Location: 20,22
+	Actor880: minv
+		Owner: GoodGuy
+		Location: 20,23
+	Actor881: minv
+		Owner: GoodGuy
+		Location: 19,23
+	Actor882: dome
+		Owner: GoodGuy
+		Location: 30,30
+	Actor883: 2tnk
+		Owner: GoodGuy
+		Location: 18,25
+		TurretFacing: 127
+		Facing: 127
+	Actor884: 2tnk
+		Owner: GoodGuy
+		Location: 19,25
+		TurretFacing: 128
+		Facing: 128
+	Actor885: 2tnk
+		Owner: GoodGuy
+		Location: 20,25
+		TurretFacing: 130
+		Facing: 130
+	Actor886: 2tnk
+		Owner: GoodGuy
+		Location: 21,25
+		TurretFacing: 134
+		Facing: 134
+	Actor887: 2tnk
+		Owner: GoodGuy
+		Location: 24,22
+		TurretFacing: 193
+		Facing: 193
+	Actor888: 2tnk
+		Owner: GoodGuy
+		Location: 24,23
+		TurretFacing: 193
+		Facing: 193
+	Actor889: 2tnk
+		Owner: GoodGuy
+		Location: 35,21
+		TurretFacing: 37
+		Facing: 37
+	Actor890: 2tnk
+		Owner: GoodGuy
+		Location: 37,21
+		TurretFacing: 225
+		Facing: 225
+	Actor891: 2tnk
+		Owner: GoodGuy
+		Location: 40,28
+		TurretFacing: 126
+		Facing: 126
+	Actor892: 2tnk
+		Owner: GoodGuy
+		Location: 51,19
+		Facing: 92
+		TurretFacing: 92
+	Actor893: 2tnk
+		Owner: GoodGuy
+		Location: 58,32
+		TurretFacing: 199
+		Facing: 199
+	Actor894: 2tnk
+		Owner: GoodGuy
+		Location: 58,35
+		TurretFacing: 159
+		Facing: 159
+	Actor895: 2tnk
+		Owner: GoodGuy
+		Location: 57,36
+		TurretFacing: 171
+		Facing: 171
+	Actor896: 2tnk
+		Owner: GoodGuy
+		Location: 55,37
+		TurretFacing: 167
+		Facing: 167
+	Actor897: hbox
+		Owner: GoodGuy
+		Location: 17,32
+		TurretFacing: 92
+	Actor898: hbox
+		Owner: GoodGuy
+		Location: 19,32
+		TurretFacing: 92
+	Actor785: gun
+		Owner: GoodGuy
+		Location: 20,34
+		TurretFacing: 127
+	Actor899: gun
+		Owner: GoodGuy
+		Location: 17,34
+		TurretFacing: 130
+	Actor900: v06
+		Owner: Neutral
+		Location: 67,29
+	Actor901: v07
+		Owner: Neutral
+		Location: 65,31
+	Actor902: v15
+		Owner: Neutral
+		Location: 66,29
+	Actor903: v16
+		Owner: Neutral
+		Location: 66,30
+	Actor904: v16
+		Owner: Neutral
+		Location: 67,30
+	Actor905: lhus
+		Owner: Neutral
+		Location: 47,81
+	Actor906: tc01
+		Owner: Neutral
+		Location: 67,18
+	Actor907: tc03
+		Owner: Neutral
+		Location: 67,20
+	Actor908: tc02
+		Owner: Neutral
+		Location: 65,19
+	Actor909: tc01
+		Owner: Neutral
+		Location: 41,32
+	Actor910: t05
+		Owner: Neutral
+		Location: 48,31
+	Actor911: t02
+		Owner: Neutral
+		Location: 47,31
+	Actor912: tc04
+		Owner: Neutral
+		Location: 46,32
+	Actor913: tc04
+		Owner: Neutral
+		Location: 72,27
+	Actor914: t16
+		Owner: Neutral
+		Location: 73,17
+	Actor915: t02
+		Owner: Neutral
+		Location: 74,16
+	Actor916: v01
+		Owner: Neutral
+		Location: 64,85
+	Actor917: v03
+		Owner: Neutral
+		Location: 61,86
+	Actor918: v02
+		Owner: Neutral
+		Location: 68,86
+	Actor919: v06
+		Owner: Neutral
+		Location: 67,89
+	Actor920: v07
+		Owner: Neutral
+		Location: 64,89
+	Actor921: v05
+		Owner: Neutral
+		Location: 62,90
+	Actor922: v10
+		Owner: Neutral
+		Location: 68,83
+	Actor923: v11
+		Owner: Neutral
+		Location: 70,83
+	Actor924: v14
+		Owner: Neutral
+		Location: 67,90
+	Actor925: v14
+		Owner: Neutral
+		Location: 68,90
+	Actor926: v17
+		Owner: Neutral
+		Location: 62,84
+	Actor927: v17
+		Owner: Neutral
+		Location: 63,84
+	Actor928: v17
+		Owner: Neutral
+		Location: 62,85
+	Actor929: v13
+		Owner: Neutral
+		Location: 68,88
+	Actor930: v13
+		Owner: Neutral
+		Location: 67,86
+	Actor931: v08
+		Owner: Neutral
+		Location: 60,90
+	Actor932: v09
+		Owner: Neutral
+		Location: 70,86
+	Actor933: v19
+		Owner: Neutral
+		Location: 90,86
+	Actor934: v19
+		Owner: Neutral
+		Location: 91,86
+	Actor935: v19
+		Owner: Neutral
+		Location: 89,85
+	Actor936: ammobox1
+		Owner: Neutral
+		Location: 65,87
+	Actor937: ammobox1
+		Owner: Neutral
+		Location: 63,87
+	Actor938: windmill
+		Owner: Neutral
+		Location: 70,88
+	Actor939: v12
+		Owner: Neutral
+		Location: 71,87
+	Actor940: v12
+		Owner: Neutral
+		Location: 69,88
+	Actor941: c1
+		Owner: Neutral
+		Location: 68,84
+		SubCell: 3
+		Facing: 92
+	Actor942: c8
+		Owner: Neutral
+		Location: 72,86
+		SubCell: 3
+		Facing: 92
+	Actor943: c6
+		Owner: Neutral
+		Location: 63,89
+		SubCell: 3
+		Facing: 92
+	Actor944: c2
+		Owner: Neutral
+		Location: 69,89
+		SubCell: 3
+		Facing: 92
+	Actor945: c3
+		Owner: Neutral
+		Location: 64,85
+		SubCell: 1
+		Facing: 92
+	Actor946: c3
+		Owner: Neutral
+		Location: 65,88
+		SubCell: 3
+		Facing: 92
+	Actor947: c7
+		Owner: Neutral
+		Location: 69,32
+		SubCell: 3
+		Facing: 92
+	Actor948: c2
+		Owner: Neutral
+		Location: 68,28
+		SubCell: 3
+		Facing: 92
+	Actor949: c3
+		Owner: Neutral
+		Location: 67,32
+		SubCell: 3
+		Facing: 92
+	Actor950: c8
+		Owner: Neutral
+		Location: 28,56
+		SubCell: 3
+		Facing: 92
+	Actor951: tc05
+		Owner: Neutral
+		Location: 77,93
+	Actor952: tc04
+		Owner: Neutral
+		Location: 79,90
+	Actor953: tc01
+		Owner: Neutral
+		Location: 71,90
+	Actor954: t11
+		Owner: Neutral
+		Location: 73,88
+	Actor955: t15
+		Owner: Neutral
+		Location: 69,91
+	Actor956: tc02
+		Owner: Neutral
+		Location: 59,92
+	Actor957: tc03
+		Owner: Neutral
+		Location: 63,91
+	Actor958: t05
+		Owner: Neutral
+		Location: 72,82
+	Actor959: t06
+		Owner: Neutral
+		Location: 71,81
+	Actor960: tc02
+		Owner: Neutral
+		Location: 71,98
+	Actor961: tc01
+		Owner: Neutral
+		Location: 83,103
+	Actor962: tc01
+		Owner: Neutral
+		Location: 95,103
+	Actor963: tc04
+		Owner: Neutral
+		Location: 109,93
+	Actor964: t16
+		Owner: Neutral
+		Location: 102,97
+	Actor965: t05
+		Owner: Neutral
+		Location: 103,98
+	Actor966: t11
+		Owner: Neutral
+		Location: 100,97
+	Actor967: t02
+		Owner: Neutral
+		Location: 94,79
+	Actor968: tc04
+		Owner: Neutral
+		Location: 105,63
+	Actor969: t16
+		Owner: Neutral
+		Location: 103,61
+	Actor970: t16
+		Owner: Neutral
+		Location: 20,54
+	Actor971: t02
+		Owner: Neutral
+		Location: 16,56
+	Actor972: t01
+		Owner: Neutral
+		Location: 16,47
+	Actor973: t01
+		Owner: Neutral
+		Location: 22,48
+	Actor974: t05
+		Owner: Neutral
+		Location: 21,47
+	Actor975: tc01
+		Owner: Neutral
+		Location: 78,57
+	Actor976: t16
+		Owner: Neutral
+		Location: 80,61
+	Actor977: t01
+		Owner: Neutral
+		Location: 76,60
+	Actor978: tc01
+		Owner: Neutral
+		Location: 66,53
+	Actor979: t06
+		Owner: Neutral
+		Location: 67,54
 Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, ra|rules/campaign-palettes.yaml, rules.yaml
 Weapons: weapons.yaml
