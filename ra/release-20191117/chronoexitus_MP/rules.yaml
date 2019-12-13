@@ -9,12 +9,12 @@ Player:
 		ExploredMapCheckboxEnabled: False
 	PlayerResources:
 		DefaultCashLocked: True
-		DefaultCash: 5000
+		DefaultCash: 0
 World:
 	-SpawnMPUnits:
 	-MPStartLocations:
 	LuaScript:
-		Scripts: blackgoldMP.lua
+		Scripts: chronoexitus_MP.lua
 	ObjectivesPanel:
 		PanelName: MISSION_OBJECTIVES
 	MapBuildRadius:
@@ -23,65 +23,70 @@ World:
 		BuildRadiusCheckboxLocked: True
 		BuildRadiusCheckboxEnabled: False
 	MissionData:
-		WinVideo: flare.vqa
-		LossVideo: sfrozen.vqa
-		Briefing: The Allies have captured one of our tech centres in this region. Our intelligence believes the reason behind this is to steal our technology and reverse-engineer it at Albert Einstein's secret research lab nearby.\n\nEinstein has been a thorn in Stalin's side for way too long. You have been tasked with his elimination.\n\nGet our spy into our research centre to assess the damage and prevent further leaks. Afterwards, proceed to locate Einstein's lab by capturing the Allied Radar Dome.\n\nVolkov will aid you in this mission and carry out the lab infiltration as well. Do not lose him, or face the concequences.
+		WinVideo: cronfail.vqa
+		LossVideo: crontest.vqa
+		Briefing: Volkov has infiltrated Einstein's Lab. He has discovered a huge underground facility underneath it.\n\nNothing will stop the might of the Soviet Union this time. Your objective is simple - you finish the job and eliminate Prof. Einstein while keeping Volkov intact.
 	-CrateSpawner:
 	MapOptions:
 		ShortGameLocked: True
 		ShortGameEnabled: False
 
-GNRL:
-	UpdatesPlayerStatistics: 
-	MustBeDestroyed: 
-	ProximityCaptor: 
-		Types: Infantry 
-	DetectCloaked: 
-		CloakTypes: Hijacker 
-	RenderSprites: 
-		Image: gnrl 
-	Valued: 
-		Cost: 1800 
-	DeliversCash@GRINDABLE: 
-		Payload: 1250 
-		Voice: Move 
-	Tooltip: 
-		Name: Volkov 
-	Health: 
-		HP: 180000 
-	Mobile: 
-		Speed: 71 
-	Passenger: 
-		PipType: Red 
-	Armor: 
-		Type: Heavy 
-	RevealsShroud: 
-		Range: 7c0 
-	Demolition: 
-		DetonationDelay: 45 
-		Voice: Attack 
-	-Crushable: 
-	-Armament: 
-	Armament@PRIMARY: 
-		Weapon: VolkovWeapon 
-	Armament@GARRISONED: 
-		Name: garrisoned 
-		Weapon: VolkovWeapon 
-		MuzzleSequence: garrison-muzzle 
-	WithInfantryBody: 
-		DefaultAttackSequence: shoot 
-		StandSequences: stand 
-	Targetable: 
-		TargetTypes: Ground, Infantry
+VOLK:
+	Inherits: GNRL
+	Buildable:
+		Prerequisites: ~disabled
+	Valued:
+		Cost: 3000
+	Tooltip:
+		Name: Volkov
+	Health:
+		HP: 250000
+	Armor:
+		Type: Heavy
+	-Crushable:
+	RevealsShroud:
+		Range: 10c0
+	Demolition:
+	Mobile:
+		Voice: Action
+	AttackFrontal:
+		Voice: Action
+	AttackMove:
+		Voice: Action
+	Passenger:
+		Voice: Action
+	Guard:
+		Voice: Action
+	Voiced:
+		VoiceSet: GenericVoice
+	Armament:
+		Weapon: VolkovWeapon
+	DetectCloaked:
+		CloakTypes: Cloak, Hijacker
+	RenderSprites:
+		Image: GNRL
+	MustBeDestroyed:
+
+PDOX:
+	Power:
+		Amount: 200
+APWR:
+	Power:
+		Amount: 2000
+#------------------------------RA classic mode--------------------------------#
+
 APC:
 	Buildable:
 		Prerequisites: ~vehicles.allies
 HIND:
 	Buildable:
-		Prerequisites: ~vehicles.soviet
+		Prerequisites: ~aircraft.soviet
 HPAD:
 	Buildable:
 		Prerequisites: dome, ~techlevel.medium
+	ProvidesPrerequisite@soviet:
+		Factions: soviet, russia, ukraine
+		Prerequisite: aircraft.soviet
 SHOK:
 	Buildable:
 		Prerequisites: stek, tsla, ~infantry.soviet
@@ -92,21 +97,10 @@ TRUK:
 	Buildable:
 		Prerequisites: ~disabled
 	SpawnActorOnDeath:
-		Actor: moneycrate
-HOSP:
-	SpawnActorOnDeath:
 		Actor: healcrate
 V01:
 	SpawnActorOnDeath:
-		Actor: healcrate
-MISS:
-	Targetable:
-		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
-	Tooltip: 
-		Name: Einstein's Lab
-STEK:
-	Targetable:
-		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
+		Actor: moneycrate
 MGG:
 	Buildable:
 		Prerequisites: atek, ~vehicles.allies
@@ -146,6 +140,11 @@ AFLD:
 
 ^Vehicle:
 	-Demolishable:
+E7.noautotarget:
+	Buildable:
+		Prerequisites: ~disabled
 SNIPER:
 	Buildable:
 		Prerequisites: tent, dome, ~infantry.allies
+	AutoTarget:
+		InitialStanceAI: AttackAnything

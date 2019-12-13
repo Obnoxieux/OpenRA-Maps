@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ra
 
-Title: Chronoexitus
+Title: Chronoexitus MP
 
 Author: Seth
 
@@ -12,9 +12,9 @@ MapSize: 98,68
 
 Bounds: 1,1,96,66
 
-Visibility: MissionSelector
+Visibility: Lobby
 
-Categories: Mission
+Categories: Mission, Cooperative Mission
 
 Players:
 	PlayerReference@GoodGuy:
@@ -22,16 +22,15 @@ Players:
 		Faction: allies
 		Color: ABB7E4
 		Allies: France
-		Enemies: USSR
+		Enemies: USSR, Ukraine
 	PlayerReference@France:
 		Name: France
 		Faction: allies
 		Color: 5CC1A3
 		Allies: GoodGuy
-		Enemies: USSR
+		Enemies: USSR, Ukraine
 	PlayerReference@USSR:
 		Name: USSR
-		AllowBots: False
 		Playable: True
 		Required: True
 		LockFaction: True
@@ -40,6 +39,19 @@ Players:
 		Color: FE1100
 		LockSpawn: True
 		LockTeam: True
+		Allies: Ukraine
+		Enemies: GoodGuy, France, Creeps
+	PlayerReference@Ukraine:
+		Name: Ukraine
+		Playable: True
+		Required: True
+		LockFaction: True
+		Faction: soviet
+		LockColor: True
+		Color: FC8800
+		LockSpawn: True
+		LockTeam: True
+		Allies: USSR
 		Enemies: GoodGuy, France, Creeps
 	PlayerReference@Neutral:
 		Name: Neutral
@@ -658,83 +670,83 @@ Actors:
 		Location: 68,53
 		TurretFacing: 92
 	Actor166: e1
-		Owner: USSR
 		Location: 4,11
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
+		Owner: Ukraine
 	Actor167: e1
-		Owner: USSR
 		Location: 4,11
 		SubCell: 1
 		Facing: 92
 		TurretFacing: 92
+		Owner: Ukraine
 	Actor168: e1
-		Owner: USSR
 		Location: 4,11
 		SubCell: 2
 		Facing: 92
 		TurretFacing: 92
+		Owner: Ukraine
 	Actor169: e1
-		Owner: USSR
 		Location: 4,11
 		SubCell: 4
 		Facing: 92
 		TurretFacing: 92
+		Owner: Ukraine
 	Actor170: e1
-		Owner: USSR
 		Location: 4,11
 		SubCell: 5
 		Facing: 92
 		TurretFacing: 92
+		Owner: Ukraine
 	Actor171: e2
-		Owner: USSR
 		Location: 4,13
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
+		Owner: Ukraine
 	Actor172: e2
-		Owner: USSR
 		Location: 4,13
 		SubCell: 1
 		Facing: 92
 		TurretFacing: 92
+		Owner: Ukraine
 	Actor173: e4
-		Owner: USSR
 		Location: 4,13
 		SubCell: 2
 		Facing: 92
 		TurretFacing: 92
+		Owner: Ukraine
 	Actor174: e4
-		Owner: USSR
 		Location: 4,13
 		SubCell: 4
 		Facing: 92
 		TurretFacing: 92
+		Owner: Ukraine
 	Actor175: e6
-		Owner: USSR
 		Location: 2,12
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
+		Owner: Ukraine
 	Actor176: e6
-		Owner: USSR
 		Location: 2,11
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
+		Owner: Ukraine
 	Actor177: e2
-		Owner: USSR
 		Location: 4,13
 		SubCell: 5
 		Facing: 92
 		TurretFacing: 92
+		Owner: Ukraine
 	Actor178: shok
-		Owner: USSR
 		Location: 3,12
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
+		Owner: Ukraine
 	POWGuardPillbox: pbox
 		Owner: France
 		Location: 15,63
@@ -1821,17 +1833,17 @@ Actors:
 		Owner: Neutral
 		Location: 77,58
 	Actor374: medi
-		Owner: USSR
 		Location: 2,13
 		SubCell: 3
 		Facing: 92
 		TurretFacing: 92
+		Owner: Ukraine
 	Actor375: medi
-		Owner: USSR
 		Location: 2,13
 		SubCell: 1
 		Facing: 92
 		TurretFacing: 92
+		Owner: Ukraine
 	TerminalExitPillboxes: waypoint
 		Owner: Neutral
 		Location: 94,2
