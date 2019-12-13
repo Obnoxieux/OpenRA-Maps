@@ -1,12 +1,21 @@
 MapFormat: 11
+
 RequiresMod: ra
+
 Title: Chrono Destruction
+
 Author: Seth
+
 Tileset: TEMPERAT
+
 MapSize: 128,128
+
 Bounds: 16,16,96,96
+
 Visibility: MissionSelector
+
 Categories: Mission
+
 Players:
 	PlayerReference@Neutral:
 		Name: Neutral
@@ -47,6 +56,7 @@ Players:
 		LockSpawn: True
 		LockTeam: True
 		Enemies: GoodGuy, Greece, France, Creeps
+
 Actors:
 	Actor22: brik
 		Location: 43,24
@@ -1195,10 +1205,6 @@ Actors:
 		Location: 46,29
 		Owner: GoodGuy
 		Facing: 127
-	Actor550: 3tnk
-		Location: 106,31
-		Owner: USSR
-		Facing: 63
 	Actor552: 4tnk
 		Location: 104,32
 		Owner: USSR
@@ -1215,10 +1221,6 @@ Actors:
 		Location: 106,33
 		Owner: USSR
 		Facing: 63
-	Actor556: ttnk
-		Location: 110,33
-		Owner: USSR
-		Facing: 63
 	Actor557: 2tnk
 		Location: 35,34
 		Owner: GoodGuy
@@ -1231,14 +1233,6 @@ Actors:
 		Location: 104,34
 		Owner: USSR
 		Facing: 63
-	Actor560: v2rl
-		Location: 108,34
-		Owner: USSR
-		Facing: 63
-	Actor561: ttnk
-		Location: 110,34
-		Owner: USSR
-		Facing: 63
 	Actor563: 1tnk
 		Location: 37,35
 		Owner: GoodGuy
@@ -1247,10 +1241,6 @@ Actors:
 		Location: 47,35
 		Owner: GoodGuy
 		Facing: 159
-	Actor565: 3tnk
-		Location: 106,35
-		Owner: USSR
-		Facing: 63
 	Actor566: arty
 		Location: 31,36
 		Owner: GoodGuy
@@ -2021,7 +2011,7 @@ Actors:
 		Owner: GoodGuy
 		Location: 27,33
 	Actor642: pdox
-		Owner: GoodGuy
+		Owner: France
 		Location: 19,19
 	Actor643: agun
 		Owner: GoodGuy
@@ -2645,5 +2635,25 @@ Actors:
 	Actor979: t06
 		Owner: Neutral
 		Location: 67,54
+	camstart: waypoint
+		Owner: Neutral
+		Location: 104,33
+	Actor980: 3tnk
+		Owner: USSR
+		Location: 105,30
+		TurretFacing: 68
+		Facing: 68
+	Actor981: 3tnk
+		Owner: USSR
+		Location: 105,35
+		TurretFacing: 67
+		Facing: 67
+	Actor982: ttnk
+		Owner: USSR
+		Location: 110,34
+		TurretFacing: 67
+		Facing: 67
+
 Rules: ra|rules/campaign-rules.yaml, ra|rules/campaign-tooltips.yaml, ra|rules/campaign-palettes.yaml, rules.yaml
+
 Weapons: weapons.yaml

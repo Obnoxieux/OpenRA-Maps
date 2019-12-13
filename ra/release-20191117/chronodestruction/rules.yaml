@@ -21,9 +21,17 @@ World:
 	-StartGameNotification:
 	-CrateSpawner:
 	MissionData:
-		Briefing: TEMP
+		Briefing: The Allies have deployed one of their Chronospheres in this sector and guard it with a heavily fortified base. Fortunately, we have the perfect barricade breaker at our disposal - Dr. Demitri's Super Tank.\n\nWe need Allied technology to finish its development though. Capture the Allied Technology Centers, build as many Super Tanks as you like and destroy the Chronosphere.\n\nIndiscriminate mass termination of other Allied presence is not required, but encouraged.
 		WinVideo: sovtstar.vqa
 		LossVideo: sovtstar.vqa
+	ScriptLobbyDropdown@difficulty:
+		ID: difficulty
+		Label: Difficulty
+		Values:
+			easy: Easy
+			normal: Normal
+			hard: Hard
+		Default: easy
 	MapBuildRadius:
 		AllyBuildRadiusLocked: True
 		AllyBuildRadiusEnabled: True
