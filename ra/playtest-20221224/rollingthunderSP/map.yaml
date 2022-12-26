@@ -2567,8 +2567,6 @@ Rules:
 			DefaultCashLocked: True
 			DefaultCash: 10000
 	World:
-		-SpawnMPUnits:
-		-MPStartLocations:
 		LuaScript:
 			Scripts: rollingthunderSP.lua
 		ObjectivesPanel:

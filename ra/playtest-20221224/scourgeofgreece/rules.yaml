@@ -11,8 +11,6 @@ Player:
 		DefaultCashLocked: True
 		DefaultCash: 10000
 World:
-	-SpawnMPUnits:
-	-MPStartLocations:
 	LuaScript:
 		Scripts: scourgeofgreece.lua
 	ObjectivesPanel:

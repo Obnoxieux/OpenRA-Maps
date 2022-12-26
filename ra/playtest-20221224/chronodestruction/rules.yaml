@@ -12,8 +12,6 @@ Player:
 		DefaultCash: 20000
 
 World:
-	-SpawnMPUnits:
-	-MPStartLocations:
 	LuaScript:
 		Scripts: chronodestruction.lua
 	ObjectivesPanel:

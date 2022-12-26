@@ -11,8 +11,6 @@ Player:
 		DefaultCashLocked: True
 		DefaultCash: 5000
 World:
-	-SpawnMPUnits:
-	-MPStartLocations:
 	LuaScript:
 		Scripts: blackgold.lua
 	ObjectivesPanel:

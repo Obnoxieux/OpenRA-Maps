@@ -12,8 +12,6 @@ Player:
 		DefaultCash: 20000
 World:
 	-CrateSpawner:
-	-SpawnMPUnits:
-	-MPStartLocations:
 	LuaScript:
 		Scripts: testmap.lua
 	ObjectivesPanel:
